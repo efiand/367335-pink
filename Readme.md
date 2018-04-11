@@ -1,7 +1,7 @@
 # Личный проект «Пинк» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Андрей Ефимов](https://up.htmlacademy.ru/adaptive/14/user/367335).
-* Наставник: `Неизвестно`.
+* Наставник: [Андрей Грачев](https://up.htmlacademy.ru/htmlcss/20/user/252055).
 
 ---
 
