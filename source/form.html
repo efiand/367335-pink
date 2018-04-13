@@ -7,12 +7,11 @@
 <body>
   <header class="page-header">
     <nav class="page-header__nav nav">
-      <img class="nav__logo logo" src="http://placehold.it/75x22" width="75" height="22" alt="Логотип Пинк">
-      <button class="nav__switch nav__switch--on" type="button">
-        Показать меню
-      </button>
-      <button class="nav__switch nav__switch--off" type="button">
-        Скрыть меню
+      <a class="nav__logo logo" href="index.html">
+        <img class="logo__img" src="http://placehold.it/75x22" width="75" height="22" alt="Логотип Пинк">
+      </a>
+      <button class="nav__switch btn" type="button">
+        Показать/скрыть меню
       </button>
       <ul class="nav__list">
         <li class="nav__item">
@@ -37,14 +36,12 @@
         </li>
       </ul>
     </nav>
+    <h1 class="page-header__title">
+      Конкурс на самое безбашенное путешествие с Пинк
+    </h1>
   </header>
 
   <main class="page-content">
-    <header class="page-content__sect main-header">
-      <h1 class="main-header__title">
-        Конкурс на самое безбашенное путешествие с Пинк
-      </h1>
-    </header>
     <p class="page-content__descr">
       Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!
       <span class="page-content__nomob">
@@ -53,126 +50,126 @@
     </p>
 
     <form class="page-content__sect post">
-      <fieldset class="post__group fields">
+      <fieldset class="post__group post__group--fields">
         <legend class="visually-hidden">
           ФИО
         </legend>
-        <p class="fields__item">
-          <label class="fields__label" for="last-name">
+        <p class="post__item">
+          <label class="post__label post__label--fields" for="last-name">
             Фамилия:
           </label>
-          <input class="fields__field" id="last-name" name="last-name" type="text" placeholder="Укажите фамилию *" required>
+          <input class="post__field" id="last-name" name="last-name" type="text" placeholder="Укажите фамилию *" required>
         </p>
-        <p class="fields__item">
-          <label class="fields__label" for="first-name">
+        <p class="post__item">
+          <label class="post__label post__label--fields" for="first-name">
             Имя:
           </label>
-          <input class="fields__field" id="first-name" name="first-name" type="text" placeholder="Укажите ваше имя *" required>
+          <input class="post__field" id="first-name" name="first-name" type="text" placeholder="Укажите ваше имя *" required>
         </p>
-        <p class="fields__item">
-          <label class="fields__label" for="middle-name">
+        <p class="post__item">
+          <label class="post__label post__label--fields" for="middle-name">
             Отчество:
           </label>
-          <input class="fields__field" id="middle-name" name="middle-name" type="text" placeholder="Ну и отчество тоже">
+          <input class="post__field" id="middle-name" name="middle-name" type="text" placeholder="Ну и отчество тоже">
         </p>
       </fieldset>
 
-      <fieldset class="post__group checks">
-        <legend class="checks__title">
+      <fieldset class="post__group post__group--checks">
+        <legend class="post__title">
           Ваши безбашенные достижения в путешествии
         </legend>
-        <p class="checks__item">
+        <p class="post__item">
           <input class="visually-hidden" id="achieve-1" name="achieve[]" type="checkbox" value="1" checked>
-          <label class="checks__label" for="achieve-1">
+          <label class="post__label" for="achieve-1">
             Сделал селфи с акулой
           </label>
         </p>
-        <p class="checks__item">
+        <p class="post__item">
           <input class="visually-hidden" id="achieve-2" name="achieve[]" type="checkbox" value="2" checked>
-          <label class="checks__label" for="achieve-2">
+          <label class="post__label" for="achieve-2">
             Обгорел на пляже
           </label>
         </p>
-        <p class="checks__item">
+        <p class="post__item">
           <input class="visually-hidden" id="achieve-3" name="achieve[]" type="checkbox" value="3">
-          <label class="checks__label" for="achieve-3">
+          <label class="post__label" for="achieve-3">
             Видел Чака Норриса
           </label>
         </p>
-        <p class="checks__item">
+        <p class="post__item">
           <input class="visually-hidden" id="achieve-4" name="achieve[]" type="checkbox" value="4">
-          <label class="checks__label" for="achieve-4">
+          <label class="post__label" for="achieve-4">
             Накупил сувениров
           </label>
         </p>
-        <p class="checks__item">
+        <p class="post__item">
           <input class="visually-hidden" id="achieve-5" name="achieve[]" type="checkbox" value="5" checked>
-          <label class="checks__label" for="achieve-5">
+          <label class="post__label" for="achieve-5">
             Удержал башню
           </label>
         </p>
-        <p class="checks__item">
+        <p class="post__item">
           <input class="visually-hidden" id="achieve-6" name="achieve[]" type="checkbox" value="6">
-          <label class="checks__label" for="achieve-6">
+          <label class="post__label" for="achieve-6">
             Разгромил отель
           </label>
         </p>
       </fieldset>
 
-      <fieldset class="post__group fields">
+      <fieldset class="post__group post__group--fields">
         <legend class="visually-hidden">
           Контакты
         </legend>
-        <p class="fields__item">
-          <label class="fields__label" for="tel">
+        <p class="post__item">
+          <label class="post__label post__label--fields" for="tel">
             Номер телефона
           </label>
-          <input class="fields__field" id="tel" name="tel" type="tel" placeholder="Номер, пожалуйста" required>
+          <input class="post__field" id="tel" name="tel" type="tel" placeholder="Номер, пожалуйста" required>
         </p>
-        <p class="fields__item">
-          <label class="fields__label" for="email">
+        <p class="post__item">
+          <label class="post__label post__label--fields" for="email">
             Адрес почты
           </label>
-          <input class="fields__field" id="email" name="email" type="email" placeholder="Введите почту *" required>
+          <input class="post__field" id="email" name="email" type="email" placeholder="Введите почту *" required>
         </p>
       </fieldset>
 
-      <fieldset class="post__group checks">
-        <legend class="checks__title">
+      <fieldset class="post__group post__group--checks">
+        <legend class="post__title">
           С каким приложением путешествовали?
         </legend>
-        <p class="checks__item">
+        <p class="post__item">
           <input class="visually-hidden" id="app-1" name="app" type="checkbox" value="0" checked>
-          <label class="checks__label checks__label--radio" for="app-1">
+          <label class="post__label post__label--radio" for="app-1">
             Pink для iOS
           </label>
         </p>
-        <p class="checks__item">
+        <p class="post__item">
           <input class="visually-hidden" id="app-2" name="app" type="checkbox" value="1">
-          <label class="checks__label checks__label--radio" for="app-2">
+          <label class="post__label post__label--radio" for="app-2">
             Pink на Android
           </label>
         </p>
-        <p class="checks__item">
+        <p class="post__item">
           <input class="visually-hidden" id="app-3" name="app" type="checkbox" value="2">
-          <label class="checks__label checks__label--radio" for="app-3">
+          <label class="post__label post__label--radio" for="app-3">
             Windows Phone
           </label>
         </p>
       </fieldset>
 
-      <fieldset class="post__group fields">
+      <fieldset class="post__group post__group--fields">
         <legend class="visually-hidden">
           Описание
         </legend>
-        <p class="fields__item">
-          <label class="fields__label fields__label--descr" for="comment">
+        <p class="post__item">
+          <label class="post__label post__label--fields post__label--descr" for="comment">
             Опишите свои эмоции
           </label>
-          <textarea class="fields__field fields__field--descr" id="comment" name="comment" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+          <textarea class="post__field post__field--descr" id="comment" name="comment" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
         </p>
       </fieldset>
-      <button class="post__btn" type="submit">
+      <button class="post__btn btn" type="submit">
         Отправить форму
       </button>
       <p class="post__descr">
@@ -182,10 +179,10 @@
   </main>
 
   <footer class="page-footer">
-    <a class="page-footer__link" href="index.html">
-      <img class="logo--footer" src="http://placehold.it/147x40" width="147" height="40" alt="Логотип Пинк">
+    <a class="page-footer__link logo logo--footer" href="index.html">
+      <img class="logo__img logo__img--footer" src="http://placehold.it/147x40" width="147" height="40" alt="Логотип Пинк">
     </a>
-    <ul class="page-footer__socials">
+    <ul class="page-footer__socials socials">
       <li class="socials__item">
         <a class="socials__link socials__link--tw" href="#">
           Мы в Twitter

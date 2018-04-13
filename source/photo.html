@@ -7,12 +7,11 @@
 <body>
   <header class="page-header">
     <nav class="page-header__nav nav">
-      <img class="nav__logo logo" src="http://placehold.it/75x22" width="75" height="22" alt="Логотип Пинк">
-      <button class="nav__switch nav__switch--on" type="button">
-        Показать меню
-      </button>
-      <button class="nav__switch nav__switch--off" type="button">
-        Скрыть меню
+      <a class="nav__logo logo" href="index.html">
+        <img class="logo__img" src="http://placehold.it/75x22" width="75" height="22" alt="Логотип Пинк">
+      </a>
+      <button class="nav__switch btn" type="button">
+        Показать/скрыть меню
       </button>
       <ul class="nav__list">
         <li class="nav__item">
@@ -37,14 +36,12 @@
         </li>
       </ul>
     </nav>
+    <h1 class="page-header__title">
+      Фотографии пользователей
+    </h1>
   </header>
 
   <main class="page-content">
-    <header class="page-content__sect main-header">
-      <h1 class="main-header__title">
-        Фотографии пользователей
-      </h1>
-    </header>
     <p class="page-content__descr">
       Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?
     </p>
@@ -55,9 +52,6 @@
       </h2>
       <ul class="photos__list">
         <li class="photos__item photos__item--lead">
-          <p class="photos__item--tag">
-            Панорама дня
-          </p>
           <img class="photos__img" src="http://placehold.it/280x180" width="280" height="180" alt="Фотография">
           <p class="photos__title">
             Анна <span class="photos__time">(5 минут назад)</span>
@@ -187,40 +181,40 @@
       <div class="add__img"></div>
       <ul class="add__edit edit">
         <li class="edit__item">
-          <button class="edit__btn" type="button">
+          <button class="edit__btn btn" type="button">
             Обрезать
           </button>
         </li>
         <li class="edit__item">
-          <button class="edit__btn" type="button">
+          <button class="edit__btn btn" type="button">
             Залить
           </button>
         </li>
         <li class="edit__item">
-          <button class="edit__btn" type="button">
+          <button class="edit__btn btn" type="button">
             Контраст
           </button>
         </li>
         <li class="edit__range range">
-          <button class="range__btn" type="button">
+          <button class="range__btn btn" type="button">
             Яркость
           </button>
         </li>
       </ul>
-      <button class="add__btn" type="submit">
+      <button class="add__btn btn" type="submit">
         Запостить
       </button>
-      <button class="add__btn--reset" type="reset">
+      <button class="add__btn add__btn--reset btn" type="reset">
         Отмена
       </button>
     </form>
   </main>
 
   <footer class="page-footer">
-    <a class="page-footer__link" href="index.html">
-      <img class="logo--footer" src="http://placehold.it/147x40" width="147" height="40" alt="Логотип Пинк">
+    <a class="page-footer__link logo logo--footer" href="index.html">
+      <img class="logo__img logo__img--footer" src="http://placehold.it/147x40" width="147" height="40" alt="Логотип Пинк">
     </a>
-    <ul class="page-footer__socials">
+    <ul class="page-footer__socials socials">
       <li class="socials__item">
         <a class="socials__link socials__link--tw" href="#">
           Мы в Twitter
