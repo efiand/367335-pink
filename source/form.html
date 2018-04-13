@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Пинк : Конкурс</title>
+</head>
+<body>
+  <header class="page-header">
+    <nav class="page-header__nav nav">
+      <img class="nav__logo logo" src="http://placehold.it/75x22" width="75" height="22" alt="Логотип Пинк">
+      <button class="nav__switch nav__switch--on" type="button">
+        Показать меню
+      </button>
+      <button class="nav__switch nav__switch--off" type="button">
+        Скрыть меню
+      </button>
+      <ul class="nav__list">
+        <li class="nav__item">
+          <a class="nav__link" href="index.html">
+            Главная
+          </a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="photo.html">
+            Фотографии
+          </a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link">
+            Конкурс
+          </a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="https://htmlacademy.ru/intensive/adaptive">
+            HTML Academy
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="page-content">
+    <header class="page-content__sect main-header">
+      <h1 class="main-header__title">
+        Конкурс на самое безбашенное путешествие с Пинк
+      </h1>
+    </header>
+    <p class="page-content__descr">
+      Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!
+      <span class="page-content__nomob">
+        Пожалуйста, заполните форму ниже:
+      </span>
+    </p>
+
+    <form class="page-content__sect post">
+      <fieldset class="post__group fields">
+        <legend class="visually-hidden">
+          ФИО
+        </legend>
+        <p class="fields__item">
+          <label class="fields__label" for="last-name">
+            Фамилия:
+          </label>
+          <input class="fields__field" id="last-name" name="last-name" type="text" placeholder="Укажите фамилию *" required>
+        </p>
+        <p class="fields__item">
+          <label class="fields__label" for="first-name">
+            Имя:
+          </label>
+          <input class="fields__field" id="first-name" name="first-name" type="text" placeholder="Укажите ваше имя *" required>
+        </p>
+        <p class="fields__item">
+          <label class="fields__label" for="middle-name">
+            Отчество:
+          </label>
+          <input class="fields__field" id="middle-name" name="middle-name" type="text" placeholder="Ну и отчество тоже">
+        </p>
+      </fieldset>
+
+      <fieldset class="post__group checks">
+        <legend class="checks__title">
+          Ваши безбашенные достижения в путешествии
+        </legend>
+        <p class="checks__item">
+          <input class="visually-hidden" id="achieve-1" name="achieve[]" type="checkbox" value="1" checked>
+          <label class="checks__label" for="achieve-1">
+            Сделал селфи с акулой
+          </label>
+        </p>
+        <p class="checks__item">
+          <input class="visually-hidden" id="achieve-2" name="achieve[]" type="checkbox" value="2" checked>
+          <label class="checks__label" for="achieve-2">
+            Обгорел на пляже
+          </label>
+        </p>
+        <p class="checks__item">
+          <input class="visually-hidden" id="achieve-3" name="achieve[]" type="checkbox" value="3">
+          <label class="checks__label" for="achieve-3">
+            Видел Чака Норриса
+          </label>
+        </p>
+        <p class="checks__item">
+          <input class="visually-hidden" id="achieve-4" name="achieve[]" type="checkbox" value="4">
+          <label class="checks__label" for="achieve-4">
+            Накупил сувениров
+          </label>
+        </p>
+        <p class="checks__item">
+          <input class="visually-hidden" id="achieve-5" name="achieve[]" type="checkbox" value="5" checked>
+          <label class="checks__label" for="achieve-5">
+            Удержал башню
+          </label>
+        </p>
+        <p class="checks__item">
+          <input class="visually-hidden" id="achieve-6" name="achieve[]" type="checkbox" value="6">
+          <label class="checks__label" for="achieve-6">
+            Разгромил отель
+          </label>
+        </p>
+      </fieldset>
+
+      <fieldset class="post__group fields">
+        <legend class="visually-hidden">
+          Контакты
+        </legend>
+        <p class="fields__item">
+          <label class="fields__label" for="tel">
+            Номер телефона
+          </label>
+          <input class="fields__field" id="tel" name="tel" type="tel" placeholder="Номер, пожалуйста" required>
+        </p>
+        <p class="fields__item">
+          <label class="fields__label" for="email">
+            Адрес почты
+          </label>
+          <input class="fields__field" id="email" name="email" type="email" placeholder="Введите почту *" required>
+        </p>
+      </fieldset>
+
+      <fieldset class="post__group checks">
+        <legend class="checks__title">
+          С каким приложением путешествовали?
+        </legend>
+        <p class="checks__item">
+          <input class="visually-hidden" id="app-1" name="app" type="checkbox" value="0" checked>
+          <label class="checks__label checks__label--radio" for="app-1">
+            Pink для iOS
+          </label>
+        </p>
+        <p class="checks__item">
+          <input class="visually-hidden" id="app-2" name="app" type="checkbox" value="1">
+          <label class="checks__label checks__label--radio" for="app-2">
+            Pink на Android
+          </label>
+        </p>
+        <p class="checks__item">
+          <input class="visually-hidden" id="app-3" name="app" type="checkbox" value="2">
+          <label class="checks__label checks__label--radio" for="app-3">
+            Windows Phone
+          </label>
+        </p>
+      </fieldset>
+
+      <fieldset class="post__group fields">
+        <legend class="visually-hidden">
+          Описание
+        </legend>
+        <p class="fields__item">
+          <label class="fields__label fields__label--descr" for="comment">
+            Опишите свои эмоции
+          </label>
+          <textarea class="fields__field fields__field--descr" id="comment" name="comment" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+        </p>
+      </fieldset>
+      <button class="post__btn" type="submit">
+        Отправить форму
+      </button>
+      <p class="post__descr">
+        <span class="page-content__em">*</span> — обязательные поля
+      </p>
+    </form>
+  </main>
+
+  <footer class="page-footer">
+    <a class="page-footer__link" href="index.html">
+      <img class="logo--footer" src="http://placehold.it/147x40" width="147" height="40" alt="Логотип Пинк">
+    </a>
+    <ul class="page-footer__socials">
+      <li class="socials__item">
+        <a class="socials__link socials__link--tw" href="#">
+          Мы в Twitter
+        </a>
+      </li>
+      <li class="socials__item">
+        <a class="socials__link socials__link--fb" href="#">
+          Мы в Facebook
+        </a>
+      </li>
+      <li class="socials__item">
+        <a class="socials__link socials__link--youtube" href="#">
+          Мы в Youtube
+        </a>
+      </li>
+    </ul>
+    <a class="page-footer__link dev" href="https://htmlacademy.ru/intensive/adaptive">
+      Разработано
+      <img class="dev__img" src="img/htmlacademy.svg" width="27" height="34" alt="Логотип HTML Academy">
+    </a>
+  </footer>
+</body>
+</html>
