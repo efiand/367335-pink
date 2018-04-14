@@ -1,12 +1,317 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Пинк</title>
-  </head>
-  <body>
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Пинк</title>
+</head>
+<body>
+  <header class="page-header">
+    <nav class="page-header__nav nav">
+      <a class="nav__logo logo">
+        <img class="logo__img" src="http://placehold.it/75x22" width="75" height="22" alt="Логотип Пинк">
+      </a>
+      <button class="nav__switch" type="button">
+        Показать/скрыть меню
+      </button>
+      <ul class="nav__list">
+        <li class="nav__item">
+          <a class="nav__link">
+            Главная
+          </a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="photo.html">
+            Фотографии
+          </a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="form.html">
+            Конкурс
+          </a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="https://htmlacademy.ru/intensive/adaptive">
+            HTML Academy
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <h1 class="visually-hidden">
+      Пинк
+    </h1>
+    <p class="page-header__title">Взгляните на жизнь иначе!</p>
 
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">Профессиональный HTML и CSS</a>», уровень 2.</p>
+    <section class="page-header__download download">
+      <h2 class="visually-hidden">
+        Скачать
+      </h2>
+      <a class="download__general" href="https://www.apple.com/itunes/">
+        Скачать приложение
+      </a>
+      <ul class="download__list">
+        <li class="download__item">
+          <a class="download__os download__os--ios" href="https://www.apple.com/itunes/">
+            iOs
+          </a>
+        </li>
+        <li class="download__item">
+          <a class="download__os download__os--android" href="https://play.google.com/store">
+            Android
+          </a>
+        </li>
+        <li class="download__item">
+          <a class="download__os download__os--win" href="https://www.microsoft.com/ru-ru/store/b/home">
+            Windows Phone
+          </a>
+        </li>
+      </ul>
+      <p class="download__descr">
+        Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
+      </p>
+    </section>
+  </header>
 
-  </body>
+  <main class="page-content">
+    <section class="page-content__sect advantages">
+      <h2 class="visually-hidden">
+        Преимущества
+      </h2>
+      <p class="page-content__lead">
+        Устали от серости мегаполиса?
+      </p>
+      <p class="page-content__lead">
+        Нам есть, что вам предложить!
+      </p>
+      <ul class="advantages__list">
+        <li class="advantages__item">
+          <p class="advantages__lead">
+            Поднимает настроение
+          </p>
+          <p class="advantages__descr">
+            Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!
+          </p>
+        </li>
+        <li class="advantages__item">
+          <p class="advantages__lead">
+            Меняет мир вокруг
+          </p>
+          <p class="advantages__descr">
+            Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект
+          </p>
+        </li>
+        <li class="advantages__item">
+          <p class="advantages__lead">
+            Заводит новых друзей
+          </p>
+          <p class="advantages__descr">
+            Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых
+          </p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="page-content__sect slides reviews">
+      <h2 class="visually-hidden">
+        Отзывы
+      </h2>
+      <ul class="slides__list reviews__btn">
+        <li class="slides__item reviews__item">
+          <p class="reviews__name">
+            Николай Петров
+          </p>
+          <p class="reviews__text">
+            «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
+          </p>
+        </li>
+        <li class="slides__item reviews__item">
+          <p class="reviews__name">
+            Иван Пичугин
+          </p>
+          <p class="reviews__text">
+            «Это приложение позволяет абстрагироваться от суеты этого бренного мира, от экзистенциальной сути всего происходящего. Оно позволяет увидеть мир таким, каким он был бы, если бы люди хоть немного задумывались о смысле своих поступков».
+          </p>
+        </li>
+        <li class="slides__item reviews__item">
+          <p class="reviews__name">
+            Лёха Фас
+          </p>
+          <p class="reviews__text">
+            «Ну чёткая приложуха чё, от души! Мы с пацанами прям пивас не берём, картинки ровнее заходят!»
+          </p>
+        </li>
+      </ul>
+      <ul class="slides__togglers">
+        <li class="slides__toggler">
+          <button class="slides__btn reviews__btn btn" type="button">
+            Отзыв 1
+          </button>
+        </li>
+        <li class="slides__toggler">
+          <button class="slides__btn reviews__btn btn" type="button">
+            Отзыв 2
+          </button>
+        </li>
+        <li class="slides__toggler">
+          <button class="slides__btn reviews__btn btn" type="button">
+            Отзыв 3
+          </button>
+        </li>
+      </ul>
+    </section>
+
+    <section class="page-content__sect slides tarifs">
+      <h2 class="visually-hidden">
+        Тарифы
+      </h2>
+      <table class="tarifs__opts">
+        <tr class="tarifs__heading">
+          <th class="visually-hidden">
+            Тарифы
+          </th>
+          <th class="tarifs__title">
+            <p class="tarifs__name">
+              База
+            </p>
+            <p class="tarifs__price">
+              1,99 USD
+            </p>
+          </th>
+          <th class="tarifs__title tarifs__title--hit">
+            <p class="tarifs__name">
+              Стандарт
+            </p>
+            <p class="tarifs__price">
+              3,99 USD
+            </p>
+          </th>
+          <th class="tarifs__title">
+            <p class="tarifs__name">
+              Анлим
+            </p>
+            <p class="tarifs__price">
+              9,99 USD
+            </p>
+          </th>
+        </tr>
+        <tr class="tarifs__opt">
+          <td class="tarifs__key">
+            Розовый фильтр
+          </td>
+          <td class="tarifs__val">
+            Есть
+          </td>
+          <td class="tarifs__val">
+            Есть
+          </td>
+          <td class="tarifs__val">
+            Есть
+          </td>
+        </tr>
+        <tr class="tarifs__opt">
+          <td class="tarifs__key">
+            Смайлики
+          </td>
+          <td class="tarifs__val tarifs__val--no">
+            Нет
+          </td>
+          <td class="tarifs__val">
+            Есть
+          </td>
+          <td class="tarifs__val">
+            Есть
+          </td>
+        </tr>
+        <tr class="tarifs__opt">
+          <td class="tarifs__key">
+            Комментарии
+          </td>
+          <td class="tarifs__val tarifs__val--no">
+            Нет
+          </td>
+          <td class="tarifs__val tarifs__val--no">
+            Нет
+          </td>
+          <td class="tarifs__val">
+            Есть
+          </td>
+        </tr>
+      </table>
+
+      <ul class="slides__togglers">
+        <li class="slides__toggler">
+          <button class="slides__btn tarifs__btn btn" type="button">
+            Отзыв 1
+          </button>
+        </li>
+        <li class="slides__toggler">
+          <button class="slides__btn tarifs__btn btn" type="button">
+            Отзыв 2
+          </button>
+        </li>
+        <li class="slides__toggler">
+          <button class="slides__btn tarifs__btn btn" type="button">
+            Отзыв 3
+          </button>
+        </li>
+      </ul>
+    </section>
+
+    <section class="page-content__sect contacts">
+      <h2 class="visually-hidden">
+        Контакты
+      </h2>
+      <p class="page-content__lead">
+        Остались вопросы? Свяжитесь с нами!
+      </p>
+      <dl class="contacts__list">
+        <dt class="contacts__item">
+          Звоните:
+        </dt>
+        <dd class="contacts__descr">
+          <a class="contacts__link" href="tel:+78125556666">+7 (812) 555-66-66</a>
+        </dd>
+        <dt class="contacts__item">
+          Пишите:
+        </dt>
+        <dd class="contacts__descr">
+          <a class="contacts__link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+        </dd>
+        <dt class="contacts__item">
+          Приезжайте в гости:
+        </dt>
+        <dd class="contacts__descr">
+          ул. Большая Конюшенная, 19/8
+        </dd>
+      </dl>
+      <div class="contacts__map" id="map"></div>
+    </section>
+  </main>
+
+  <footer class="page-footer page-footer--index">
+    <a class="page-footer__link logo logo--footer" href="index.html">
+      <img class="logo__img logo__img--footer" src="http://placehold.it/147x40" width="147" height="40" alt="Логотип Пинк">
+    </a>
+    <ul class="page-footer__socials socials">
+      <li class="socials__item">
+        <a class="socials__link socials__link--tw" href="#">
+          Мы в Twitter
+        </a>
+      </li>
+      <li class="socials__item">
+        <a class="socials__link socials__link--fb" href="#">
+          Мы в Facebook
+        </a>
+      </li>
+      <li class="socials__item">
+        <a class="socials__link socials__link--youtube" href="#">
+          Мы в Youtube
+        </a>
+      </li>
+    </ul>
+    <a class="page-footer__link dev" href="https://htmlacademy.ru/intensive/adaptive">
+      Разработано
+      <img class="dev__img" src="img/htmlacademy.svg" width="27" height="34" alt="Логотип HTML Academy">
+    </a>
+  </footer>
+</body>
 </html>
