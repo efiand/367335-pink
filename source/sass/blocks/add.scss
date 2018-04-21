@@ -1,0 +1,52 @@
+.add {
+  padding: 20px 0 30px;
+  background-color: #f2f2f2;
+}
+
+.add__img {
+  display: block;
+  width: 280px;
+  height: 374px;
+  margin: 0 auto 42px;
+  overflow: hidden;
+  text-indent: 1000px;
+  white-space: nowrap;
+  background-image: url("../img/photo-road-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  cursor: pointer;
+}
+
+.add__btn {
+  width: calc(100% - 40px);
+  margin: 11px 20px;
+  color: $pink;
+  border-color: $pink;
+
+  &:hover,
+  &:focus {
+    color: #ffffff;
+    background-color: $pink;
+  }
+
+  &--reset {
+    color: $asphalt;
+    border-color: $asphalt;
+    opacity: 0.1;
+
+    &:hover,
+    &:focus {
+      color: $asphalt;
+      background-color: transparent;
+      opacity: 0.3;
+    }
+
+    &:active {
+      background-color: $asphalt;
+    }
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+}

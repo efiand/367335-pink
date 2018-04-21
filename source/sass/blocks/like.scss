@@ -1,0 +1,16 @@
+.like {
+  display: flex;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: $pink;
+}
+
+.like__link {
+  margin-right: 19px;
+  color: inherit;
+  outline: none;
+}
+
+.like__val {
+  margin: 0;
+}

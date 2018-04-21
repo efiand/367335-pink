@@ -1,0 +1,61 @@
+.tarifs__opts {
+  margin: 54px auto 0;
+  line-height: 30px;
+  text-transform: uppercase;
+  text-align: center;
+  border-collapse: collapse;
+}
+
+.tarifs__title {
+  width: 153px;
+  padding: 20px;
+  color: #ffffff;
+  background-color: $asphalt;
+  border: solid 2px #e5e5e5;
+  border-top: none;
+
+  &--hit {
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: "Хит";
+      position: absolute;
+      top: 0;
+      left: -50%;
+      width: 100%;
+      height: 30px;
+      text-transform: uppercase;
+      background-color: $pink;
+      transform: translate(18px) rotate(-45deg);
+    }
+  }
+}
+
+.tarifs__name {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.tarifs__price {
+  margin: 7px 0 0;
+  font-weight: 300;
+  font-size: 24px;
+}
+
+.tarifs__key {
+  width: 153px;
+  padding: 17px 20px;
+  text-align: left;
+  background-color: #ffffff;
+  border: solid 2px #e5e5e5;
+}
+
+.tarifs__val {
+  padding: 17px 20px;
+  background-color: #ffffff;
+  border: solid 2px #e5e5e5;
+}
