@@ -1,0 +1,43 @@
+.page-content__descr {
+  margin: 0;
+  padding: 48px 40px;
+  line-height: 30px;
+  text-align: center;
+
+  &--post {
+    padding-bottom: 2px;
+  }
+}
+
+.page-content__sect {
+  padding: 20px;
+
+  &--even {
+    padding: 0 0 6px;
+    background-color: #f2f2f2;
+
+    &::before {
+      content: "";
+      display: block;
+      height: 32px;
+      background-image: linear-gradient(to right bottom, #ffffff 50%, #f2f2f2 50%);
+      border-bottom: solid 12px #f2f2f2;
+    }
+  }
+}
+
+.page-content__lead {
+  margin: 30px;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.page-content__nomob {
+  display: none;
+}
+
+.page-content__em {
+  color: $pink;
+}

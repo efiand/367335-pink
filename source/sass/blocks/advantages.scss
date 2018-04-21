@@ -1,0 +1,28 @@
+.advantages {
+  padding-bottom: 0;
+}
+
+.advantages__list {
+  margin: 0;
+  padding: 0 0 276px;
+  list-style: none;
+  text-align: center;
+  background-image: url("../img/iphone-screen-mobile@1x.png");
+  background-repeat: no-repeat;
+  background-position: center bottom -44px;
+}
+
+.advantages__item {
+  margin: 40px 20px;
+}
+
+.advantages__lead {
+  margin: 0;
+  font-weight: 700;
+  font-size: 18px;
+  color: #000000;
+}
+
+.advantages__descr {
+  margin: 16px 0 0;
+}

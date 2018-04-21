@@ -1,0 +1,17 @@
+.dev {
+  position: relative;
+  padding: 8px 42px 8px 0;
+  line-height: 18px;
+  color: inherit;
+  text-decoration: none;
+
+  &:active &__img {
+    opacity: 0.3;
+  }
+}
+
+.dev__img {
+  position: absolute;
+  top: 0;
+  right: 0;
+}

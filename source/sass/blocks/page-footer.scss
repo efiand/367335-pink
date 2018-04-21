@@ -1,0 +1,25 @@
+.page-footer {
+  padding: 40px;
+
+  &--index {
+    display: none;
+  }
+}
+
+.page-footer__item {
+  display: table;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.page-footer__logo {
+  outline: none;
+
+  &[href]:active {
+    opacity: 0.3;
+  }
+}
+
+.page-footer__socials {
+  margin: 40px 0;
+}

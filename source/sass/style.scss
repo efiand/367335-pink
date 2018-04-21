@@ -1,3 +1,7 @@
+$pink: #d22856;
+$pink-pale: rgba(210, 40, 86, 0.3);
+$asphalt: #283645;
+
 @font-face {
   font-style: normal;
   font-weight: 400;
@@ -22,10 +26,27 @@
 body {
   margin: 0;
   font-size: 14px;
-  line-height: 1.2;
+  line-height: 24px;
   font-family: "Open Sans", "Arial", sans-serif;
+  color: $asphalt;
 }
 
+@import "blocks/visually-hidden.scss";
 @import "blocks/btn.scss";
 @import "blocks/page-header.scss";
 @import "blocks/nav.scss";
+@import "blocks/download.scss";
+@import "blocks/page-content.scss";
+@import "blocks/advantages.scss";
+@import "blocks/reviews.scss";
+@import "blocks/slides.scss";
+@import "blocks/tarifs.scss";
+@import "blocks/contacts.scss";
+@import "blocks/photos.scss";
+@import "blocks/like.scss";
+@import "blocks/add.scss";
+@import "blocks/edit.scss";
+@import "blocks/post.scss";
+@import "blocks/page-footer.scss";
+@import "blocks/socials.scss";
+@import "blocks/dev.scss";
