@@ -3,19 +3,20 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Пинк</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-  <header class="page-header">
-    <nav class="page-header__nav nav">
-      <a class="nav__logo logo">
-        <img class="logo__img" src="http://placehold.it/75x22" width="75" height="22" alt="Логотип Пинк">
+<body class="page">
+  <header class="page__header page-header">
+    <nav class="page-header__nav nav nav--off">
+      <a class="nav__logo">
+        <img src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Логотип Пинк">
       </a>
-      <button class="nav__switch" type="button">
+      <button class="nav__switch nav__switch--off btn" type="button">
         Показать/скрыть меню
       </button>
-      <ul class="nav__list">
+      <ul class="nav__list nav__list--off">
         <li class="nav__item">
-          <a class="nav__link">
+          <a class="nav__link nav__link--current">
             Главная
           </a>
         </li>
@@ -39,13 +40,13 @@
     <h1 class="visually-hidden">
       Пинк
     </h1>
-    <p class="page-header__title">Взгляните на жизнь иначе!</p>
+    <p class="page-header__title visually-hidden">Взгляните на жизнь иначе!</p>
 
     <section class="page-header__download download">
       <h2 class="visually-hidden">
         Скачать
       </h2>
-      <a class="download__general" href="https://www.apple.com/itunes/">
+      <a class="download__main btn btn--main" href="https://www.apple.com/itunes/">
         Скачать приложение
       </a>
       <ul class="download__list">
@@ -71,10 +72,10 @@
     </section>
   </header>
 
-  <main class="page-content">
-    <section class="page-content__sect advantages">
+  <main class="page__content page-content">
+    <section class="page-content__sect">
       <h2 class="visually-hidden">
-        Преимущества
+        Lead'ы
       </h2>
       <p class="page-content__lead">
         Устали от серости мегаполиса?
@@ -82,6 +83,12 @@
       <p class="page-content__lead">
         Нам есть, что вам предложить!
       </p>
+    </section>
+
+    <section class="page-content__sect page-content__sect--even advantages">
+      <h2 class="visually-hidden">
+        Преимущества
+      </h2>
       <ul class="advantages__list">
         <li class="advantages__item">
           <p class="advantages__lead">
@@ -114,7 +121,7 @@
       <h2 class="visually-hidden">
         Отзывы
       </h2>
-      <ul class="slides__list reviews__btn">
+      <ul class="slides__list reviews__list">
         <li class="slides__item reviews__item">
           <p class="reviews__name">
             Николай Петров
@@ -159,7 +166,7 @@
       </ul>
     </section>
 
-    <section class="page-content__sect slides tarifs">
+    <section class="page-content__sect page-content__sect--even slides tarifs">
       <h2 class="visually-hidden">
         Тарифы
       </h2>
@@ -287,11 +294,11 @@
     </section>
   </main>
 
-  <footer class="page-footer page-footer--index">
-    <a class="page-footer__link logo logo--footer" href="index.html">
-      <img class="logo__img logo__img--footer" src="http://placehold.it/147x40" width="147" height="40" alt="Логотип Пинк">
+  <footer class="page__footer page__footer--index page-footer">
+    <a class="page-footer__item page-footer__logo">
+      <img src="img/logo-pink-blue-mobile.svg" width="147" height="41" alt="Логотип Пинк">
     </a>
-    <ul class="page-footer__socials socials">
+    <ul class="page-footer__item page-footer__socials socials">
       <li class="socials__item">
         <a class="socials__link socials__link--tw" href="#">
           Мы в Twitter
@@ -308,9 +315,9 @@
         </a>
       </li>
     </ul>
-    <a class="page-footer__link dev" href="https://htmlacademy.ru/intensive/adaptive">
+    <a class="page-footer__item dev" href="https://htmlacademy.ru/intensive/adaptive">
       Разработано
-      <img class="dev__img" src="img/htmlacademy.svg" width="27" height="34" alt="Логотип HTML Academy">
+      <img class="dev__img" src="img/logo-htmlacademy.svg" width="27" height="34" alt="Логотип HTML Academy">
     </a>
   </footer>
 </body>

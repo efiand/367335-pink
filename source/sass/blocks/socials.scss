@@ -1,0 +1,28 @@
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+  list-style: none;
+}
+
+.socials__item {
+  margin: 0 6px;
+}
+
+.socials__link {
+  padding: 10px;
+  color: $pink;
+  border: solid 3px #e9ebec;
+  border-radius: 50%;
+
+  &:hover,
+  &:focus {
+    border-color: $asphalt;
+    outline: none;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
