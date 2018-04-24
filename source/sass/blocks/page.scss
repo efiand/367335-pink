@@ -7,7 +7,21 @@
 }
 
 .page__footer {
-  &--index {
-    display: none;
+  @media ($mobile) {
+    &--index {
+      display: none;
+    }
+  }
+}
+
+.page__desktop {
+  display: none;
+
+  @media ($desktop) {
+    display: block;
+
+    &--inline {
+      display: inline;
+    }
   }
 }

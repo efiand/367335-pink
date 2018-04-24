@@ -16,4 +16,29 @@
     border: solid 3px;
     border-radius: 30px;
   }
+
+  &--post {
+    padding: 17px;
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #ffffff;
+    background-color: #2aab6d;
+    border-radius: 2px;
+
+    &:hover,
+    &:focus {
+      background-color: #1c9b5e;
+    }
+
+    &:active {
+      color: rgba(255, 255, 255, 0.3);
+    }
+
+    &:disabled {
+      background-color: #e5e5e5;
+    }
+  }
 }
+

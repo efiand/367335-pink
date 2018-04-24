@@ -1,6 +1,19 @@
 .add {
-  padding: 20px 0 30px;
+  padding: 20px calc(50% - 330px) 40px;
   background-color: #f2f2f2;
+
+  @media ($tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 50px;
+  }
+
+  @media ($desktop) {
+    width: 940px;
+    margin: 0 auto;
+    padding: 60px 0;
+
+  }
 }
 
 .add__img {
@@ -15,13 +28,41 @@
   background-repeat: no-repeat;
   background-position: center top;
   cursor: pointer;
+
+  @media ($tablet) {
+    height: 400px;
+    margin: 0 45px 0 20px;
+  }
+
+  @media ($desktop) {
+    margin: 0 80px;
+  }
+}
+
+.add__submit {
+  width: calc(100% - 40px);
+  margin-top: 100px;
+
+  @media ($tablet) {
+    margin-top: auto;
+  }
+
+  @media ($desktop) {
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% - 60px);
+  }
 }
 
 .add__btn {
-  width: calc(100% - 40px);
-  margin: 11px 20px;
+  width: 100%;
+  margin: 11px 0;
   color: $pink;
   border-color: $pink;
+
+  @media($desktop) {
+    width: 200px;
+  }
 
   &:hover,
   &:focus {

@@ -1,11 +1,36 @@
 .page-content__descr {
-  margin: 0;
-  padding: 48px 40px;
+  margin: 20px;
+  padding: 20px;
   line-height: 30px;
   text-align: center;
 
+  @media ($tablet) {
+    font-size: 18px;
+  }
+
+  &--photo {
+    @media ($tablet) {
+      width: 600px;
+      margin: 50px auto 30px;
+    }
+
+    @media ($desktop) {
+      margin: 90px auto;
+    }
+  }
+
   &--post {
-    padding-bottom: 2px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+
+    @media ($tablet) {
+      margin: 60px 60px 20px;
+    }
+
+    @media ($desktop) {
+      width: 760px;
+      margin: 60px auto 40px;
+    }
   }
 }
 
@@ -22,20 +47,49 @@
       height: 32px;
       background-image: linear-gradient(to right bottom, #ffffff 50%, #f2f2f2 50%);
       border-bottom: solid 12px #f2f2f2;
+
+      @media ($tablet) {
+        height: 50px;
+      }
+
+      @media ($desktop) {
+        height: 100px;
+      }
     }
   }
 }
 
+.page-content__add {
+  @media ($tablet) {
+    margin-top: 20px;
+  }
+
+  @media($desktop) {
+    margin-top: 50px;
+  }
+}
+
 .page-content__lead {
-  margin: 30px;
+  margin: 0 0 30px;
   font-weight: 300;
   font-size: 24px;
   line-height: 1.2;
   text-align: center;
+
+  @media ($tablet) {
+    margin: 0;
+    font-size: 40px;
+  }
+
+  @media ($desktop) {
+    font-size: 50px;
+  }
 }
 
-.page-content__nomob {
-  display: none;
+.page-content__descr-add {
+  @media ($mobile) {
+    display: none;
+  }
 }
 
 .page-content__em {

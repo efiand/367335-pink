@@ -3,12 +3,27 @@
   font-size: 12px;
   text-transform: uppercase;
   color: $pink;
+
+  @media ($tablet) {
+    justify-content: space-between;
+  }
 }
 
 .like__link {
-  margin-right: 19px;
+  margin: 0 19px 0 0;
   color: inherit;
   outline: none;
+
+  @media ($tablet) {
+    order: 1;
+    margin: 0;
+  }
+
+  &--lead {
+    @media ($tablet) {
+      margin: 0 0 0 19px;
+    }
+  }
 }
 
 .like__val {

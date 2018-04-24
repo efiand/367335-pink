@@ -6,6 +6,17 @@
   margin: 0;
   padding: 0;
   list-style: none;
+
+  @media ($tablet) {
+    width: 640px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @media ($desktop) {
+    width: 960px;
+  }
 }
 
 .photos__item {
@@ -13,26 +24,71 @@
   padding: 0 20px 25px;
   background-color: #f2f2f2;
 
-  &--lead {
-    position: relative;
-    margin-top: 0;
-
-    &::before {
-      content: "Панорама дня";
-      position: absolute;
-      top: 0;
-      right: 20px;
-      z-index: 1;
-      padding: 6px 21px;
-      font-size: 12px;
-      text-transform: uppercase;
-      color: #ffffff;
-      background-color: $pink;
-    }
+  @media ($tablet) {
+    display: flex;
+    flex-direction: column;
+    width: 260px;
+    margin: 0 10px 20px;
   }
 
   &:last-child {
-    margin-bottom: 0;
+    @media ($mobile) {
+      margin-bottom: 0;
+    }
+  }
+
+  &--lead {
+    position: relative;
+    margin-top: 0;
+    padding-top: 157px;
+
+    @media ($tablet) {
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 620px;
+      padding-top: 515px;
+    }
+
+    @media ($desktop) {
+      width: 100%;
+    }
+  }
+
+  &--lead::before {
+    content: "Панорама дня";
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    padding: 6px 21px;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #ffffff;
+    background-color: $pink;
+
+    @media ($tablet) {
+      top: 57px;
+    }
+  }
+}
+
+.photos__lead {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  width: 320px;
+  height: 137px;
+  overflow: hidden;
+  transform: translateX(-50%);
+
+  @media ($tablet) {
+    width: 660px;
+    height: 509px;
+  }
+
+  @media ($desktop) {
+    top: -14px;
   }
 }
 
@@ -40,11 +96,22 @@
   position: relative;
   left: 50%;
   transform: translateX(-50%);
+
+  &--lead {
+    top: 50%;
+    width: 100%;
+    height: auto;
+    transform: translate(-50%, -50%);
+  }
 }
 
 .photos__title {
   margin: 12px 0 0;
   font-weight: 700;
+
+  @media ($desktop) {
+    margin-top: 24px;
+  }
 }
 
 .photos__time {
@@ -55,8 +122,28 @@
 
 .photos__descr {
   margin: 0;
+
+  @media ($tablet) {
+    min-height: 48px;
+    margin-bottom: 10px;
+  }
+
+  @media ($desktop) {
+    min-height: auto;
+  }
+
+  &--lead {
+    @media ($tablet) {
+      order: 1;
+      margin-bottom: 0;
+    }
+  }
 }
 
 .photos__like {
   margin-top: 12px;
+
+  @media ($tablet) {
+    margin-top: auto;
+  }
 }

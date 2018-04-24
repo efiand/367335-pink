@@ -1,14 +1,25 @@
 .page-footer {
   padding: 40px;
+
+  @media ($tablet) {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .page-footer__item {
   display: table;
+  box-sizing: border-box;
   margin-right: auto;
   margin-left: auto;
+
+  @media ($tablet) {
+    width: 200px;
+  }
 }
 
 .page-footer__logo {
+  margin: 0 auto;
   outline: none;
 
   &[href]:active {
@@ -18,4 +29,8 @@
 
 .page-footer__socials {
   margin: 40px 0;
+
+  @media ($tablet) {
+    margin: 0;
+  }
 }

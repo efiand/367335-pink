@@ -2,6 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Пинк</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -9,7 +10,7 @@
   <header class="page__header page-header">
     <nav class="page-header__nav nav nav--off">
       <a class="nav__logo">
-        <img src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Логотип Пинк">
+        <img class="nav__logo-img" src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Логотип Пинк">
       </a>
       <button class="nav__switch nav__switch--off btn" type="button">
         Показать/скрыть меню
@@ -40,13 +41,13 @@
     <h1 class="visually-hidden">
       Пинк
     </h1>
-    <p class="page-header__title visually-hidden">Взгляните на жизнь иначе!</p>
 
     <section class="page-header__download download">
       <h2 class="visually-hidden">
         Скачать
       </h2>
-      <a class="download__main btn btn--main" href="https://www.apple.com/itunes/">
+      <p class="page-header__title page-header__title--index">Взгляните на жизнь иначе!</p>
+      <a class="download__mainlink btn btn--main" href="https://www.apple.com/itunes/">
         Скачать приложение
       </a>
       <ul class="download__list">
@@ -81,7 +82,8 @@
         Устали от серости мегаполиса?
       </p>
       <p class="page-content__lead">
-        Нам есть, что вам предложить!
+        Нам есть, что вам<br>
+        предложить!
       </p>
     </section>
 
@@ -103,7 +105,7 @@
             Меняет мир вокруг
           </p>
           <p class="advantages__descr">
-            Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект
+            Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект
           </p>
         </li>
         <li class="advantages__item">
@@ -117,21 +119,39 @@
       </ul>
     </section>
 
+    <section class="page-content__sect effect">
+      <h2 class="visually-hidden">
+        Эффект
+      </h2>
+      <p class="effect__lead">
+        Эффект на 24 часа!
+      </p>
+      <p class="effect__descr">
+        Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!
+      </p>
+      <a class="effect__link" href="#">
+        Узнать больше об исследовании
+      </a>
+    </section>
+
     <section class="page-content__sect slides reviews">
       <h2 class="visually-hidden">
         Отзывы
       </h2>
       <ul class="slides__list reviews__list">
         <li class="slides__item reviews__item">
-          <p class="reviews__name">
+          <p class="reviews__author">
             Николай Петров
+          </p>
+          <p class="reviews__author-about">
+            25 лет, водитель трамвая
           </p>
           <p class="reviews__text">
             «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
           </p>
         </li>
         <li class="slides__item reviews__item">
-          <p class="reviews__name">
+          <p class="reviews__author">
             Иван Пичугин
           </p>
           <p class="reviews__text">
@@ -139,7 +159,7 @@
           </p>
         </li>
         <li class="slides__item reviews__item">
-          <p class="reviews__name">
+          <p class="reviews__author">
             Лёха Фас
           </p>
           <p class="reviews__text">
@@ -164,6 +184,8 @@
           </button>
         </li>
       </ul>
+      <button class="reviews__nav reviews__nav--prev btn" type="button">Предыдущий слайд</button>
+      <button class="reviews__nav reviews__nav--next btn" type="button">Следующий слайд</button>
     </section>
 
     <section class="page-content__sect page-content__sect--even slides tarifs">
@@ -244,20 +266,20 @@
         </tr>
       </table>
 
-      <ul class="slides__togglers">
+      <ul class="slides__togglers tarifs__togglers">
         <li class="slides__toggler">
           <button class="slides__btn tarifs__btn btn" type="button">
-            Отзыв 1
+            Тариф 1
           </button>
         </li>
         <li class="slides__toggler">
           <button class="slides__btn tarifs__btn btn" type="button">
-            Отзыв 2
+            Тариф 2
           </button>
         </li>
         <li class="slides__toggler">
           <button class="slides__btn tarifs__btn btn" type="button">
-            Отзыв 3
+            Тариф 3
           </button>
         </li>
       </ul>
@@ -268,36 +290,45 @@
         Контакты
       </h2>
       <p class="page-content__lead">
-        Остались вопросы? Свяжитесь с нами!
+        Остались вопросы?<br>
+        Свяжитесь с нами!
       </p>
-      <dl class="contacts__list">
-        <dt class="contacts__item">
-          Звоните:
-        </dt>
-        <dd class="contacts__descr">
-          <a class="contacts__link" href="tel:+78125556666">+7 (812) 555-66-66</a>
-        </dd>
-        <dt class="contacts__item">
-          Пишите:
-        </dt>
-        <dd class="contacts__descr">
-          <a class="contacts__link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-        </dd>
-        <dt class="contacts__item">
-          Приезжайте в гости:
-        </dt>
-        <dd class="contacts__descr">
-          ул. Большая Конюшенная, 19/8
-        </dd>
-      </dl>
+      <ul class="contacts__list">
+        <li class="contacts__item">
+          <p class="contacts__param">
+            Звоните:
+          </p>
+          <p class="contacts__val">
+            <a class="contacts__link" href="tel:+78125556666">+7 (812) 555-66-66</a>
+          </p>
+        </li>
+        <li class="contacts__item">
+          <p class="contacts__param">
+            Пишите:
+          </p>
+          <p class="contacts__val">
+            <a class="contacts__link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+          </p>
+        </li>
+        <li class="contacts__item contacts__item--address">
+          <p class="contacts__param">
+            Приезжайте в гости:
+          </p>
+          <p class="contacts__val">
+            ул. Большая Конюшенная, 19/8
+          </p>
+        </li>
+      </ul>
       <div class="contacts__map" id="map"></div>
     </section>
   </main>
 
   <footer class="page__footer page__footer--index page-footer">
-    <a class="page-footer__item page-footer__logo">
-      <img src="img/logo-pink-blue-mobile.svg" width="147" height="41" alt="Логотип Пинк">
-    </a>
+    <p class="page-footer__item page-footer__logo">
+      <a>
+        <img src="img/logo-pink-blue-mobile.svg" width="147" height="41" alt="Логотип Пинк">
+      </a>
+    </p>
     <ul class="page-footer__item page-footer__socials socials">
       <li class="socials__item">
         <a class="socials__link socials__link--tw" href="#">

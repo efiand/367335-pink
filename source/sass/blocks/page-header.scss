@@ -4,6 +4,14 @@
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: center top;
+
+  @media (min-width: 321px) {
+    background-image: url("../img/bg-back-tablet@1x.jpg");
+  }
+
+  @media ($tablet) {
+    margin-bottom: 30px;
+  }
 }
 
 .page-header__title {
@@ -11,6 +19,41 @@
   padding: 32px 60px 82px;
   font-weight: 300;
   font-size: 24px;
-  line-height: auto;
+  line-height: 1.2;
   text-align: center;
+
+  @media ($tablet) {
+    min-height: 170px;
+    padding: 80px 60px;
+    font-size: 50px;
+  }
+
+  @media ($desktop) {
+    width: 940px;
+    margin: 0 auto;
+  }
+
+  &--index {
+    padding: 0 60px 30px;
+    font-size: 40px;
+
+    @media ($mobile) {
+      display: none;
+    }
+
+    @media ($desktop) {
+      width: 260px;
+      margin: 0;
+      padding: 0 20px 60px;
+      font-size: 50px;
+    }
+  }
+
+  &--photo {
+    @media ($tablet) {
+      width: 360px;
+      margin: 0 auto;
+      padding: 80px;
+    }
+  }
 }

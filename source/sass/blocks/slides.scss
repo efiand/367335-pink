@@ -5,4 +5,8 @@
   margin: 34px 0 41px;
   padding: 0;
   list-style: none;
+
+  @media ($desktop) {
+    display: none;
+  }
 }
