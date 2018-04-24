@@ -12,7 +12,6 @@
     width: 940px;
     margin: 0 auto;
     padding: 60px 0;
-
   }
 }
 
@@ -60,7 +59,7 @@
   color: $pink;
   border-color: $pink;
 
-  @media($desktop) {
+  @media ($desktop) {
     width: 200px;
   }
 
