@@ -3,6 +3,10 @@
 }
 
 .tarifs__opts {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 834px;
   margin: 54px auto 0;
   table-layout: fixed;
   line-height: 30px;
@@ -10,9 +14,11 @@
   border-collapse: collapse;
 
   @media ($tablet) {
-    width: 620px;
+    position: static;
+    width: calc(100% - 40px);
     margin: 40px auto;
     text-transform: none;
+    transform: none;
   }
 
   @media ($desktop) {
@@ -22,7 +28,7 @@
 }
 
 .tarifs__title {
-  width: 155px;
+  width: 258px;
   padding: 10px;
   text-transform: uppercase;
   color: #ffffff;
@@ -31,11 +37,10 @@
   border-top: none;
 
   @media ($tablet) {
-    width: 135px;
+    width: auto;
   }
 
   @media ($desktop) {
-    width: 213px;
     padding: 15px 10px;
   }
 
@@ -84,32 +89,31 @@
 }
 
 .tarifs__key {
-  width: 153px;
-  padding: 17px 15px;
+  position: absolute;
+  left: 279px;
+  width: 160px;
+  padding: 17px 25px;
   text-transform: uppercase;
   text-align: left;
   background-color: #ffffff;
   border: solid 2px #e5e5e5;
+  border-right-width: 0;
+  transform: translateY(-1px);
 
   @media ($tablet) {
-    width: 125px;
+    position: static;
+    width: auto;
     text-transform: none;
-  }
-
-  @media ($desktop) {
-    width: 190px;
+    border-right-width: 2px;
+    transform: none;
   }
 }
 
 .tarifs__val {
-  width: 153px;
   padding: 17px 15px;
+  text-align: right;
   background-color: #ffffff;
   border: solid 2px #e5e5e5;
-
-  @media ($tablet) {
-    width: 125px;
-  }
 }
 
 .tarifs__togglers {
