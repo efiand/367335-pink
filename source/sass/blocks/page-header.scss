@@ -5,12 +5,9 @@
   background-repeat: no-repeat;
   background-position: center top;
 
-  @media (min-width: 321px) {
-    background-image: url("../img/bg-back-tablet@1x.jpg");
-  }
-
   @media ($tablet) {
     margin-bottom: 30px;
+    background-image: url("../img/bg-back-tablet@1x.jpg");
   }
 }
 

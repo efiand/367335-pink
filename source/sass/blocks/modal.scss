@@ -3,7 +3,7 @@
   text-align: center;
   box-shadow: 0 7px 15px 0 rgba(0, 0, 0, 0.15);
 
-  @media (min-width: 500px) {
+  @media ($tablet) {
     width: 460px;
     margin: 0 auto;
   }
@@ -31,7 +31,7 @@
   color: #000000;
   background-color: #ffffff;
 
-  @media (min-width: 500px) {
+  @media ($tablet) {
     padding: 40px 100px 25px;
     font-size: 30px;
     line-height: 40px;
@@ -43,7 +43,7 @@
   padding: 0 20px 35px;
   background-color: #ffffff;
 
-  @media (min-width: 500px) {
+  @media ($tablet) {
     padding: 0 75px 35px;
     font-size: 18px;
   }
@@ -53,7 +53,7 @@
   width: calc(100% - 40px);
   margin: 0 20px;
 
-  @media (min-width: 500px) {
+  @media ($tablet) {
     width: calc(100% - 160px);
     margin: 0 80px;
   }
