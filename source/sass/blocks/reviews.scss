@@ -82,6 +82,11 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  display: none;
+
+  @media ($desktop) {
+    display: block;
+  }
 
   &--prev {
     left: 0;
