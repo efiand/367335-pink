@@ -9,10 +9,10 @@
   &::after {
     content: "";
     display: block;
-    height: 276px;
+    height: 287px;
     background-image: url("../img/iphone-screen-mobile@1x.png");
     background-repeat: no-repeat;
-    background-position: center bottom -44px;
+    background-position: center bottom -43px;
 
     @media ($tablet) {
       position: absolute;
@@ -32,7 +32,7 @@
 }
 
 .advantages__list {
-  margin: 0;
+  margin: 37px 0 0;
   padding: 0;
   list-style: none;
   text-align: center;
@@ -52,8 +52,7 @@
 }
 
 .advantages__item {
-  margin: 0 20px;
-  padding-bottom: 40px;
+  margin: 0 20px 31px;
 
   @media ($desktop) {
     position: relative;
@@ -96,7 +95,7 @@
 }
 
 .advantages__descr {
-  margin: 16px 0 0;
+  margin: 12px 0 0;
 
   @media ($desktop) {
     margin-top: 30px;

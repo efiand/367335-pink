@@ -1,6 +1,6 @@
 .page-content__descr {
   margin: 20px;
-  padding: 20px;
+  padding: 20px 0;
   line-height: 30px;
   text-align: center;
 
@@ -35,27 +35,31 @@
 }
 
 .page-content__sect {
-  padding: 20px;
+  padding: 20px 20px 0;
 
   &--even {
     padding: 0 0 6px;
     background-color: #f2f2f2;
+  }
 
-    &::before {
-      content: "";
-      display: block;
-      height: 32px;
-      background-image: linear-gradient(to right bottom, #ffffff 50%, #f2f2f2 50%);
-      border-bottom: solid 12px #f2f2f2;
+  &--even::before {
+    content: "";
+    display: block;
+    height: 32px;
+    background-image: linear-gradient(to right bottom, #ffffff 50%, #f2f2f2 50%);
+    border-bottom: solid 12px #f2f2f2;
 
-      @media ($tablet) {
-        height: 50px;
-      }
-
-      @media ($desktop) {
-        height: 100px;
-      }
+    @media ($tablet) {
+      height: 50px;
     }
+
+    @media ($desktop) {
+      height: 100px;
+    }
+  }
+
+  &--index {
+    padding-bottom: 4px;
   }
 }
 

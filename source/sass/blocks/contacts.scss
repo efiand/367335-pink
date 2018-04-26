@@ -1,5 +1,5 @@
 .contacts {
-  padding: 50px 0 0;
+  padding: 43px 0 0;
   line-height: 1.2;
   text-align: center;
 }
@@ -23,6 +23,10 @@
 }
 
 .contacts__item {
+  &:first-child {
+    transform: translateY(6px);
+  }
+
   @media ($tablet) {
     width: 50%;
   }
@@ -82,7 +86,7 @@
 
 .contacts__map {
   position: relative;
-  height: 200px;
+  height: 198px;
   background-image: url("../img/bg-map-mobile@1x.png");
   background-repeat: no-repeat;
   background-position: center bottom;
@@ -98,8 +102,8 @@
     top: 0;
     left: center;
     border: solid 160px transparent;
-    border-top: solid 40px #ffffff;
-    transform: translateX(-50%);
+    border-top: solid 32px #ffffff;
+    transform: translate(-50%, -1px);
 
     @media ($tablet) {
       border: solid 330px transparent;
