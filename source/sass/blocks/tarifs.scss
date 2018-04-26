@@ -32,14 +32,24 @@
 }
 
 .tarifs__title {
-  width: 257px;
-  padding: 16px 10px;
+  width: 233px;
+  padding: 16px 22px;
   text-transform: uppercase;
   color: #ffffff;
   background-color: $asphalt;
   border: solid 2px #e5e5e5;
   border-top: none;
   border-bottom: none;
+
+  @media ($mobile) {
+    &:nth-of-type(2) {
+      text-align: right;
+    }
+
+    &:last-of-type {
+      text-align: left;
+    }
+  }
 
   @media ($tablet) {
     width: auto;
@@ -128,6 +138,10 @@
   background-color: #ffffff;
   border: solid 2px #e5e5e5;
   border-top: none;
+
+  &:last-child {
+    text-align: left;
+  }
 }
 
 .tarifs__togglers {
