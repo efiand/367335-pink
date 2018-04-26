@@ -5,8 +5,9 @@
   justify-content: center;
   flex-grow: 1;
   margin: 0;
-  padding: 0;
+  padding: 0 0 75px;
   list-style: none;
+  border-bottom: solid 1px #dddfe0;
 
   @media ($tablet) {
     flex-direction: column;
@@ -48,12 +49,10 @@
   position: absolute;
   left: 0;
   display: none;
-  width: calc(100% - 40px);
+  width: calc(100% - 80px);
   height: 14px;
-  margin: 33px 18px 0;
-  padding-bottom: 28px;
+  margin: 33px 38px 0;
   background-image: linear-gradient(transparent 6px, $asphalt 6px, $asphalt 8px, transparent 8px);
-  border-bottom: solid 1px #dddfe0;
 
   .edit__btn--active + & {
     display: block;
@@ -72,6 +71,8 @@
   top: 0;
   width: 14px;
   height: 14px;
+  padding-right: 0;
+  padding-left: 0;
   overflow: hidden;
   text-indent: 100px;
   white-space: nowrap;
@@ -80,7 +81,11 @@
   border-radius: 50%;
 
   &--crop {
-    left: 24.65%;
+    left: 80.25%;
+
+    @media ($tablet) {
+      left: 24.65%;
+    }
   }
 
   &--fill {

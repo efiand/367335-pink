@@ -9,6 +9,8 @@
   }
 
   &--photo {
+    margin: 25px 35px 29px;
+
     @media ($tablet) {
       width: 600px;
       margin: 50px auto 30px;
@@ -64,6 +66,8 @@
 }
 
 .page-content__add {
+  margin-top: 21px;
+
   @media ($tablet) {
     margin-top: 20px;
   }

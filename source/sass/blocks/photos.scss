@@ -20,8 +20,9 @@
 }
 
 .photos__item {
-  margin: 20px;
-  padding: 0 20px 25px;
+  width: 244px;
+  margin: 20px auto;
+  padding: 0 18px 18px;
   background-color: #f2f2f2;
 
   @media ($tablet) {
@@ -31,16 +32,15 @@
     margin: 0 10px 20px;
   }
 
-  &:last-child {
-    @media ($mobile) {
-      margin-bottom: 0;
-    }
+  &:nth-child(n+3) {
+    padding-bottom: 20px;
   }
 
   &--lead {
     position: relative;
     margin-top: 0;
-    padding-top: 157px;
+    padding-top: 143px;
+    padding-bottom: 20px;
 
     @media ($tablet) {
       flex-wrap: wrap;
@@ -61,7 +61,8 @@
     top: 0;
     right: 0;
     z-index: 1;
-    padding: 6px 21px;
+    padding: 6px 20px;
+    font-weight: 700;
     font-size: 12px;
     text-transform: uppercase;
     color: #ffffff;
@@ -75,10 +76,11 @@
 
 .photos__lead {
   position: absolute;
-  top: -20px;
+  top: 0;
   left: 50%;
   width: 320px;
   height: 137px;
+  margin: 0;
   overflow: hidden;
   transform: translateX(-50%);
 
@@ -141,7 +143,7 @@
 }
 
 .photos__like {
-  margin-top: 12px;
+  margin-top: 9px;
 
   @media ($tablet) {
     margin-top: auto;

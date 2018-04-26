@@ -48,6 +48,8 @@
   }
 
   &--photo {
+    padding-bottom: 83px;
+
     @media ($tablet) {
       width: 360px;
       margin: 0 auto;

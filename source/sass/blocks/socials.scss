@@ -11,7 +11,13 @@
 }
 
 .socials__link {
+  display: block;
+  width: 25px;
+  height: 25px;
   padding: 10px;
+  overflow: hidden;
+  text-indent: 200px;
+  white-space: nowrap;
   color: $pink;
   border: solid 3px #e9ebec;
   border-radius: 50%;

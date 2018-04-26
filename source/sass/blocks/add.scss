@@ -1,5 +1,5 @@
 .add {
-  padding: 20px calc(50% - 330px) 40px;
+  padding: 20px 0 29px;
   background-color: #f2f2f2;
 
   @media ($tablet) {
@@ -39,8 +39,8 @@
 }
 
 .add__submit {
-  width: calc(100% - 40px);
-  margin-top: 100px;
+  width: calc(100% - 44px);
+  margin: 38px auto 0;
 
   @media ($tablet) {
     margin-top: auto;
@@ -55,7 +55,7 @@
 
 .add__btn {
   width: 100%;
-  margin: 11px 0;
+  margin: 11px 0 12px;
   color: $pink;
   border-color: $pink;
 
