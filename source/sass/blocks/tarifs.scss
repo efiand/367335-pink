@@ -1,18 +1,48 @@
+.tarifs {
+  overflow: hidden;
+}
+
 .tarifs__opts {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 834px;
   margin: 54px auto 0;
+  table-layout: fixed;
   line-height: 30px;
-  text-transform: uppercase;
   text-align: center;
   border-collapse: collapse;
+
+  @media ($tablet) {
+    position: static;
+    width: calc(100% - 40px);
+    margin: 40px auto;
+    text-transform: none;
+    transform: none;
+  }
+
+  @media ($desktop) {
+    width: 940px;
+    font-size: 18px;
+  }
 }
 
 .tarifs__title {
-  width: 153px;
-  padding: 20px;
+  width: 258px;
+  padding: 10px;
+  text-transform: uppercase;
   color: #ffffff;
   background-color: $asphalt;
   border: solid 2px #e5e5e5;
   border-top: none;
+
+  @media ($tablet) {
+    width: auto;
+  }
+
+  @media ($desktop) {
+    padding: 15px 10px;
+  }
 
   &--hit {
     position: relative;
@@ -27,7 +57,7 @@
       height: 30px;
       text-transform: uppercase;
       background-color: $pink;
-      transform: translate(18px) rotate(-45deg);
+      transform: rotate(-45deg) translate(12px, 15px);
     }
   }
 }
@@ -38,24 +68,56 @@
   margin: 0;
   font-weight: 700;
   font-size: 18px;
+
+  @media ($tablet) {
+    font-size: 16px;
+  }
 }
 
 .tarifs__price {
   margin: 7px 0 0;
   font-weight: 300;
   font-size: 24px;
+
+  @media ($tablet) {
+    font-size: 18px;
+  }
+
+  @media ($desktop) {
+    font-size: 24px;
+  }
 }
 
 .tarifs__key {
-  width: 153px;
-  padding: 17px 20px;
+  position: absolute;
+  left: 279px;
+  width: 160px;
+  padding: 17px 25px;
+  text-transform: uppercase;
   text-align: left;
+  background-color: #ffffff;
+  border: solid 2px #e5e5e5;
+  border-right-width: 0;
+  transform: translateY(-1px);
+
+  @media ($tablet) {
+    position: static;
+    width: auto;
+    text-transform: none;
+    border-right-width: 2px;
+    transform: none;
+  }
+}
+
+.tarifs__val {
+  padding: 17px 15px;
+  text-align: right;
   background-color: #ffffff;
   border: solid 2px #e5e5e5;
 }
 
-.tarifs__val {
-  padding: 17px 20px;
-  background-color: #ffffff;
-  border: solid 2px #e5e5e5;
+.tarifs__togglers {
+  @media ($tablet) {
+    display: none;
+  }
 }

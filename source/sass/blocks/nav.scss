@@ -1,9 +1,20 @@
 .nav {
+  position: relative;
+  z-index: 2;
   display: flex;
   justify-content: space-between;
-  padding: 20px 22px;
+  padding: 20px;
   text-transform: uppercase;
   background-color: inherit;
+
+  @media ($tablet) {
+    padding: 30px 20px;
+  }
+
+  @media ($desktop) {
+    align-items: center;
+    padding: 35px $contain;
+  }
 
   &--off {
     background-color: rgba(0, 0, 0, 0.3);
@@ -18,6 +29,10 @@
   }
 }
 
+.nav__logo-img {
+  display: block;
+}
+
 .nav__switch {
   width: 24px;
   height: 24px;
@@ -26,6 +41,10 @@
   white-space: nowrap;
   background-image: url("../img/icon-menu-cross.svg");
   background-repeat: no-repeat;
+
+  @media ($desktop) {
+    display: none;
+  }
 
   &--off {
     width: 50px;
@@ -51,8 +70,27 @@
   border-top: solid 1px #000000;
   list-style: none;
 
+  @media ($tablet) {
+    top: 85px;
+  }
+
+  @media ($desktop) {
+    position: static;
+    display: flex;
+    width: auto;
+    margin: 0;
+    font-weight: 400;
+    line-height: 1;
+    background-color: transparent;
+    border: none;
+  }
+
   &--off {
     display: none;
+
+    @media ($desktop) {
+      display: flex;
+    }
   }
 }
 
@@ -60,16 +98,26 @@
   padding: 0 20px;
   border-top: solid 1px rgba(255, 255, 255, 0.15);
   border-bottom: solid 1px #000000;
+
+  @media ($desktop) {
+    padding: 0 0 0 80px;
+    border: none;
+  }
 }
 
 .nav__link {
   display: inline-block;
   padding: 9px 0;
   line-height: 32px;
-  color: inherit;
+  color: #ffffff;
   background-color: inherit;
   text-decoration: none;
   vertical-align: baseline;
+
+  @media ($desktop) {
+    padding: 0;
+    text-transform: none;
+  }
 
   &[href]:hover,
   &:focus {
@@ -80,9 +128,15 @@
     color: rgba(255, 255, 255, 0.3);
   }
 
-  //&--current {
-  //  color: #ffffff;
-  //  background-image: repeating-linear-gradient($asphalt 0, $asphalt 30px, #ffffff 30px, #ffffff 32px);
-  //  background-position: 0 12px;
-  //}
+  &--current {
+    @media ($tablet) {
+      background-image: repeating-linear-gradient($asphalt 0, $asphalt 30px, #ffffff 30px, #ffffff 32px);
+      background-position: 0 12px;
+    }
+
+    @media ($desktop) {
+      background-image: repeating-linear-gradient(transparent 0, transparent 30px, #ffffff 30px, #ffffff 32px);
+      background-position: 0 30px;
+    }
+  }
 }
