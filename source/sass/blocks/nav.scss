@@ -1,16 +1,13 @@
 .nav {
-  position: absolute;
-  top: 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  width: 100%;
   padding: 21px 0 0;
   text-transform: uppercase;
   background-color: inherit;
 
   @media ($tablet) {
-    padding: 30px 20px;
+    padding: 44px 0 0;
   }
 
   @media ($desktop) {
@@ -21,6 +18,10 @@
   &--off {
     padding-bottom: 21px;
     background-color: rgba(0, 0, 0, 0.3);
+
+    @media ($tablet) {
+      padding-bottom: 42px;
+    }
   }
 }
 
@@ -73,11 +74,10 @@
   list-style: none;
 
   @media ($tablet) {
-    top: 85px;
+    margin-top: 41px;
   }
 
   @media ($desktop) {
-    position: static;
     display: flex;
     width: auto;
     margin: 0;

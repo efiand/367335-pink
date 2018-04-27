@@ -4,6 +4,8 @@
   @media ($tablet) {
     display: flex;
     justify-content: center;
+    align-items: center;
+    padding: 39px 18px 29px;
   }
 }
 
@@ -22,6 +24,11 @@
   margin: 0 auto;
   outline: none;
 
+  @media ($tablet) {
+    margin: 0 auto 0 0;
+    transform: translateY(-10px);
+  }
+
   &[href]:active {
     opacity: 0.3;
   }
@@ -31,6 +38,12 @@
   margin: 32px 0 38px;
 
   @media ($tablet) {
-    margin: 0;
+    margin: 0 auto 8px;
+  }
+}
+
+.page-footer__dev {
+  @media ($tablet) {
+    margin-right: 2px;
   }
 }

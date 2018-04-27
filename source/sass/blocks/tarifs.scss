@@ -1,8 +1,16 @@
 .tarifs {
   overflow: hidden;
 
+  @media ($tablet) {
+    padding-bottom: 43px;
+  }
+
   &::before {
     height: 24px;
+
+    @media ($tablet) {
+      height: 50px;
+    }
   }
 }
 
@@ -20,7 +28,7 @@
   @media ($tablet) {
     position: static;
     width: calc(100% - 40px);
-    margin: 40px auto;
+    margin: 25px auto;
     text-transform: none;
     transform: none;
   }
@@ -53,6 +61,7 @@
 
   @media ($tablet) {
     width: auto;
+    padding: 12px 20px;
   }
 
   @media ($desktop) {
@@ -74,7 +83,7 @@
       line-height: 1;
       text-transform: uppercase;
       background-color: $pink;
-      transform: rotate(-45deg) translate(4px, 22px);
+      transform: rotate(-45deg) translate(8px, 15px);
     }
   }
 }
@@ -97,7 +106,9 @@
   font-size: 24px;
 
   @media ($tablet) {
+    margin: 0;
     font-size: 18px;
+    line-height: 24px;
   }
 
   @media ($desktop) {
@@ -125,6 +136,7 @@
   @media ($tablet) {
     position: static;
     width: auto;
+    padding: 7px 15px 8px;
     text-transform: none;
     border-top-width: 2px;
     border-right-width: 2px;
@@ -141,6 +153,15 @@
 
   &:last-child {
     text-align: left;
+  }
+
+  @media ($tablet) {
+    padding: 7px 15px 8px;
+    text-align: center;
+
+  &:last-child {
+    text-align: center;
+  }
   }
 }
 

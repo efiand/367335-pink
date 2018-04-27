@@ -63,6 +63,10 @@
 
   &--index {
     padding-bottom: 4px;
+
+    @media ($tablet) {
+      padding-bottom: 6px;
+    }
   }
 }
 

@@ -5,6 +5,10 @@
     display: none;
   }
 
+  @media ($tablet) {
+    padding-top: 96px;
+  }
+
   @media ($desktop) {
     padding: 100px $contain 110px calc(50% - 100px);
     font-size: 18px;
@@ -27,7 +31,7 @@
 }
 
 .effect__descr {
-  margin: 0 0 20px;
+  margin: 0 10px 11px 0;
 
   @media ($desktop) {
     margin-bottom: 30px;

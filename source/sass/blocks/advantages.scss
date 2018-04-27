@@ -4,6 +4,7 @@
   @media ($tablet) {
     position: relative;
     margin-top: 40px;
+    overflow: hidden;
   }
 
   &::after {
@@ -16,8 +17,8 @@
 
     @media ($tablet) {
       position: absolute;
-      bottom: 0;
-      left: 0;
+      bottom: -1px;
+      left: calc(50% - 330px);
       z-index: 1;
       width: 100%;
       height: 482px;
@@ -38,7 +39,9 @@
   text-align: center;
 
   @media ($tablet) {
-    padding: 0 0 0 310px;
+    width: 350px;
+    margin: 12px auto 0;
+    padding: 0 0 9px 310px;
     text-align: left;
   }
 
@@ -53,6 +56,10 @@
 
 .advantages__item {
   margin: 0 20px 31px;
+
+  @media($tablet) {
+    margin-bottom: 34px;
+  }
 
   @media ($desktop) {
     position: relative;

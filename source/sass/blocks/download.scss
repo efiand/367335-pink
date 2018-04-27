@@ -6,13 +6,13 @@
 
   @media ($tablet) {
     z-index: 1;
-    margin-top: 0;
-    padding: 74px calc(100% - 320px) 100px 20px;
+    margin: 0 auto 0;
+    width: 300px;
+    padding: 74px 340px 108px 20px;
     background-color: transparent;
   }
 
   @media ($desktop) {
-    width: 300px;
     margin: 0 auto 40px;
     padding: 74px 640px 100px 10px;
   }
@@ -97,6 +97,7 @@
   text-align: center;
 
   @media ($tablet) {
+    margin-top: 60px;
     font-size: 18px;
   }
 }

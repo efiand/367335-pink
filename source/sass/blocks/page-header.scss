@@ -14,11 +14,21 @@
 
   &--index {
     margin-top: 259px;
+
+    @media ($tablet) {
+      margin-top: 255px;
+    }
   }
 
   &--off {
     margin-top: 0;
   }
+}
+
+.page-header__nav {
+  position: absolute;
+  top: 0;
+  width: 100%;
 }
 
 .page-header__title {
@@ -47,6 +57,11 @@
 
     @media ($mobile) {
       display: none;
+    }
+
+    @media ($tablet) {
+      padding-top: 63px;
+      padding-bottom: 5px;
     }
 
     @media ($desktop) {
