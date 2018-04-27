@@ -55,6 +55,7 @@
 
     @media ($tablet) {
       order: -3;
+      padding-bottom: 6px;
     }
 
     @media ($desktop) {
@@ -69,6 +70,11 @@
 
     @media ($tablet) {
       order: -2;
+      margin-top: 0;
+      margin-bottom: 37px;
+      padding-top: 3px;
+      padding-bottom: 35px;
+      padding-left: 58px;
     }
 
     @media ($desktop) {
@@ -86,7 +92,8 @@
 
     @media ($tablet) {
       order: -1;
-      padding-bottom: 40px;
+      padding: 30px 58px 4px;
+      margin-bottom: 37px;
     }
 
     @media ($desktop) {
@@ -96,6 +103,17 @@
 
   &--adv {
     padding: 52px 20px 18px;
+
+    @media ($tablet) {
+      margin-bottom: 37px;
+      padding: 1px 58px 24px;
+    }
+  }
+
+  &--descr {
+    @media ($tablet) {
+      padding: 23px 58px 11px;
+    }
   }
 }
 
@@ -110,7 +128,7 @@
 
   @media ($tablet) {
     top: 0;
-    padding: 0 30px;
+    padding: 0 25px;
   }
 
   &--contacts {
@@ -118,6 +136,7 @@
 
     @media ($tablet) {
       display: block;
+      padding: 0 31px;
     }
   }
 
@@ -126,6 +145,13 @@
 
     @media ($tablet) {
       display: block;
+      padding: 0 38px;
+    }
+  }
+
+  &--adv {
+    @media ($tablet) {
+      padding: 0 32px;
     }
   }
 }
@@ -150,6 +176,7 @@
   @media ($tablet) {
     display: flex;
     align-items: center;
+    padding-bottom: 52px;
   }
 
   @media ($desktop) {
@@ -159,6 +186,8 @@
   &--contacts {
     @media ($tablet) {
       flex-direction: column-reverse;
+      padding-top: 7px;
+      padding-bottom: 12px;
     }
 
     @media ($desktop) {
@@ -176,7 +205,7 @@
   color: $pink;
 
   @media ($tablet) {
-    padding: 0 23px 0 0;
+    padding: 0 18px 0 0;
   }
 
   &--contacts {
@@ -197,12 +226,11 @@
   }
 }
 
-
 .post__field {
   display: block;
   box-sizing: border-box;
   width: 100%;
-  padding: 13px 20px 16px;
+  padding: 14px 20px 15px;
   font: inherit;
   font-size: 18px;
   color: inherit;
@@ -222,6 +250,7 @@
     resize: none;
 
     @media ($tablet) {
+    min-height: 193px;
       margin-bottom: 40px;
     }
 
@@ -256,6 +285,10 @@
   padding: 5px 0 5px 69px;
   vertical-align: baseline;
   cursor: pointer;
+
+  @media ($tablet) {
+    padding-left: 59px;
+  }
 
   &::before {
     content: "";
@@ -332,7 +365,7 @@
 
   @media ($tablet) {
     width: 300px;
-    margin: 50px 0 50px 20px;
+    margin: 47px 0 50px 20px;
   }
 
   @media ($desktop) {
