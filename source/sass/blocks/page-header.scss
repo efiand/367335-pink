@@ -1,4 +1,6 @@
 .page-header {
+  margin-top: 260px;
+  padding-top: 66px;
   color: #ffffff;
   background-color: $asphalt;
   background-image: url("../img/bg-back-mobile@1x.jpg");
@@ -9,11 +11,19 @@
     margin-bottom: 30px;
     background-image: url("../img/bg-back-tablet@1x.jpg");
   }
+
+  &--index {
+    margin-top: 259px;
+  }
+
+  &--off {
+    margin-top: 0;
+  }
 }
 
 .page-header__title {
   margin: 0;
-  padding: 32px 60px 82px;
+  padding: 32px 40px 54px;
   font-weight: 300;
   font-size: 24px;
   line-height: 1.2;
@@ -48,7 +58,7 @@
   }
 
   &--photo {
-    padding-bottom: 83px;
+    padding-bottom: 82px;
 
     @media ($tablet) {
       width: 360px;

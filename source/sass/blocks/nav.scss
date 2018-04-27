@@ -1,9 +1,11 @@
 .nav {
-  position: relative;
-  z-index: 2;
+  position: absolute;
+  top: 0;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  padding: 21px 20px 24px;
+  width: 100%;
+  padding: 21px 0 0;
   text-transform: uppercase;
   background-color: inherit;
 
@@ -23,6 +25,7 @@
 }
 
 .nav__logo {
+  margin-left: 20px;
   outline: none;
 
   &[href]:active {
@@ -37,6 +40,7 @@
 .nav__switch {
   width: 24px;
   height: 24px;
+  margin-right: 20px;
   overflow: hidden;
   text-indent: 100px;
   white-space: nowrap;
@@ -58,11 +62,8 @@
 }
 
 .nav__list {
-  position: absolute;
-  top: 69px;
-  left: 0;
   width: 100%;
-  margin: 0;
+  margin: 24px 0 0;
   padding: 0;
   font-weight: 700;
   font-size: 18px;
