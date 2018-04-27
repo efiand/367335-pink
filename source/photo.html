@@ -7,15 +7,15 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="page">
-  <header class="page__header page-header page-header--off">
-    <nav class="page-header__nav nav nav--off">
+  <header class="page__header page-header">
+    <nav class="page-header__nav nav">
       <a class="nav__logo" href="index.html">
         <img class="nav__logo-img" src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Логотип Пинк">
       </a>
-      <button class="nav__switch nav__switch--off btn" type="button">
+      <button class="nav__switch btn" type="button">
         Показать/скрыть меню
       </button>
-      <ul class="nav__list nav__list--off">
+      <ul class="nav__list">
         <li class="nav__item">
           <a class="nav__link" href="index.html">
             Главная
@@ -58,13 +58,13 @@
           <p class="photos__lead">
             <img class="photos__img photos__img--lead" src="img/panorama-tablet@1x.jpg" width="660" height="509" alt="Фотография">
           </p>
-          <p class="photos__title">
+          <p class="photos__title photos__title--lead">
             Анна <span class="photos__time">(5 минут назад)</span>
           </p>
           <p class="photos__descr photos__descr--lead">
             Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!
           </p>
-          <div class="photos__like like">
+          <div class="photos__like like like--lead">
             <a class="like__link like__link--lead" href="#">
               Поставить лайк
             </a>
@@ -182,7 +182,7 @@
       Выкладывайте все, что накопилось в телефоне!
     </p>
 
-    <form class="page-content__sect page-content__add add">
+    <form class="page-content__sect page-content__sect--add add">
       <input class="visually-hidden" id="img" type="file" name="file">
       <label class="add__img" for="img">Выберите файл</label>
       <ul class="add__edit edit">

@@ -6,6 +6,11 @@
 
   @media ($tablet) {
     justify-content: space-between;
+    padding-right: 4px;
+
+    &--lead {
+      padding-right: 0;
+    }
   }
 }
 

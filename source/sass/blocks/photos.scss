@@ -9,7 +9,7 @@
 
   @media ($tablet) {
     width: 640px;
-    margin: 0 auto;
+    margin: 0 auto 25px;
     display: flex;
     flex-wrap: wrap;
   }
@@ -25,15 +25,18 @@
   padding: 0 18px 18px;
   background-color: #f2f2f2;
 
+  @media ($mobile) {
+    &:nth-child(n+3) {
+      padding-bottom: 20px;
+    }
+  }
+
   @media ($tablet) {
     display: flex;
     flex-direction: column;
-    width: 260px;
+    width: 264px;
     margin: 0 10px 20px;
-  }
-
-  &:nth-child(n+3) {
-    padding-bottom: 20px;
+    padding-bottom: 22px;
   }
 
   &--lead {
@@ -47,7 +50,9 @@
       flex-direction: row;
       justify-content: space-between;
       width: 620px;
+      margin: 0 10px 50px;
       padding-top: 515px;
+      padding-bottom: 12px;
     }
 
     @media ($desktop) {
@@ -99,6 +104,11 @@
   left: 50%;
   transform: translateX(-50%);
 
+  @media($tablet) {
+    width: 300px; // временно для PP
+    height: 300px; // временно для PP
+  }
+
   &--lead {
     top: 50%;
     width: 100%;
@@ -111,8 +121,18 @@
   margin: 12px 0 0;
   font-weight: 700;
 
+  @media ($tablet) {
+    margin: 24px 10px 0;
+  }
+
   @media ($desktop) {
     margin-top: 24px;
+  }
+
+  &--lead {
+    @media ($tablet) {
+      margin: 18px 10px 0;
+    }
   }
 }
 
@@ -126,8 +146,9 @@
   margin: 0;
 
   @media ($tablet) {
+    margin: 0 10px;
     min-height: 48px;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
   }
 
   @media ($desktop) {
@@ -137,7 +158,6 @@
   &--lead {
     @media ($tablet) {
       order: 1;
-      margin-bottom: 0;
     }
   }
 }
@@ -146,6 +166,6 @@
   margin-top: 9px;
 
   @media ($tablet) {
-    margin-top: auto;
+    margin: auto 10px 0;
   }
 }
