@@ -11,6 +11,10 @@
     @media ($tablet) {
       height: 50px;
     }
+
+    @media ($desktop) {
+      height: 85px;
+    }
   }
 }
 
@@ -35,6 +39,7 @@
 
   @media ($desktop) {
     width: 940px;
+    margin: 53px auto 52px;
     font-size: 18px;
   }
 }
@@ -65,25 +70,34 @@
   }
 
   @media ($desktop) {
-    padding: 15px 10px;
+    padding: 16px 10px;
   }
 
   &--hit {
     position: relative;
     overflow: hidden;
+  }
 
-    &::before {
-      content: "Хит";
-      position: absolute;
-      top: 0;
-      left: -50%;
-      width: 100%;
-      padding: 7px 5px 8px;
-      font-weight: 400;
-      line-height: 1;
-      text-transform: uppercase;
-      background-color: $pink;
+  &--hit::before {
+    content: "Хит";
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 100%;
+    padding: 7px 5px 8px;
+    font-weight: 400;
+    line-height: 1;
+    text-transform: uppercase;
+    background-color: $pink;
+    transform: rotate(-45deg) translate(4px, 22px);
+
+    @media ($tablet) {
       transform: rotate(-45deg) translate(8px, 15px);
+    }
+
+    @media ($desktop) {
+      font-size: 14px;
+      transform: rotate(-45deg) translate(6px, 23px);
     }
   }
 }
@@ -97,6 +111,10 @@
 
   @media ($tablet) {
     font-size: 16px;
+  }
+
+  @media ($desktop) {
+
   }
 }
 
@@ -112,6 +130,7 @@
   }
 
   @media ($desktop) {
+    margin: 5px 0 6px;
     font-size: 24px;
   }
 }
@@ -142,6 +161,10 @@
     border-right-width: 2px;
     transform: none;
   }
+
+  @media ($desktop) {
+    padding: 14px 21px 15px;
+  }
 }
 
 .tarifs__val {
@@ -159,9 +182,9 @@
     padding: 7px 15px 8px;
     text-align: center;
 
-  &:last-child {
-    text-align: center;
-  }
+    &:last-child {
+      text-align: center;
+    }
   }
 }
 

@@ -12,15 +12,29 @@
     background-image: url("../img/bg-back-tablet@1x.jpg");
   }
 
+  @media ($desktop) {
+    margin-top: 0;
+    padding-top: 0;
+  }
+
   &--index {
     margin-top: 259px;
 
     @media ($tablet) {
       margin-top: 255px;
     }
+
+    @media ($desktop) {
+      margin-top: 0;
+      margin-bottom: 47px;
+    }
   }
 
   &--off {
+    margin-top: 0;
+  }
+
+  @media ($desktop) {
     margin-top: 0;
   }
 }
@@ -29,6 +43,12 @@
   position: absolute;
   top: 0;
   width: 100%;
+
+  @media ($desktop) {
+    position: static;
+    width: 940px;
+    margin: 0 auto;
+  }
 }
 
 .page-header__title {
@@ -67,7 +87,7 @@
     @media ($desktop) {
       width: 260px;
       margin: 0;
-      padding: 0 20px 60px;
+      padding: 0 20px 52px;
       font-size: 50px;
     }
   }

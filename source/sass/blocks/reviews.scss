@@ -75,18 +75,22 @@
   }
 
   @media ($desktop) {
-    padding: 0 120px;
+    padding: 5px 120px 0;
   }
 }
 
 .reviews__nav {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
   display: none;
 
   @media ($desktop) {
+    position: absolute;
+    top: 213px;
     display: block;
+    width: 22px;
+    height: 41px;
+    overflow: hidden;
+    text-indent: 100px;
+    white-space: nowrap;
   }
 
   &--prev {

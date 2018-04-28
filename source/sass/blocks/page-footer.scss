@@ -7,6 +7,11 @@
     align-items: center;
     padding: 39px 18px 29px;
   }
+
+  @media ($desktop) {
+    width: 940px;
+    margin: 35px auto;
+  }
 }
 
 .page-footer__item {
