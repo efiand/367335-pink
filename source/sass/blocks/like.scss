@@ -12,6 +12,12 @@
       padding-right: 0;
     }
   }
+
+  @media ($desktop) {
+    &--lead {
+      padding-right: 4px;
+    }
+  }
 }
 
 .like__link {

@@ -59,9 +59,8 @@
     }
 
     @media ($desktop) {
-      align-self: flex-end;
-      width: 439px;
-      padding: 0 0 34px;
+      width: 435px;
+      padding: 52px 0 0 0;
     }
   }
 
@@ -78,11 +77,10 @@
     }
 
     @media ($desktop) {
-      width: 395px;
+      width: 391px;
+      margin-top: 20px;
       margin-left: auto;
-      padding-right: 20px;
-      padding-bottom: 40px;
-      padding-left: 20px;
+      padding: 28px 20px 39px 20px;
     }
   }
 
@@ -97,7 +95,9 @@
     }
 
     @media ($desktop) {
-      padding-bottom: 10px;
+      margin-top: 5px;
+      padding-top: 19px;
+      padding-bottom: 0;
     }
   }
 
@@ -108,11 +108,23 @@
       margin-bottom: 37px;
       padding: 1px 58px 24px;
     }
+
+    @media ($desktop) {
+      margin-top: 20px;
+      margin-bottom: 27px;
+      padding-top: 22px;
+      padding-bottom: 34px;
+    }
   }
 
   &--descr {
     @media ($tablet) {
       padding: 23px 58px 11px;
+    }
+
+    @media ($desktop) {
+      padding-top: 20px;
+      padding-bottom: 18px;
     }
   }
 }
@@ -164,7 +176,7 @@
 
     &--col {
       flex-direction: column;
-      max-height: 250px;
+      max-height: 240px;
     }
   }
 }
@@ -177,10 +189,6 @@
     display: flex;
     align-items: center;
     padding-bottom: 52px;
-  }
-
-  @media ($desktop) {
-    padding-top: 50px;
   }
 
   &--contacts {
@@ -208,10 +216,18 @@
     padding: 0 18px 0 0;
   }
 
+  @media ($desktop) {
+    padding: 0 19px 0 0;
+  }
+
   &--contacts {
     @media ($tablet) {
       align-self: flex-start;
-      margin: 10px 20px;
+      margin: 10px 20px 5px;
+    }
+
+    @media ($desktop) {
+      margin-bottom: 1px;
     }
   }
 
@@ -255,7 +271,7 @@
     }
 
     @media ($desktop) {
-      min-height: 125px;
+      min-height: 128px;
       margin-bottom: 25px;
     }
   }
@@ -276,6 +292,10 @@
 .post__item-checks {
   margin: 24px 0;
   font-size: 18px;
+
+  @media ($desktop) {
+    margin: 0;
+  }
 }
 
 .post__label {
@@ -288,6 +308,11 @@
 
   @media ($tablet) {
     padding-left: 59px;
+  }
+
+  @media ($desktop) {
+    margin: 21px 0;
+    padding-right: 56px;
   }
 
   &::before {
@@ -339,7 +364,8 @@
     padding-bottom: 0;
 
     @media ($desktop) {
-      margin-left: 40px;
+      margin-top: 18px;
+      margin-left: 54px;
     }
 
     &::before {
@@ -369,7 +395,7 @@
   }
 
   @media ($desktop) {
-    margin: 40px 0 60px;
+    margin: 35px 0 0;
   }
 }
 
@@ -386,6 +412,6 @@
 
   @media ($desktop) {
     width: auto;
-    margin: 40px 0 60px auto;
+    margin: 37px 0 0 auto;
   }
 }

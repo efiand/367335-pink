@@ -83,6 +83,11 @@
     margin: 0;
     border-bottom: none;
   }
+
+  @media ($desktop) {
+    width: 288px;
+    margin-right: 12px;
+  }
 }
 
 .edit__range-btn {
@@ -105,14 +110,26 @@
     @media ($tablet) {
       left: 72.5%;
     }
+
+    @media ($desktop) {
+      left: 24.5%;
+    }
   }
 
   &--fill {
     left: 12.5%;
+
+    @media ($desktop) {
+      left: 85.75%;
+    }
   }
 
   &--contrast {
     left: 47.5%;
+
+    @media ($desktop) {
+      left: 55.5%;
+    }
   }
 
   &:active {

@@ -12,7 +12,9 @@
 
   @media ($desktop) {
     align-items: center;
-    padding: 38px 0;
+    box-sizing: border-box;
+    padding: 38px $contain;
+    background-color: rgba(0, 0, 0, 0.3);
   }
 
   &--off {
