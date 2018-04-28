@@ -119,12 +119,12 @@
   left: 50%;
   transform: translateX(-50%);
 
-  @media($tablet) {
+  @media ($tablet) {
     width: 300px; // временно для PP
     height: 300px; // временно для PP
   }
 
-  @media($desktop) {
+  @media ($desktop) {
     height: 400px; // временно для PP
   }
 
@@ -180,7 +180,7 @@
     }
 
     @media ($desktop) {
-    min-height: auto;
+      min-height: auto;
       margin-bottom: 11px;
     }
   }
