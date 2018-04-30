@@ -5,8 +5,12 @@
     display: none;
   }
 
+  @media ($tablet) {
+    padding-top: 96px;
+  }
+
   @media ($desktop) {
-    padding: 100px $contain 110px calc(50% - 100px);
+    padding: 160px $contain 114px calc(50% - 104px);
     font-size: 18px;
     line-height: 30px;
     background-color: #f2f2f2;
@@ -21,13 +25,13 @@
   color: #000000;
 
   @media ($desktop) {
-    margin-bottom: 20px;
+    margin-bottom: 24px;
     line-height: 30px;
   }
 }
 
 .effect__descr {
-  margin: 0 0 20px;
+  margin: 0 10px 11px 0;
 
   @media ($desktop) {
     margin-bottom: 30px;

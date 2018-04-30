@@ -3,55 +3,68 @@
 }
 
 .photos__list {
+  position: relative;
   margin: 0;
   padding: 0;
   list-style: none;
 
   @media ($tablet) {
     width: 640px;
-    margin: 0 auto;
+    margin: 0 auto 25px;
     display: flex;
     flex-wrap: wrap;
   }
 
   @media ($desktop) {
-    width: 960px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 calc(50% - 480px);
+    margin-bottom: 20px;
   }
 }
 
 .photos__item {
-  margin: 20px;
-  padding: 0 20px 25px;
+  width: 244px;
+  margin: 20px auto;
+  padding: 0 18px 18px;
   background-color: #f2f2f2;
+
+  @media ($mobile) {
+    &:nth-child(n+3) {
+      padding-bottom: 20px;
+    }
+  }
 
   @media ($tablet) {
     display: flex;
     flex-direction: column;
-    width: 260px;
+    width: 264px;
     margin: 0 10px 20px;
+    padding-bottom: 22px;
   }
 
-  &:last-child {
-    @media ($mobile) {
-      margin-bottom: 0;
-    }
+  @media ($desktop) {
+    margin-top: 34px;
   }
 
   &--lead {
-    position: relative;
     margin-top: 0;
-    padding-top: 157px;
+    padding-top: 143px;
+    padding-bottom: 20px;
 
     @media ($tablet) {
       flex-wrap: wrap;
       flex-direction: row;
       justify-content: space-between;
       width: 620px;
+      margin: 0 10px 50px;
       padding-top: 515px;
+      padding-bottom: 12px;
     }
 
     @media ($desktop) {
       width: 100%;
+      margin-bottom: 16px;
     }
   }
 
@@ -59,9 +72,10 @@
     content: "Панорама дня";
     position: absolute;
     top: 0;
-    right: 0;
+    right: 20px;
     z-index: 1;
-    padding: 6px 21px;
+    padding: 6px 20px;
+    font-weight: 700;
     font-size: 12px;
     text-transform: uppercase;
     color: #ffffff;
@@ -69,16 +83,23 @@
 
     @media ($tablet) {
       top: 57px;
+      right: 10px;
+    }
+
+    @media ($desktop) {
+      top: 54px;
+      right: $contain;
     }
   }
 }
 
 .photos__lead {
   position: absolute;
-  top: -20px;
+  top: 0;
   left: 50%;
   width: 320px;
   height: 137px;
+  margin: 0;
   overflow: hidden;
   transform: translateX(-50%);
 
@@ -88,7 +109,8 @@
   }
 
   @media ($desktop) {
-    top: -14px;
+    width: 100%;
+    height: 506px;
   }
 }
 
@@ -96,6 +118,15 @@
   position: relative;
   left: 50%;
   transform: translateX(-50%);
+
+  @media ($tablet) {
+    width: 300px; // временно для PP
+    height: 300px; // временно для PP
+  }
+
+  @media ($desktop) {
+    height: 400px; // временно для PP
+  }
 
   &--lead {
     top: 50%;
@@ -109,8 +140,22 @@
   margin: 12px 0 0;
   font-weight: 700;
 
+  @media ($tablet) {
+    margin: 24px 10px 0;
+  }
+
   @media ($desktop) {
     margin-top: 24px;
+  }
+
+  &--lead {
+    @media ($tablet) {
+      margin: 18px 10px 0;
+    }
+
+    @media ($desktop) {
+      margin-top: 15px;
+    }
   }
 }
 
@@ -124,26 +169,27 @@
   margin: 0;
 
   @media ($tablet) {
+    margin: 0 10px;
     min-height: 48px;
-    margin-bottom: 10px;
-  }
-
-  @media ($desktop) {
-    min-height: auto;
+    margin-bottom: 12px;
   }
 
   &--lead {
     @media ($tablet) {
       order: 1;
-      margin-bottom: 0;
+    }
+
+    @media ($desktop) {
+      min-height: auto;
+      margin-bottom: 11px;
     }
   }
 }
 
 .photos__like {
-  margin-top: 12px;
+  margin-top: 9px;
 
   @media ($tablet) {
-    margin-top: auto;
+    margin: auto 10px 0;
   }
 }

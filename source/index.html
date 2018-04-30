@@ -7,15 +7,15 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="page">
-  <header class="page__header page-header">
-    <nav class="page-header__nav nav nav--off">
+  <header class="page__header page-header page-header--index">
+    <nav class="page-header__nav nav">
       <a class="nav__logo">
         <img class="nav__logo-img" src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Логотип Пинк">
       </a>
-      <button class="nav__switch nav__switch--off btn" type="button">
+      <button class="nav__switch btn" type="button">
         Показать/скрыть меню
       </button>
-      <ul class="nav__list nav__list--off">
+      <ul class="nav__list">
         <li class="nav__item">
           <a class="nav__link nav__link--current">
             Главная
@@ -74,7 +74,7 @@
   </header>
 
   <main class="page__content page-content">
-    <section class="page-content__sect">
+    <section class="page-content__sect page-content__sect--index">
       <h2 class="visually-hidden">
         Lead'ы
       </h2>
@@ -127,7 +127,7 @@
         Эффект на 24 часа!
       </p>
       <p class="effect__descr">
-        Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!
+        Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!
       </p>
       <a class="effect__link" href="#">
         Узнать больше об исследовании
@@ -150,7 +150,7 @@
             «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
           </p>
         </li>
-        <li class="slides__item reviews__item">
+        <li class="slides__item reviews__item visually-hidden">
           <p class="reviews__author">
             Иван Пичугин
           </p>
@@ -158,7 +158,7 @@
             «Это приложение позволяет абстрагироваться от суеты этого бренного мира, от экзистенциальной сути всего происходящего. Оно позволяет увидеть мир таким, каким он был бы, если бы люди хоть немного задумывались о смысле своих поступков».
           </p>
         </li>
-        <li class="slides__item reviews__item">
+        <li class="slides__item reviews__item visually-hidden">
           <p class="reviews__author">
             Лёха Фас
           </p>
@@ -223,7 +223,7 @@
           </th>
         </tr>
         <tr class="tarifs__opt">
-          <td class="tarifs__key">
+          <td class="tarifs__key tarifs__key--first">
             Розовый фильтр
           </td>
           <td class="tarifs__val">
@@ -315,7 +315,7 @@
             Приезжайте в гости:
           </p>
           <p class="contacts__val">
-            ул. Большая Конюшенная, 19/8
+            ул. Большая Конюшенная, 19/8
           </p>
         </li>
       </ul>
@@ -346,7 +346,7 @@
         </a>
       </li>
     </ul>
-    <a class="page-footer__item dev" href="https://htmlacademy.ru/intensive/adaptive">
+    <a class="page-footer__item page-footer__dev dev" href="https://htmlacademy.ru/intensive/adaptive">
       Разработано
       <img class="dev__img" src="img/logo-htmlacademy.svg" width="27" height="34" alt="Логотип HTML Academy">
     </a>

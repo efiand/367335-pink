@@ -2,9 +2,13 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 34px 0 41px;
+  margin: 24px 0 32px;
   padding: 0;
   list-style: none;
+
+  @media ($tablet) {
+    margin-bottom: 12px;
+  }
 
   @media ($desktop) {
     display: none;

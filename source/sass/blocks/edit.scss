@@ -5,11 +5,14 @@
   justify-content: center;
   flex-grow: 1;
   margin: 0;
-  padding: 0;
+  padding: 0 0 75px;
   list-style: none;
+  border-bottom: solid 1px #dddfe0;
 
   @media ($tablet) {
-    flex-direction: column;
+    display: block;
+    padding-bottom: 34px;
+    border: none;
   }
 }
 
@@ -18,8 +21,15 @@
 
   @media ($tablet) {
     display: flex;
-    margin: 0 20px 0 0;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px 0 22px;
+    padding: 0 18px 20px 0;
     border-bottom: solid 1px #dddfe0;
+
+    &:nth-child(2) {
+      margin-bottom: 19px;
+    }
   }
 
   @media ($desktop) {
@@ -28,9 +38,18 @@
 }
 
 .edit__btn {
-  padding: 10px 0;
+  width: 30px;
+  height: 30px;
+  padding: 4px 0;
+  overflow: hidden;
+  text-indent: 100px;
+  white-space: nowrap;
   color: $asphalt;
   opacity: 0.3;
+
+  @media ($tablet) {
+    padding: 0;
+  }
 
   &:hover,
   &:focus {
@@ -48,12 +67,10 @@
   position: absolute;
   left: 0;
   display: none;
-  width: calc(100% - 40px);
+  width: calc(100% - 80px);
   height: 14px;
-  margin: 33px 18px 0;
-  padding-bottom: 28px;
+  margin: 33px 38px 0;
   background-image: linear-gradient(transparent 6px, $asphalt 6px, $asphalt 8px, transparent 8px);
-  border-bottom: solid 1px #dddfe0;
 
   .edit__btn--active + & {
     display: block;
@@ -62,8 +79,14 @@
   @media ($tablet) {
     position: relative;
     display: block;
-    margin-left: 30px;
+    width: calc(100% - 55px);
+    margin: 0;
     border-bottom: none;
+  }
+
+  @media ($desktop) {
+    width: 288px;
+    margin-right: 12px;
   }
 }
 
@@ -72,6 +95,8 @@
   top: 0;
   width: 14px;
   height: 14px;
+  padding-right: 0;
+  padding-left: 0;
   overflow: hidden;
   text-indent: 100px;
   white-space: nowrap;
@@ -80,15 +105,31 @@
   border-radius: 50%;
 
   &--crop {
-    left: 24.65%;
+    left: 80.25%;
+
+    @media ($tablet) {
+      left: 72.5%;
+    }
+
+    @media ($desktop) {
+      left: 24.5%;
+    }
   }
 
   &--fill {
-    left: 85.76%;
+    left: 12.5%;
+
+    @media ($desktop) {
+      left: 85.75%;
+    }
   }
 
   &--contrast {
-    left: 55.55%;
+    left: 47.5%;
+
+    @media ($desktop) {
+      left: 55.5%;
+    }
   }
 
   &:active {

@@ -1,28 +1,28 @@
 .download {
   position: relative;
-  margin-top: 396px;
+  margin: 396px 0 21px;
   padding: 28px 20px;
   background-color: #283645;
 
   @media ($tablet) {
     z-index: 1;
-    margin-top: 0;
-    padding: 74px calc(100% - 320px) 100px 20px;
+    margin: 0 auto 0;
+    width: 300px;
+    padding: 74px 340px 108px 20px;
     background-color: transparent;
   }
 
   @media ($desktop) {
-    width: 300px;
     margin: 0 auto 40px;
-    padding: 74px 640px 100px 10px;
+    padding: 110px 640px 100px 0;
   }
 
   &::before {
     content: "";
     position: absolute;
     top: -285px;
-    left: 0;
-    width: 100%;
+    left: calc(50% - 160px);
+    width: 300px;
     height: 285px;
     background-image: url("../img/iphone-hand-mobile@1x.png");
     background-repeat: no-repeat;
@@ -30,7 +30,9 @@
     @media ($tablet) {
       top: auto;
       bottom: 0;
+      left: 0;
       z-index: -1;
+      width: 100%;
       height: 545px;
       background-image: url("../img/iphone-hand-tablet@1x.png");
     }
@@ -77,7 +79,11 @@
 }
 
 .download__item {
-  margin: 30px 18px;
+  width: 50px;
+  margin: 30px 15px;
+  overflow: hidden;
+  text-indent: 200px;
+  white-space: nowrap;
 }
 
 .download__os {
@@ -86,11 +92,17 @@
 }
 
 .download__descr {
-  margin: 0;
+  margin: 32px 0 2px;
   font-weight: 300;
   text-align: center;
 
   @media ($tablet) {
+    margin-top: 60px;
     font-size: 18px;
+  }
+
+  @media ($desktop) {
+    margin-top: 100px;
+    margin-bottom: 22px;
   }
 }

@@ -1,6 +1,6 @@
 .page-content__descr {
   margin: 20px;
-  padding: 20px;
+  padding: 20px 0;
   line-height: 30px;
   text-align: center;
 
@@ -9,63 +9,77 @@
   }
 
   &--photo {
+    margin: 25px 35px 29px;
+
     @media ($tablet) {
-      width: 600px;
-      margin: 50px auto 30px;
+      width: 560px;
+      margin: 72px auto 56px;
     }
 
     @media ($desktop) {
-      margin: 90px auto;
+      width: 600px;
+      margin: 72px auto 68px;
     }
   }
 
   &--post {
+    margin-top: 25px;
     margin-bottom: 0;
     padding-bottom: 0;
 
     @media ($tablet) {
-      margin: 60px 60px 20px;
+      margin: 72px 60px 38px;
     }
 
     @media ($desktop) {
       width: 760px;
-      margin: 60px auto 40px;
+      margin: 72px auto 34px;
     }
   }
 }
 
 .page-content__sect {
-  padding: 20px;
+  padding: 20px 20px 0;
 
   &--even {
     padding: 0 0 6px;
     background-color: #f2f2f2;
+  }
 
-    &::before {
-      content: "";
-      display: block;
-      height: 32px;
-      background-image: linear-gradient(to right bottom, #ffffff 50%, #f2f2f2 50%);
-      border-bottom: solid 12px #f2f2f2;
+  &--even::before {
+    content: "";
+    display: block;
+    height: 32px;
+    background-image: linear-gradient(to right bottom, #ffffff 50%, #f2f2f2 50%);
+    border-bottom: solid 12px #f2f2f2;
 
-      @media ($tablet) {
-        height: 50px;
-      }
+    @media ($tablet) {
+      height: 50px;
+    }
 
-      @media ($desktop) {
-        height: 100px;
-      }
+    @media ($desktop) {
+      height: 97px;
     }
   }
-}
 
-.page-content__add {
-  @media ($tablet) {
-    margin-top: 20px;
+  &--index {
+    padding-bottom: 4px;
+
+    @media ($tablet) {
+      padding-bottom: 6px;
+    }
   }
 
-  @media ($desktop) {
-    margin-top: 50px;
+  &--add {
+    margin-top: 21px;
+
+    @media ($tablet) {
+      margin-top: 49px;
+    }
+
+    @media ($desktop) {
+      margin-top: 50px;
+    }
   }
 }
 

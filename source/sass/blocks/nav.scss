@@ -1,28 +1,39 @@
 .nav {
-  position: relative;
-  z-index: 2;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  padding: 20px;
+  padding: 21px 0 0;
   text-transform: uppercase;
   background-color: inherit;
 
   @media ($tablet) {
-    padding: 30px 20px;
+    padding: 44px 0 0;
   }
 
   @media ($desktop) {
     align-items: center;
-    padding: 35px $contain;
+    box-sizing: border-box;
+    padding: 38px $contain;
+    background-color: rgba(0, 0, 0, 0.3);
   }
 
   &--off {
+    padding-bottom: 21px;
     background-color: rgba(0, 0, 0, 0.3);
+
+    @media ($tablet) {
+      padding-bottom: 42px;
+    }
   }
 }
 
 .nav__logo {
+  margin-left: 20px;
   outline: none;
+
+  @media ($desktop) {
+    margin-left: 0;
+  }
 
   &[href]:active {
     opacity: 0.3;
@@ -36,6 +47,7 @@
 .nav__switch {
   width: 24px;
   height: 24px;
+  margin-right: 20px;
   overflow: hidden;
   text-indent: 100px;
   white-space: nowrap;
@@ -57,11 +69,8 @@
 }
 
 .nav__list {
-  position: absolute;
-  top: 65px;
-  left: 0;
   width: 100%;
-  margin: 2px 0 0;
+  margin: 24px 0 0;
   padding: 0;
   font-weight: 700;
   font-size: 18px;
@@ -71,11 +80,10 @@
   list-style: none;
 
   @media ($tablet) {
-    top: 85px;
+    margin-top: 41px;
   }
 
   @media ($desktop) {
-    position: static;
     display: flex;
     width: auto;
     margin: 0;
@@ -95,7 +103,7 @@
 }
 
 .nav__item {
-  padding: 0 20px;
+  padding: 6px 20px;
   border-top: solid 1px rgba(255, 255, 255, 0.15);
   border-bottom: solid 1px #000000;
 

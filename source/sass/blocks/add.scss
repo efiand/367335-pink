@@ -1,17 +1,17 @@
 .add {
-  padding: 20px calc(50% - 330px) 40px;
+  padding: 20px 0 29px;
   background-color: #f2f2f2;
 
   @media ($tablet) {
-    display: flex;
-    flex-wrap: wrap;
-    padding-top: 50px;
+    position: relative;
+    width: calc(100% - 385px);
+    padding: 57px 20px 30px 365px;
   }
 
   @media ($desktop) {
-    width: 940px;
-    margin: 0 auto;
-    padding: 60px 0;
+    width: 470px;
+    margin: 45px auto 62px;
+    padding: 57px 0 33px 470px;
   }
 }
 
@@ -25,42 +25,51 @@
   white-space: nowrap;
   background-image: url("../img/photo-road-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-position: center top;
   cursor: pointer;
 
   @media ($tablet) {
+    position: absolute;
+    top: 57px;
+    left: 20px;
+    width: 300px;
     height: 400px;
-    margin: 0 45px 0 20px;
+    margin: 0;
   }
 
   @media ($desktop) {
-    margin: 0 80px;
+    left: 80px;
   }
 }
 
 .add__submit {
-  width: calc(100% - 40px);
-  margin-top: 100px;
+  width: calc(100% - 44px);
+  margin: 38px auto 0;
 
   @media ($tablet) {
-    margin-top: auto;
+    width: calc(100% - 15px);
+    margin: 0 0 0 2px;
   }
 
   @media ($desktop) {
     display: flex;
     justify-content: space-between;
-    width: calc(100% - 60px);
+    width: 410px;
+    margin: 79px 0 0;
   }
 }
 
 .add__btn {
   width: 100%;
-  margin: 11px 0;
+  margin: 11px 0 12px;
   color: $pink;
   border-color: $pink;
 
+  @media ($tablet) {
+    margin-bottom: 24px;
+  }
+
   @media ($desktop) {
-    width: 200px;
+    width: 183px;
   }
 
   &:hover,

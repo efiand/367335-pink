@@ -3,7 +3,7 @@
   text-align: center;
 
   @media ($tablet) {
-    padding-top: 0;
+    padding-top: 64px;
     font-size: 18px;
   }
 
@@ -37,13 +37,14 @@
 }
 
 .reviews__author {
-  margin: 25px 0 16px;
+  margin: 22px 0 13px;
   font-weight: 700;
   font-size: 18px;
   color: #000000;
 
   @media ($tablet) {
-    margin: 25px 0 0;
+    margin: 20px 0 2px;
+    font-size: 20px;
   }
 
   @media ($desktop) {
@@ -74,18 +75,22 @@
   }
 
   @media ($desktop) {
-    padding: 0 120px;
+    padding: 5px 120px 0;
   }
 }
 
 .reviews__nav {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
   display: none;
 
   @media ($desktop) {
+    position: absolute;
+    top: 213px;
     display: block;
+    width: 22px;
+    height: 41px;
+    overflow: hidden;
+    text-indent: 100px;
+    white-space: nowrap;
   }
 
   &--prev {
