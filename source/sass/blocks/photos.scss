@@ -4,7 +4,8 @@
 
 .photos__list {
   position: relative;
-  margin: 0;
+  width: 320px;
+  margin: 0 auto;
   padding: 0;
   list-style: none;
 
@@ -117,22 +118,25 @@
 .photos__img {
   position: relative;
   left: 50%;
+  display: block;
+  width: 280px;
+  height: auto;
   transform: translateX(-50%);
 
   @media ($tablet) {
-    width: 300px; // временно для PP
-    height: 300px; // временно для PP
-  }
-
-  @media ($desktop) {
-    height: 400px; // временно для PP
+    width: 300px;
   }
 
   &--lead {
-    top: 50%;
-    width: 100%;
-    height: auto;
-    transform: translate(-50%, -50%);
+    width: 320px;
+
+    @media ($tablet) {
+      width: 700px;
+    }
+
+    @media ($desktop) {
+      width: 1200px;
+    }
   }
 }
 

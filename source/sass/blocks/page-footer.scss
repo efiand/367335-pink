@@ -10,6 +10,7 @@
 
   @media ($desktop) {
     width: 940px;
+    padding: 40px 0 29px;
     margin: 35px auto;
   }
 }
@@ -31,7 +32,7 @@
 
   @media ($tablet) {
     margin: 0 auto 0 0;
-    transform: translateY(-10px);
+    transform: translate(2px, -13px);
   }
 
   &[href]:active {

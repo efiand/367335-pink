@@ -108,15 +108,32 @@
   background-image: url("../img/bg-map-mobile@1x.png");
   background-repeat: no-repeat;
   background-position: center bottom;
+  background-size: 320px auto;
+
+  @media ($retina) {
+    background-image: url("../img/bg-map-mobile@2x.jpg");
+  }
 
   @media ($tablet) {
     height: 372px;
-    background-image: url("../img/bg-map-tablet@1x.png");
+    background-image: url("../img/bg-map-tablet@1x.jpg");
     background-position: center -349px;
+    background-size: 700px auto;
+  }
+
+  @media ($tablet) and ($retina) {
+    background-image: url("../img/bg-map-tablet@2x.jpg");
   }
 
   @media ($desktop) {
     height: 500px;
+    background-image: url("../img/bg-map-desktop@1x.jpg");
+    background-size: 1200px auto;
+    background-position: center -279px;
+  }
+
+  @media ($desktop) and ($retina) {
+    background-image: url("../img/bg-map-desktop@2x.jpg");
   }
 
   &::before {

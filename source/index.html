@@ -10,7 +10,11 @@
   <header class="page__header page-header page-header--index">
     <nav class="page-header__nav nav">
       <a class="nav__logo">
-        <img class="nav__logo-img" src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Логотип Пинк">
+        <picture>
+          <source media="(min-width: 960px)" srcset="img/logo-pink-white-desktop.svg">
+          <source media="(min-width: 660px)" srcset="img/logo-pink-white-tablet.svg">
+          <img class="nav__logo-img" src="img/logo-pink-white-mobile.svg" alt="Логотип Пинк">
+        </picture>
       </a>
       <button class="nav__switch btn" type="button">
         Показать/скрыть меню
@@ -100,7 +104,7 @@
             Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!
           </p>
         </li>
-        <li class="advantages__item">
+        <li class="advantages__item advantages__item--2">
           <p class="advantages__lead">
             Меняет мир вокруг
           </p>
@@ -108,7 +112,7 @@
             Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект
           </p>
         </li>
-        <li class="advantages__item">
+        <li class="advantages__item advantages__item--3">
           <p class="advantages__lead">
             Заводит новых друзей
           </p>
@@ -326,7 +330,10 @@
   <footer class="page__footer page__footer--index page-footer">
     <p class="page-footer__item page-footer__logo">
       <a>
-        <img src="img/logo-pink-blue-mobile.svg" width="147" height="41" alt="Логотип Пинк">
+        <picture>
+          <source media="(min-width: 960px)" srcset="img/logo-pink-blue-desktop.svg">
+          <img class="nav__logo-img" src="img/logo-pink-blue-mobile.svg" alt="Логотип Пинк">
+        </picture>
       </a>
     </p>
     <ul class="page-footer__item page-footer__socials socials">

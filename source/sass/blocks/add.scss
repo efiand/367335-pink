@@ -25,7 +25,12 @@
   white-space: nowrap;
   background-image: url("../img/photo-road-mobile@1x.jpg");
   background-repeat: no-repeat;
+  background-size: contain;
   cursor: pointer;
+
+  @media ($retina) {
+    background-image: url("../img/photo-road-mobile@2x.jpg");
+  }
 
   @media ($tablet) {
     position: absolute;
@@ -34,6 +39,11 @@
     width: 300px;
     height: 400px;
     margin: 0;
+    background-image: url("../img/photo-road-tablet@1x.jpg");
+  }
+
+  @media ($tablet) and ($retina) {
+    background-image: url("../img/photo-road-tablet@2x.jpg");
   }
 
   @media ($desktop) {

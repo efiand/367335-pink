@@ -10,7 +10,11 @@
   <header class="page__header page-header">
     <nav class="page-header__nav nav">
       <a class="nav__logo" href="index.html">
-        <img class="nav__logo-img" src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Логотип Пинк">
+        <picture>
+          <source media="(min-width: 960px)" srcset="img/logo-pink-white-desktop.svg">
+          <source media="(min-width: 660px)" srcset="img/logo-pink-white-tablet.svg">
+          <img class="nav__logo-img" src="img/logo-pink-white-mobile.svg" alt="Логотип Пинк">
+        </picture>
       </a>
       <button class="nav__switch btn" type="button">
         Показать/скрыть меню
@@ -56,7 +60,11 @@
       <ul class="photos__list">
         <li class="photos__item photos__item--lead">
           <p class="photos__lead">
-            <img class="photos__img photos__img--lead" src="img/panorama-tablet@1x.jpg" width="660" height="509" alt="Фотография">
+            <picture>
+              <source media="(min-width: 960px)" srcset="img/panorama-desktop@1x.jpg 1x, img/panorama-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)" srcset="img/panorama-tablet@1x.jpg 1x, img/panorama-tablet@2x.jpg 2x">
+              <img class="photos__img photos__img--lead" src="img/panorama-mobile@1x.jpg" srcset="img/panorama-mobile@2x.jpg 2x" alt="Фотография">
+            </picture>
           </p>
           <p class="photos__title photos__title--lead">
             Анна <span class="photos__time">(5 минут назад)</span>
@@ -74,7 +82,11 @@
           </div>
         </li>
         <li class="photos__item">
-          <img class="photos__img" src="img/photo-car-mobile@1x.jpg" width="280" height="180" alt="Фотография">
+          <picture>
+            <source media="(min-width: 960px)" srcset="img/photo-car-desktop@1x.jpg 1x, img/photo-car-desktop@2x.jpg 2x">
+            <source media="(min-width: 660px)" srcset="img/photo-car-tablet@1x.jpg 1x, img/photo-car-tablet@2x.jpg 2x">
+            <img class="photos__img" src="img/photo-car-mobile@1x.jpg" srcset="img/photo-car-mobile@2x.jpg 2x" alt="Фотография">
+          </picture>
           <p class="photos__title">
             Левон <span class="photos__time">(5 часов назад)</span>
           </p>
@@ -91,7 +103,11 @@
           </div>
         </li>
         <li class="photos__item">
-          <img class="photos__img" src="img/photo-drumset-mobile@1x.jpg" width="280" height="180" alt="Фотография">
+          <picture>
+            <source media="(min-width: 960px)" srcset="img/photo-drumset-desktop@1x.jpg 1x, img/photo-drumset-desktop@2x.jpg 2x">
+            <source media="(min-width: 660px)" srcset="img/photo-drumset-tablet@1x.jpg 1x, img/photo-drumset-tablet@2x.jpg 2x">
+            <img class="photos__img" src="img/photo-drumset-mobile@1x.jpg" srcset="img/photo-drumset-mobile@2x.jpg 2x" alt="Фотография">
+          </picture>
           <p class="photos__title">
             Антон <span class="photos__time">(12 часов назад)</span>
           </p>
@@ -108,7 +124,11 @@
           </div>
         </li>
         <li class="photos__item">
-          <img class="photos__img" src="img/photo-window-mobile@1x.jpg" width="280" height="180" alt="Фотография">
+          <picture>
+            <source media="(min-width: 960px)" srcset="img/photo-window-desktop@1x.jpg 1x, img/photo-window-desktop@2x.jpg 2x">
+            <source media="(min-width: 660px)" srcset="img/photo-window-tablet@1x.jpg 1x, img/photo-window-tablet@2x.jpg 2x">
+            <img class="photos__img" src="img/photo-window-mobile@1x.jpg" srcset="img/photo-window-mobile@2x.jpg 2x" alt="Фотография">
+          </picture>
           <p class="photos__title">
             Борис <span class="photos__time">(20 часов назад)</span>
           </p>
@@ -125,7 +145,11 @@
           </div>
         </li>
         <li class="photos__item">
-          <img class="photos__img" src="img/photo-fair-mobile@1x.jpg" width="280" height="180" alt="Фотография">
+          <picture>
+            <source media="(min-width: 960px)" srcset="img/photo-fair-desktop@1x.jpg 1x, img/photo-fair-desktop@2x.jpg 2x">
+            <source media="(min-width: 660px)" srcset="img/photo-fair-tablet@1x.jpg 1x, img/photo-fair-tablet@2x.jpg 2x">
+            <img class="photos__img" src="img/photo-fair-mobile@1x.jpg" srcset="img/photo-fair-mobile@2x.jpg 2x" alt="Фотография">
+          </picture>
           <p class="photos__title">
             Сергей <span class="photos__time">(25 часов назад)</span>
           </p>
@@ -142,7 +166,11 @@
           </div>
         </li>
         <li class="photos__item">
-          <img class="photos__img" src="img/photo-pov-mobile@1x.jpg" width="280" height="180" alt="Фотография">
+          <picture>
+            <source media="(min-width: 960px)" srcset="img/photo-pov-desktop@1x.jpg 1x, img/photo-pov-desktop@2x.jpg 2x">
+            <source media="(min-width: 660px)" srcset="img/photo-pov-tablet@1x.jpg 1x, img/photo-pov-tablet@2x.jpg 2x">
+            <img class="photos__img" src="img/photo-pov-mobile@1x.jpg" srcset="img/photo-pov-mobile@2x.jpg 2x" alt="Фотография">
+          </picture>
           <p class="photos__title">
             Максим <span class="photos__time">(40 часов назад)</span>
           </p>
@@ -159,7 +187,11 @@
           </div>
         </li>
         <li class="photos__item">
-          <img class="photos__img" src="img/photo-wing-mobile@1x.jpg" width="280" height="180" alt="Фотография">
+          <picture>
+            <source media="(min-width: 960px)" srcset="img/photo-wing-desktop@1x.jpg 1x, img/photo-wing-desktop@2x.jpg 2x">
+            <source media="(min-width: 660px)" srcset="img/photo-wing-tablet@1x.jpg 1x, img/photo-wing-tablet@2x.jpg 2x">
+            <img class="photos__img" src="img/photo-wing-mobile@1x.jpg" srcset="img/photo-wing-mobile@2x.jpg 2x" alt="Фотография">
+          </picture>
           <p class="photos__title">
             Надежда <span class="photos__time">(45 часов назад)</span>
           </p>
@@ -231,7 +263,10 @@
   <footer class="page__footer page-footer">
     <p class="page-footer__item page-footer__logo">
       <a href="index.html">
-        <img src="img/logo-pink-blue-mobile.svg" width="147" height="41" alt="Логотип Пинк">
+        <picture>
+          <source media="(min-width: 960px)" srcset="img/logo-pink-blue-desktop.svg">
+          <img class="nav__logo-img" src="img/logo-pink-blue-mobile.svg" alt="Логотип Пинк">
+        </picture>
       </a>
     </p>
     <ul class="page-footer__item page-footer__socials socials">
