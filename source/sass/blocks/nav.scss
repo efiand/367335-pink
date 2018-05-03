@@ -7,13 +7,13 @@
   background-color: inherit;
 
   @media ($tablet) {
-    padding: 44px 0 0;
+    padding: 27px 0 0;
   }
 
   @media ($desktop) {
     align-items: center;
     box-sizing: border-box;
-    padding: 38px $contain;
+    padding: 25px $contain 40px;
     background-color: rgba(0, 0, 0, 0.3);
   }
 
@@ -54,6 +54,10 @@
   background-image: url("../img/icon-menu-cross.svg");
   background-repeat: no-repeat;
 
+  @media ($tablet) {
+    margin-top: 17px;
+  }
+
   @media ($desktop) {
     display: none;
   }
@@ -86,7 +90,7 @@
   @media ($desktop) {
     display: flex;
     width: auto;
-    margin: 0;
+    margin: 13px 0 0;
     font-weight: 400;
     line-height: 1;
     background-color: transparent;

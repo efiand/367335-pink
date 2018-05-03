@@ -10,7 +10,11 @@
   <header class="page__header page-header">
     <nav class="page-header__nav nav">
       <a class="nav__logo" href="index.html">
-        <img class="nav__logo-img" src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Логотип Пинк">
+        <picture>
+          <source media="(min-width: 960px)" srcset="img/logo-pink-white-desktop.svg">
+          <source media="(min-width: 660px)" srcset="img/logo-pink-white-tablet.svg">
+          <img class="nav__logo-img" src="img/logo-pink-white-mobile.svg" alt="Логотип Пинк">
+        </picture>
       </a>
       <button class="nav__switch btn" type="button">
         Показать/скрыть меню
@@ -209,7 +213,10 @@
   <footer class="page__footer page-footer">
     <p class="page-footer__item page-footer__logo">
       <a href="index.html">
-        <img src="img/logo-pink-blue-mobile.svg" width="147" height="41" alt="Логотип Пинк">
+        <picture>
+          <source media="(min-width: 960px)" srcset="img/logo-pink-blue-desktop.svg">
+          <img class="nav__logo-img" src="img/logo-pink-blue-mobile.svg" alt="Логотип Пинк">
+        </picture>
       </a>
     </p>
     <ul class="page-footer__item page-footer__socials socials">

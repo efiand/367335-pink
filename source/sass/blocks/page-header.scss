@@ -6,15 +6,20 @@
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: center top;
+  background-size: 700px auto;
+
+  @media ($retina) {
+    background-image: url("../img/bg-back-mobile@2x.jpg");
+  }
 
   @media ($tablet) {
     margin-bottom: 30px;
     background-image: url("../img/bg-back-tablet@1x.jpg");
+    background-size: 1200px auto;
   }
 
-  @media ($desktop) {
-    margin-top: 0;
-    padding-top: 0;
+  @media ($tablet) and ($retina) {
+    background-image: url("../img/bg-back-tablet@2x.jpg");
   }
 
   &--index {
@@ -25,7 +30,6 @@
     }
 
     @media ($desktop) {
-      margin-top: 0;
       margin-bottom: 47px;
     }
   }
@@ -36,6 +40,13 @@
 
   @media ($desktop) {
     margin-top: 0;
+    padding-top: 0;
+    background-image: url("../img/bg-back-desktop@1x.jpg");
+    background-size: 2560px auto;
+  }
+
+  @media ($desktop) and ($retina) {
+    background-image: url("../img/bg-back-desktop@2x.jpg");
   }
 }
 
@@ -85,7 +96,7 @@
     @media ($desktop) {
       width: 260px;
       margin: 0;
-      padding: 0 20px 52px;
+      padding: 0 20px 50px;
       font-size: 50px;
     }
   }
@@ -100,7 +111,7 @@
     }
 
     @media ($desktop) {
-      padding: 65px 0 51px;
+      padding: 63px 0 51px;
     }
   }
 }

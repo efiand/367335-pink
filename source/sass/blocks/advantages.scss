@@ -8,7 +8,7 @@
   }
 
   @media ($desktop) {
-    margin-top: 71px;
+    margin-top: 70px;
   }
 
   &::after {
@@ -17,17 +17,26 @@
     height: 287px;
     background-image: url("../img/iphone-screen-mobile@1x.png");
     background-repeat: no-repeat;
-    background-position: center bottom -43px;
+    background-position: center 10px;
+    background-size: 157px auto;
+
+    @media ($retina) {
+      background-image: url("../img/iphone-screen-mobile@2x.png");
+    }
 
     @media ($tablet) {
       position: absolute;
-      bottom: -1px;
-      left: calc(50% - 330px);
+      bottom: 0;
+      left: calc(50% - 310px);
       z-index: 1;
-      width: 100%;
-      height: 482px;
-      background-image: url("../img/iphone-screen-tablet@1x.png");
-      background-position: left 20px bottom -65px;
+      width: 268px;
+      height: 481px;
+      background-image: url("../img/iphone-screen-3-tablet@1x.png");
+      background-size: contain;
+    }
+
+    @media ($tablet) and ($retina) {
+      background-image: url("../img/iphone-screen-3-tablet@2x.png");
     }
 
     @media ($desktop) {
@@ -70,11 +79,32 @@
     position: relative;
     z-index: 1;
     width: 300px;
-    margin: 190px 0 0;
+    margin: 193px 0 0;
     text-align: center;
 
     &:last-child {
       margin-right: 0;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -302px;
+      left: 4px;
+      z-index: -2;
+      width: 292px;
+      height: 302px;
+      background-image: url("../img/iphone-screen-1-desktop@1x.png");
+      background-repeat: no-repeat;
+      background-size: 292px auto;
+    }
+
+    &--2::before {
+      background-image: url("../img/iphone-screen-2-desktop@1x.png");
+    }
+
+    &--3::before {
+      background-image: url("../img/iphone-screen-3-desktop@1x.png");
     }
 
     &::after {
@@ -90,6 +120,18 @@
       box-shadow: 0 -10px 15px 0 rgba(0, 0, 0, 0.15);
     }
   }
+
+  @media ($desktop) and ($retina) {
+    background-image: url("../img/iphone-screen-1-desktop@2x.png");
+
+    &--2::before {
+      background-image: url("../img/iphone-screen-2-desktop@2x.png");
+    }
+
+    &--3::before {
+      background-image: url("../img/iphone-screen-3-desktop@2x.png");
+    }
+  }
 }
 
 .advantages__lead {
@@ -99,7 +141,7 @@
   color: #000000;
 
   @media ($desktop) {
-    padding: 57px 30px 0;
+    padding: 55px 30px 0;
     font-size: 30px;
     background-color: #f2f2f2;
   }
