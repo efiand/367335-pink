@@ -10,11 +10,15 @@
   <header class="page__header page-header">
     <nav class="page-header__nav nav">
       <a class="nav__logo" href="index.html">
-        <picture>
-          <source media="(min-width: 960px)" srcset="img/logo-pink-white-desktop.svg">
-          <source media="(min-width: 660px)" srcset="img/logo-pink-white-tablet.svg">
-          <img class="nav__logo-img" src="img/logo-pink-white-mobile.svg" alt="Логотип Пинк">
-        </picture>
+        <svg class="nav__logo-img nav__logo-img--mobile">
+          <use xlink:href="img/symbols.svg#logo-header-mobile"/>
+        </svg>
+        <svg class="nav__logo-img nav__logo-img--tablet">
+          <use xlink:href="img/symbols.svg#logo-header-tablet"/>
+        </svg>
+        <svg class="nav__logo-img nav__logo-img--desktop">
+          <use xlink:href="img/symbols.svg#logo-header-desktop"/>
+        </svg>
       </a>
       <button class="nav__switch btn" type="button">
         Показать/скрыть меню
@@ -133,7 +137,7 @@
             <label class="post__label-fields post__label-fields--contacts" for="tel">
               Номер телефона
             </label>
-            <input class="post__field post__field--contacts" id="tel" name="tel" type="tel" placeholder="Номер, пожалуйста" required>
+            <input class="post__field post__field--contacts post__field--tel" id="tel" name="tel" type="tel" placeholder="Номер, пожалуйста" required>
           </p>
           <p class="post__item-fields post__item-fields--contacts">
             <label class="post__label-fields post__label-fields--contacts" for="email">
@@ -211,12 +215,14 @@
   </main>
 
   <footer class="page__footer page-footer">
-    <p class="page-footer__item page-footer__logo">
-      <a href="index.html">
-        <picture>
-          <source media="(min-width: 960px)" srcset="img/logo-pink-blue-desktop.svg">
-          <img class="nav__logo-img" src="img/logo-pink-blue-mobile.svg" alt="Логотип Пинк">
-        </picture>
+    <p class="page-footer__item page-footer__item--logo">
+      <a class="page-footer__logo" href="index.html">
+        <svg class="page-footer__logo-img">
+          <use xlink:href="img/symbols.svg#logo-footer-tablet" />
+        </svg>
+        <svg class="page-footer__logo-img page-footer__logo-img--desktop">
+          <use xlink:href="img/symbols.svg#logo-footer-desktop" />
+        </svg>
       </a>
     </p>
     <ul class="page-footer__item page-footer__socials socials">
@@ -238,7 +244,9 @@
     </ul>
     <a class="page-footer__item page-footer__dev dev" href="https://htmlacademy.ru/intensive/adaptive">
       Разработано
-      <img class="dev__img" src="img/logo-htmlacademy.svg" width="27" height="34" alt="Логотип HTML Academy">
+      <svg class="dev__img" width="27px" height="34px">
+        <use xlink:href="img/symbols.svg#logo-academy" />
+      </svg>
     </a>
   </footer>
 </body>

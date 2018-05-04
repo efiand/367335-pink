@@ -10,11 +10,15 @@
   <header class="page__header page-header page-header--index">
     <nav class="page-header__nav nav">
       <a class="nav__logo">
-        <picture>
-          <source media="(min-width: 960px)" srcset="img/logo-pink-white-desktop.svg">
-          <source media="(min-width: 660px)" srcset="img/logo-pink-white-tablet.svg">
-          <img class="nav__logo-img" src="img/logo-pink-white-mobile.svg" alt="Логотип Пинк">
-        </picture>
+        <svg class="nav__logo-img nav__logo-img--mobile">
+          <use xlink:href="img/symbols.svg#logo-header-mobile"/>
+        </svg>
+        <svg class="nav__logo-img nav__logo-img--tablet">
+          <use xlink:href="img/symbols.svg#logo-header-tablet"/>
+        </svg>
+        <svg class="nav__logo-img nav__logo-img--desktop">
+          <use xlink:href="img/symbols.svg#logo-header-desktop"/>
+        </svg>
       </a>
       <button class="nav__switch btn" type="button">
         Показать/скрыть меню
@@ -143,7 +147,7 @@
         Отзывы
       </h2>
       <ul class="slides__list reviews__list">
-        <li class="slides__item reviews__item">
+        <li class="reviews__item">
           <p class="reviews__author">
             Николай Петров
           </p>
@@ -154,17 +158,23 @@
             «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
           </p>
         </li>
-        <li class="slides__item reviews__item visually-hidden">
+        <li class="reviews__item visually-hidden">
           <p class="reviews__author">
             Иван Пичугин
+          </p>
+          <p class="reviews__author-about">
+            15 лет, популярный блогер
           </p>
           <p class="reviews__text">
             «Это приложение позволяет абстрагироваться от суеты этого бренного мира, от экзистенциальной сути всего происходящего. Оно позволяет увидеть мир таким, каким он был бы, если бы люди хоть немного задумывались о смысле своих поступков».
           </p>
         </li>
-        <li class="slides__item reviews__item visually-hidden">
+        <li class="reviews__item visually-hidden">
           <p class="reviews__author">
             Лёха Фас
+          </p>
+          <p class="reviews__author-about">
+            23 года, помощник депутата
           </p>
           <p class="reviews__text">
             «Ну чёткая приложуха чё, от души! Мы с пацанами прям пивас не берём, картинки ровнее заходят!»
@@ -173,17 +183,17 @@
       </ul>
       <ul class="slides__togglers">
         <li class="slides__toggler">
-          <button class="slides__btn reviews__btn btn" type="button">
+          <button class="slides__btn slides__btn--active btn" type="button">
             Отзыв 1
           </button>
         </li>
         <li class="slides__toggler">
-          <button class="slides__btn reviews__btn btn" type="button">
+          <button class="slides__btn btn" type="button">
             Отзыв 2
           </button>
         </li>
         <li class="slides__toggler">
-          <button class="slides__btn reviews__btn btn" type="button">
+          <button class="slides__btn btn" type="button">
             Отзыв 3
           </button>
         </li>
@@ -231,13 +241,19 @@
             Розовый фильтр
           </td>
           <td class="tarifs__val">
-            Есть
+            <span class="visually-hidden">
+              Есть
+            </span>
           </td>
           <td class="tarifs__val">
-            Есть
+            <span class="visually-hidden">
+              Есть
+            </span>
           </td>
           <td class="tarifs__val">
-            Есть
+            <span class="visually-hidden">
+              Есть
+            </span>
           </td>
         </tr>
         <tr class="tarifs__opt">
@@ -245,13 +261,19 @@
             Смайлики
           </td>
           <td class="tarifs__val tarifs__val--no">
-            Нет
+            <span class="visually-hidden">
+              Нет
+            </span>
           </td>
           <td class="tarifs__val">
-            Есть
+            <span class="visually-hidden">
+              Есть
+            </span>
           </td>
           <td class="tarifs__val">
-            Есть
+            <span class="visually-hidden">
+              Есть
+            </span>
           </td>
         </tr>
         <tr class="tarifs__opt">
@@ -259,30 +281,36 @@
             Комментарии
           </td>
           <td class="tarifs__val tarifs__val--no">
-            Нет
+            <span class="visually-hidden">
+              Нет
+            </span>
           </td>
           <td class="tarifs__val tarifs__val--no">
-            Нет
+            <span class="visually-hidden">
+              Нет
+            </span>
           </td>
           <td class="tarifs__val">
-            Есть
+            <span class="visually-hidden">
+              Есть
+            </span>
           </td>
         </tr>
       </table>
 
-      <ul class="slides__togglers tarifs__togglers">
+      <ul class="tarifs__togglers slides__togglers">
         <li class="slides__toggler">
-          <button class="slides__btn tarifs__btn btn" type="button">
+          <button class="slides__btn btn" type="button">
             Тариф 1
           </button>
         </li>
         <li class="slides__toggler">
-          <button class="slides__btn tarifs__btn btn" type="button">
+          <button class="slides__btn slides__btn--active btn" type="button">
             Тариф 2
           </button>
         </li>
         <li class="slides__toggler">
-          <button class="slides__btn tarifs__btn btn" type="button">
+          <button class="slides__btn btn" type="button">
             Тариф 3
           </button>
         </li>
@@ -328,12 +356,14 @@
   </main>
 
   <footer class="page__footer page__footer--index page-footer">
-    <p class="page-footer__item page-footer__logo">
-      <a>
-        <picture>
-          <source media="(min-width: 960px)" srcset="img/logo-pink-blue-desktop.svg">
-          <img class="nav__logo-img" src="img/logo-pink-blue-mobile.svg" alt="Логотип Пинк">
-        </picture>
+    <p class="page-footer__item page-footer__item--logo">
+      <a class="page-footer__logo">
+        <svg class="page-footer__logo-img">
+          <use xlink:href="img/symbols.svg#logo-footer-tablet" />
+        </svg>
+        <svg class="page-footer__logo-img page-footer__logo-img--desktop">
+          <use xlink:href="img/symbols.svg#logo-footer-desktop" />
+        </svg>
       </a>
     </p>
     <ul class="page-footer__item page-footer__socials socials">
@@ -355,7 +385,9 @@
     </ul>
     <a class="page-footer__item page-footer__dev dev" href="https://htmlacademy.ru/intensive/adaptive">
       Разработано
-      <img class="dev__img" src="img/logo-htmlacademy.svg" width="27" height="34" alt="Логотип HTML Academy">
+      <svg class="dev__img" width="27px" height="34px">
+        <use xlink:href="img/symbols.svg#logo-academy" />
+      </svg>
     </a>
   </footer>
 </body>

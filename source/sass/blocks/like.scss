@@ -21,8 +21,15 @@
 }
 
 .like__link {
+  width: 13px;
+  height: 17px;
+  overflow: hidden;
   margin: 0 19px 0 0;
+  text-indent: 100px;
+  white-space: nowrap;
   color: inherit;
+  background-image: url("../img/bg-icons.svg");
+  background-position: -100px -562px;
   outline: none;
 
   @media ($tablet) {

@@ -1,12 +1,13 @@
 .effect {
-  padding: 100px 20px 0 330px;
-
-  @media ($mobile) {
-    display: none;
-  }
+  display: none;
 
   @media ($tablet) {
-    padding-top: 96px;
+    display: block;
+    padding: 96px 20px 30px 330px;
+    background-image: url("../img/bg-icons.svg");
+    background-repeat: no-repeat;
+    background-position: -59px -1303px;
+    background-size: 398px auto;
   }
 
   @media ($desktop) {
@@ -14,6 +15,8 @@
     font-size: 18px;
     line-height: 30px;
     background-color: #f2f2f2;
+    background-position: calc(50% - 320px) -1638px;
+    background-size: auto;
   }
 }
 

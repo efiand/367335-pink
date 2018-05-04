@@ -24,19 +24,46 @@
   @media ($tablet) {
     width: 200px;
   }
+
+  &--logo {
+    margin: 0 auto;
+
+    @media ($tablet) {
+      margin: 0 auto 0 0;
+      transform: translate(2px, -13px);
+    }
+  }
 }
 
 .page-footer__logo {
-  margin: 0 auto;
   outline: none;
+}
 
-  @media ($tablet) {
-    margin: 0 auto 0 0;
-    transform: translate(2px, -13px);
+.page-footer__logo-img {
+  width: 146px;
+  height: 40px;
+  fill: #283645;
+
+  .page-footer__logo[href]:hover &,
+  .page-footer__logo:focus & {
+    fill: $pink;
   }
 
-  &[href]:active {
+  .page-footer__logo[href]:active & {
+    fill: #283645;
     opacity: 0.3;
+  }
+
+  &--desktop {
+    display: none;
+  }
+
+  @media ($desktop) {
+    display: none;
+
+    &--desktop {
+      display: block;
+    }
   }
 }
 

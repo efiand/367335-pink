@@ -14,10 +14,15 @@
     padding-bottom: 34px;
     border: none;
   }
+
+  @media ($desktop) {
+    top: -4px;
+    padding-bottom: 39px;
+  }
 }
 
 .edit__item {
-  margin: 0 17px;
+  margin: 0 16px;
 
   @media ($tablet) {
     display: flex;
@@ -33,22 +38,48 @@
   }
 
   @media ($desktop) {
-    margin-right: 60px;
+    margin: 0 60px 13px 0;
+    padding-bottom: 11px;
+
+    &:nth-child(2) {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.edit__icon {
+  fill: $asphalt;
+
+  @media ($tablet) {
+    width: 30px;
+    height: 30px;
+    fill: $pink;
+  }
+
+  @media ($desktop) {
+    width: 48px;
+    height: 48px;
   }
 }
 
 .edit__btn {
-  width: 30px;
-  height: 30px;
+  width: 48px;
+  height: 48px;
   padding: 4px 0;
   overflow: hidden;
-  text-indent: 100px;
   white-space: nowrap;
-  color: $asphalt;
   opacity: 0.3;
 
   @media ($tablet) {
+    width: 30px;
+    height: 30px;
     padding: 0;
+    opacity: 1;
+  }
+
+  @media ($desktop) {
+    width: 48px;
+    height: 48px;
   }
 
   &:hover,
@@ -56,10 +87,31 @@
     opacity: 0.5;
   }
 
+  @media ($tablet) {
+    &:hover,
+    &:focus {
+      opacity: 0.5;
+    }
+
+    &:hover .edit__icon,
+    &:focus .edit__icon {
+      fill: $asphalt;
+    }
+  }
+
   &:active,
-  &--active {
-    color: $pink;
+  &--active,
+  &--active:hover,
+  &--active:focus {
     opacity: 1;
+
+    .edit__icon {
+      fill: $pink;
+    }
+  }
+
+  &--active {
+    cursor: default;
   }
 }
 

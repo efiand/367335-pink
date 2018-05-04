@@ -34,25 +34,85 @@
   @media ($desktop) {
     margin-left: 0;
   }
-
-  &[href]:active {
-    opacity: 0.3;
-  }
 }
 
 .nav__logo-img {
-  display: block;
+  width: 146px;
+  height: 40px;
+  fill: #ffffff;
+
+  .nav__logo[href]:hover &,
+  .nav__logo:focus & {
+    fill: $pink;
+  }
+
+  .nav__logo[href]:active & {
+    fill: #ffffff;
+    opacity: 0.3;
+  }
+
+  &--tablet,
+  &--desktop {
+    display: none;
+  }
+
+  @media ($tablet) {
+    display: none;
+
+    &--tablet {
+      display: block;
+    }
+  }
+
+  @media ($desktop) {
+    &--tablet {
+      display: none;
+    }
+
+    &--desktop {
+      display: block;
+    }
+  }
 }
 
 .nav__switch {
-  width: 24px;
+  position: relative;
+  width: 28px;
   height: 24px;
   margin-right: 20px;
   overflow: hidden;
   text-indent: 100px;
   white-space: nowrap;
-  background-image: url("../img/icon-menu-cross.svg");
-  background-repeat: no-repeat;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 3px;
+    width: 100%;
+    height: 4px;
+    background-color: #ffffff;
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &--off {
+    width: 50px;
+
+    &::before {
+      top: 0;
+      transform: none;
+    }
+
+    &::after {
+      transform: none;
+      box-shadow: 0 10px 0 0 #ffffff;
+    }
+  }
 
   @media ($tablet) {
     margin-top: 17px;
@@ -62,9 +122,19 @@
     display: none;
   }
 
-  &--off {
-    width: 50px;
-    background-image: url("../img/icon-menu-burger.svg");
+  &:hover,
+  &:focus {
+    &::before,
+    &::after {
+      background-color: $pink;
+    }
+  }
+
+  &--off:hover,
+  &--off:focus {
+    &::after {
+      box-shadow: 0 10px 0 0 $pink;
+    }
   }
 
   &:active {
@@ -74,7 +144,7 @@
 
 .nav__list {
   width: 100%;
-  margin: 24px 0 0;
+  margin: 1px 0 0;
   padding: 0;
   font-weight: 700;
   font-size: 18px;
@@ -137,7 +207,11 @@
   }
 
   &[href]:active {
-    color: rgba(255, 255, 255, 0.3);
+    opacity: 0.3;
+
+    @media ($desktop) {
+      color: #ffffff;
+    }
   }
 
   &--current {
