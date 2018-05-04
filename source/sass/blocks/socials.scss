@@ -18,9 +18,21 @@
   overflow: hidden;
   text-indent: 200px;
   white-space: nowrap;
-  color: $pink;
+  background-image: url("../img/bg-icons.svg");
   border: solid 3px #e9ebec;
   border-radius: 50%;
+
+  &--tw {
+    background-position: -86px -2234px;
+  }
+
+  &--fb {
+    background-position: -82px -336px;
+  }
+
+  &--youtube {
+    background-position: -83px -2667px;
+  }
 
   &:hover,
   &:focus {

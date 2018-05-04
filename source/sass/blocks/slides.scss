@@ -2,15 +2,50 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 24px 0 32px;
+  margin: 34px 0 0;
   padding: 0;
   list-style: none;
 
-  @media ($tablet) {
-    margin-bottom: 12px;
-  }
-
   @media ($desktop) {
     display: none;
+  }
+}
+
+.slides__toggler {
+  margin: 0 7px;
+}
+
+.slides__btn {
+  width: 12px;
+  height: 12px;
+  padding: 0;
+  overflow: hidden;
+  text-indent: 100px;
+  white-space: nowrap;
+  background-color: $asphalt;
+  border: solid 3px #ffffff;
+  border-radius: 50%;
+  opacity: 0.3;
+
+  &:hover,
+  &:focus {
+    opacity: 0.5;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
+
+  &--active {
+    background-color: transparent;
+    border-color: $asphalt;
+    opacity: 1;
+    cursor: default;
+
+    &:hover,
+    &:focus,
+    &:active {
+      opacity: 1;
+    }
   }
 }

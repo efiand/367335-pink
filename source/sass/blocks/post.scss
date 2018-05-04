@@ -223,7 +223,7 @@
   &--contacts {
     @media ($tablet) {
       align-self: flex-start;
-      margin: 10px 20px 5px;
+      margin: 10px 20px;
     }
 
     @media ($desktop) {
@@ -256,7 +256,22 @@
 
   &--contacts {
     @media ($tablet) {
-      background-image: linear-gradient(to left, #e5e5e5 60px, transparent 60px);
+      background-image: url("../img/bg-icons.svg"), linear-gradient(to left, #e5e5e5 60px, transparent 60px);
+      background-position: 357px -756px, 0 0;
+    }
+
+    @media ($desktop) {
+      background-position: 232px -756px, 0 0;
+    }
+  }
+
+  &--tel {
+    @media ($tablet) {
+      background-position: 356px -1200px, 0 0;
+    }
+
+    @media ($desktop) {
+      background-position: 231px -1200px, 0 0;
     }
   }
 

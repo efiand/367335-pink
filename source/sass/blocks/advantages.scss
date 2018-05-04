@@ -32,7 +32,7 @@
       width: 268px;
       height: 481px;
       background-image: url("../img/iphone-screen-3-tablet@1x.png");
-      background-size: contain;
+      background-size: 268px auto;
     }
 
     @media ($tablet) and ($retina) {
@@ -122,7 +122,9 @@
   }
 
   @media ($desktop) and ($retina) {
-    background-image: url("../img/iphone-screen-1-desktop@2x.png");
+    &::before {
+      background-image: url("../img/iphone-screen-1-desktop@2x.png");
+    }
 
     &--2::before {
       background-image: url("../img/iphone-screen-2-desktop@2x.png");

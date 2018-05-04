@@ -20,8 +20,14 @@
   position: absolute;
   top: 0;
   right: 0;
-}
+  fill: $pink;
 
-.dev:active .dev__img {
-  opacity: 0.3;
+  .dev:hover &,
+  .dev:focus & {
+    fill: $asphalt;
+  }
+
+  .dev:active & {
+    opacity: 0.3;
+  }
 }

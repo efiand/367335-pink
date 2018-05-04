@@ -1,8 +1,10 @@
 .reviews {
+  margin-bottom: 42px;
   line-height: 30px;
   text-align: center;
 
   @media ($tablet) {
+    margin-bottom: 22px;
     padding-top: 64px;
     font-size: 18px;
   }
@@ -25,14 +27,24 @@
   @media ($tablet) {
     display: flex;
     flex-direction: column;
-    padding-top: 60px;
+    padding-top: 30px;
   }
 
   @media ($desktop) {
+    position: relative;
     padding-top: 180px;
-    background-image: url("../img/icon-quotes.svg");
-    background-repeat: no-repeat;
-    background-position: center 70px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 71px;
+      left: 433px;
+      width: 77px;
+      height: 64px;
+      background-image: url("../img/bg-icons.svg");
+      background-repeat: no-repeat;
+      background-position: -100px -1440px;
+    }
   }
 }
 
@@ -84,20 +96,48 @@
 
   @media ($desktop) {
     position: absolute;
-    top: 213px;
+    top: 212px;
     display: block;
-    width: 22px;
-    height: 41px;
+    width: 23px;
+    height: 42px;
     overflow: hidden;
     text-indent: 100px;
     white-space: nowrap;
+    opacity: 0.3;
+
+    &:hover,
+    &:focus {
+      opacity: 0.5;
+    }
+
+    &:active {
+      opacity: 0.1;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 7px;
+    width: 28px;
+    height: 28px;
+    border-left: solid 2px $asphalt;
+    border-bottom: solid 2px $asphalt;
+    transform: rotate(45deg);
   }
 
   &--prev {
-    left: 0;
+    left: -1px;
   }
 
   &--next {
-    right: 0;
+    right: -1px;
+
+    &::before {
+      right: 7px;
+      left: auto;
+      transform: rotate(-135deg);
+    }
   }
 }

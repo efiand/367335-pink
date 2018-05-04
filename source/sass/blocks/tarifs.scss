@@ -1,5 +1,6 @@
 .tarifs {
   overflow: hidden;
+  padding-bottom: 48px;
 
   @media ($tablet) {
     padding-bottom: 43px;
@@ -23,7 +24,7 @@
   left: 50%;
   transform: translateX(-50%);
   width: 834px;
-  margin: 54px auto 35px;
+  margin: 54px auto 39px;
   table-layout: fixed;
   line-height: 30px;
   text-align: center;
@@ -164,7 +165,7 @@
 }
 
 .tarifs__val {
-  padding: 15px 22px 14px;
+  padding: 12px 22px 14px;
   text-align: right;
   background-color: #ffffff;
   border: solid 2px #e5e5e5;
@@ -174,12 +175,35 @@
     text-align: left;
   }
 
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 33px;
+    height: 33px;
+    vertical-align: middle;
+    background-image: url("../img/bg-icons.svg");
+    background-position: -141px -3510px;
+    background-size: 711px auto;
+    transform: translateX(8px);
+  }
+
+  &--no {
+    &::before {
+      background-position: -97px -988px;
+      background-size: auto;
+    }
+  }
+
   @media ($tablet) {
-    padding: 7px 15px 8px;
+    padding: 5px 15px 7px;
     text-align: center;
 
     &:last-child {
       text-align: center;
+    }
+
+    &::before {
+      transform: none;
     }
   }
 }
