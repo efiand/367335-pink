@@ -114,6 +114,10 @@
     }
   }
 
+  &--no-js {
+    display: none;
+  }
+
   @media ($tablet) {
     margin-top: 17px;
   }

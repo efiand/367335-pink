@@ -10,6 +10,7 @@ var postcss = require('gulp-postcss');
 var autoprefixer = require('autoprefixer');
 var minify = require('gulp-csso');
 var imagemin = require('gulp-imagemin');
+var jpegoptim = require('imagemin-jpegoptim');
 var webp = require('gulp-webp');
 var svgstore = require('gulp-svgstore');
 var spriteBg = require('gulp-svg-sprites');
@@ -19,7 +20,9 @@ var server = require('browser-sync').create();
 
 gulp.task('html', function() {
   return gulp.src('source/**/*.html')
-  .pipe(htmlmin({collapseWhitespace: true}))
+  .pipe(htmlmin({
+    collapseWhitespace: true
+  }))
   .pipe(gulp.dest('build'))
   .pipe(server.stream());
 });
@@ -46,11 +49,14 @@ gulp.task('uglify', function() {
 });
 
 gulp.task('images', function() {
-  return gulp.src('source/img/**/*.{png,jpg,svg}')
+  return gulp.src('source/img/*.{png,jpg,svg}')
   .pipe(imagemin([
-    imagemin.optipng({optimizationLevel: 3}),
-    imagemin.jpegtran({progressive: true}),
-    imagemin.svgo()
+    imagemin.optipng(),
+    imagemin.svgo(),
+    jpegoptim({
+      max: 70,
+      progressive: true
+    })
     ]))
   .pipe(gulp.dest('build/img'));
 });
@@ -61,7 +67,7 @@ gulp.task('webp', function() {
   .pipe(gulp.dest('build/img'));
 });
 
-gulp.task('symbols', function() {
+gulp.task('symbols-build', function() {
   return gulp.src('source/img/symbols/*.svg')
   .pipe(imagemin([
     imagemin.svgo()
@@ -74,7 +80,19 @@ gulp.task('symbols', function() {
   .pipe(gulp.dest('build/img'));
 });
 
-gulp.task('sprite-bg', function() {
+gulp.task('symbols-clean', function() {
+  del('build/img/symbols');
+});
+
+gulp.task('symbols', function (done) {
+  run(
+    'symbols-build',
+    'symbols-clean',
+    done
+    );
+});
+
+gulp.task('sprite-bg-build', function() {
   return gulp.src('source/img/bg-icons/*.svg')
   .pipe(imagemin([
     imagemin.svgo()
@@ -93,6 +111,18 @@ gulp.task('sprite-bg', function() {
   }
   ))
   .pipe(gulp.dest('build/img/bg-icons'));
+});
+
+gulp.task('sprite-bg-clean', function() {
+  del('build/img/bg-icons');
+});
+
+gulp.task('sprite-bg', function (done) {
+  run(
+    'sprite-bg-build',
+    'sprite-bg-clean',
+    done
+    );
 });
 
 gulp.task('copy', function() {

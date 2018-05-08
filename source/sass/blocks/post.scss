@@ -257,21 +257,21 @@
   &--contacts {
     @media ($tablet) {
       background-image: url("../img/bg-icons.svg"), linear-gradient(to left, #e5e5e5 60px, transparent 60px);
-      background-position: 357px -756px, 0 0;
+      background-position: 357px -508px, 0 0;
     }
 
     @media ($desktop) {
-      background-position: 232px -756px, 0 0;
+      background-position: 232px -508px, 0 0;
     }
   }
 
   &--tel {
     @media ($tablet) {
-      background-position: 356px -1200px, 0 0;
+      background-position: 356px -952px, 0 0;
     }
 
     @media ($desktop) {
-      background-position: 231px -1200px, 0 0;
+      background-position: 231px -952px, 0 0;
     }
   }
 
