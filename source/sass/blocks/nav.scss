@@ -24,6 +24,10 @@
     @media ($tablet) {
       padding-bottom: 42px;
     }
+
+    @media ($desktop) {
+      padding-bottom: 40px;
+    }
   }
 }
 

@@ -3,6 +3,7 @@
 
   @media ($tablet) {
     display: block;
+    min-height: 213px;
     padding: 96px 20px 30px 330px;
     background-image: url("../img/bg-icons.svg");
     background-repeat: no-repeat;
@@ -11,7 +12,7 @@
   }
 
   @media ($desktop) {
-    padding: 160px $contain 114px calc(50% - 104px);
+    padding: 160px $contain 105px calc(50% - 104px);
     font-size: 18px;
     line-height: 30px;
     background-color: #f2f2f2;
