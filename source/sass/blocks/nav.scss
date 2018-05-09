@@ -6,8 +6,17 @@
   text-transform: uppercase;
   background-color: inherit;
 
+  &--off {
+    padding: 21px 0;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
   @media ($tablet) {
     padding: 27px 0 0;
+
+    &--off {
+      padding: 21px 0 42px;
+    }
   }
 
   @media ($desktop) {
@@ -15,18 +24,9 @@
     box-sizing: border-box;
     padding: 25px $contain 40px;
     background-color: rgba(0, 0, 0, 0.3);
-  }
 
-  &--off {
-    padding-bottom: 21px;
-    background-color: rgba(0, 0, 0, 0.3);
-
-    @media ($tablet) {
-      padding-bottom: 42px;
-    }
-
-    @media ($desktop) {
-      padding-bottom: 40px;
+    &--off {
+      padding: 25px $contain 40px;
     }
   }
 }
@@ -161,6 +161,10 @@
   border-top: solid 1px #000000;
   list-style: none;
 
+  &--off {
+    display: none;
+  }
+
   @media ($tablet) {
     margin-top: 41px;
   }
@@ -173,12 +177,8 @@
     line-height: 1;
     background-color: transparent;
     border: none;
-  }
 
-  &--off {
-    display: none;
-
-    @media ($desktop) {
+    &--off {
       display: flex;
     }
   }

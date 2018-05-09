@@ -4,6 +4,10 @@
   text-align: center;
   box-shadow: 0 7px 15px 0 rgba(0, 0, 0, 0.15);
 
+  &--success {
+    background-color: #f2f2f2;
+  }
+
   @media ($tablet) {
     width: 460px;
     margin: 0 auto;
@@ -11,14 +15,8 @@
 
   @media ($desktop) {
     width: 780px;
-  }
 
-  &--success {
-    background-color: #f2f2f2;
-  }
-
-  &--error {
-    @media ($desktop) {
+    &--error {
       background-color: #f2f2f2;
     }
   }
@@ -54,6 +52,10 @@
   width: calc(100% - 40px);
   margin: 0 20px;
 
+  &--success {
+    margin-top: 45px;
+  }
+
   @media ($tablet) {
     width: calc(100% - 160px);
     margin: 0 80px;
@@ -61,18 +63,12 @@
 
   @media ($desktop) {
     margin: 0 auto;
-  }
 
-  &--success {
-    margin-top: 45px;
-
-    @media ($desktop) {
+    &--success {
       width: 460px;
     }
-  }
 
-  &--error {
-    @media ($desktop) {
+    &--error {
       width: 300px;
       margin-top: 45px;
     }

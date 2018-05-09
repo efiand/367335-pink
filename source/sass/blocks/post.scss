@@ -19,112 +19,99 @@
   padding: 14px 20px 31px;
   border: none;
 
-  @media ($tablet) {
-    width: 100%;
-  }
-
-  @media ($desktop) {
-    padding-right: 0;
-    padding-left: 0;
-  }
-
   &--checks {
     padding: 50px 20px 20px;
     background-color: #f2f2f2;
-
-    @media ($tablet) {
-      background-color: transparent;
-    }
-  }
-
-  &--named {
-    @media ($tablet) {
-      margin: 20px;
-      padding: 20px 60px;
-      border: solid 2px #e6e6e6;
-    }
-
-    @media ($desktop) {
-      margin: 30px 0;
-    }
   }
 
   &--person {
-    padding-top: 33px;
-    padding-bottom: 8px;
-
-    @media ($tablet) {
-      order: -3;
-      padding-bottom: 6px;
-    }
-
-    @media ($desktop) {
-      width: 435px;
-      padding: 52px 0 0 0;
-    }
+    padding: 33px 20px 8px;
   }
 
   &--app {
     padding-bottom: 23px;
-
-    @media ($tablet) {
-      order: -2;
-      margin-top: 0;
-      margin-bottom: 37px;
-      padding-top: 3px;
-      padding-bottom: 35px;
-      padding-left: 58px;
-    }
-
-    @media ($desktop) {
-      width: 391px;
-      margin-top: 20px;
-      margin-left: auto;
-      padding: 28px 20px 39px 20px;
-    }
   }
 
   &--contacts {
-    padding-top: 32px;
-    padding-bottom: 7px;
-
-    @media ($tablet) {
-      order: -1;
-      padding: 30px 58px 4px;
-      margin-bottom: 37px;
-    }
-
-    @media ($desktop) {
-      margin-top: 5px;
-      padding-top: 19px;
-      padding-bottom: 0;
-    }
+    padding: 32px 20px 7px;
   }
 
   &--adv {
     padding: 52px 20px 18px;
+  }
 
-    @media ($tablet) {
-      margin-bottom: 37px;
+  @media ($tablet) {
+    width: 100%;
+    margin: 20px 20px 37px;
+
+    &--checks {
+      background-color: transparent;
+    }
+
+    &--person {
+      order: -3;
+      margin: 0;
+      padding-bottom: 6px;
+    }
+
+    &--app {
+      order: -2;
+      margin: 0 20px 37px;
+      padding: 3px 20px 35px 58px;
+    }
+
+    &--contacts {
+      order: -1;
+      padding: 30px 58px 4px;
+    }
+
+    &--adv {
       padding: 1px 58px 24px;
     }
 
-    @media ($desktop) {
-      margin-top: 20px;
-      margin-bottom: 27px;
-      padding-top: 22px;
-      padding-bottom: 34px;
-    }
-  }
-
-  &--descr {
-    @media ($tablet) {
+    &--descr {
+      margin: 20px 20px 20px;
       padding: 23px 58px 11px;
     }
 
-    @media ($desktop) {
-      padding-top: 20px;
-      padding-bottom: 18px;
+    &--named {
+      border: solid 2px #e6e6e6;
+    }
+  }
+
+  @media ($desktop) {
+    padding: 14px 20px 31px;
+
+    &--checks {
+      margin: 0;
+      padding: 50px 20px 20px;
+    }
+
+    &--person {
+      width: 435px;
+      padding: 52px 0 0 0;
+    }
+
+    &--app {
+      width: 391px;
+      margin: 0 0 17px auto;
+      padding: 28px 20px 39px 20px;
+    }
+
+    &--contacts {
+      margin: 5px auto 0;
+      padding: 19px 58px 0;
+    }
+
+    &--adv {
+      margin-top: 57px;
+      margin-bottom: 57px;
+      padding: 22px 58px 34px;
+    }
+
+    &--descr {
+      margin: 0 0 30px;
+      padding: 20px 58px 18px;
     }
   }
 }
@@ -173,11 +160,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-
-    &--col {
-      flex-direction: column;
-      max-height: 240px;
-    }
   }
 }
 
@@ -246,6 +228,7 @@
   display: block;
   box-sizing: border-box;
   width: 100%;
+  min-height: 63px;
   padding: 14px 20px 15px;
   font: inherit;
   font-size: 18px;
@@ -321,15 +304,6 @@
   vertical-align: baseline;
   cursor: pointer;
 
-  @media ($tablet) {
-    padding-left: 59px;
-  }
-
-  @media ($desktop) {
-    margin: 21px 0;
-    padding-right: 56px;
-  }
-
   &::before {
     content: "";
     position: absolute;
@@ -355,6 +329,38 @@
     opacity: 0;
   }
 
+  &--radio {
+    margin-top: 16px;
+    padding-bottom: 0;
+
+    &::before {
+      border-radius: 50%;
+    }
+
+    &::after {
+      top: 13px;
+      left: 12px;
+      width: 15px;
+      height: 15px;
+      background-color: $pink;
+      border: none;
+      border-radius: 50%;
+    }
+  }
+
+  @media ($tablet) {
+    padding-left: 59px;
+  }
+
+  @media ($desktop) {
+    margin: 21px 0;
+
+    &--radio {
+      margin-top: 18px;
+      margin-left: 54px;
+    }
+  }
+
   .post__checker:checked + &::after,
   .post__checker:not(:checked):not(:disabled) + &:active::after {
     opacity: 1;
@@ -372,30 +378,6 @@
 
   &:active:not(:disabled)::before {
     border-color: $pink;
-  }
-
-  &--radio {
-    margin-top: 16px;
-    padding-bottom: 0;
-
-    @media ($desktop) {
-      margin-top: 18px;
-      margin-left: 54px;
-    }
-
-    &::before {
-      border-radius: 50%;
-    }
-
-    &::after {
-      top: 13px;
-      left: 12px;
-      width: 15px;
-      height: 15px;
-      background-color: $pink;
-      border: none;
-      border-radius: 50%;
-    }
   }
 }
 
