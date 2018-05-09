@@ -1,2 +1,94 @@
-!function(a,b){"function"==typeof define&&define.amd?define([],function(){return a.svg4everybody=b()}):"object"==typeof module&&module.exports?module.exports=b():a.svg4everybody=b()}(this,function(){function a(a,b,c){if(c){var d=document.createDocumentFragment(),e=!b.hasAttribute("viewBox")&&c.getAttribute("viewBox");e&&b.setAttribute("viewBox",e);for(var f=c.cloneNode(!0);f.childNodes.length;)d.appendChild(f.firstChild);a.appendChild(d)}}function b(b){b.onreadystatechange=function(){if(4===b.readyState){var c=b._cachedDocument;c||(c=b._cachedDocument=document.implementation.createHTMLDocument(""),c.body.innerHTML=b.responseText,b._cachedTarget={}),b._embeds.splice(0).map(function(d){var e=b._cachedTarget[d.id];e||(e=b._cachedTarget[d.id]=c.getElementById(d.id)),a(d.parent,d.svg,e)})}},b.onreadystatechange()}function c(c){function e(){for(var c=0;c<o.length;){var h=o[c],i=h.parentNode,j=d(i),k=h.getAttribute("xlink:href")||h.getAttribute("href");if(!k&&g.attributeName&&(k=h.getAttribute(g.attributeName)),j&&k){if(f)if(!g.validate||g.validate(k,j,h)){i.removeChild(h);var l=k.split("#"),q=l.shift(),r=l.join("#");if(q.length){var s=m[q];s||(s=m[q]=new XMLHttpRequest,s.open("GET",q),s.send(),s._embeds=[]),s._embeds.push({parent:i,svg:j,id:r}),b(s)}else a(i,j,document.getElementById(r))}else++c,++p}else++c}(!o.length||o.length-p>0)&&n(e,67)}var f,g=Object(c),h=/\bTrident\/[567]\b|\bMSIE (?:9|10)\.0\b/,i=/\bAppleWebKit\/(\d+)\b/,j=/\bEdge\/12\.(\d+)\b/,k=/\bEdge\/.(\d+)\b/,l=window.top!==window.self;f="polyfill"in g?g.polyfill:h.test(navigator.userAgent)||(navigator.userAgent.match(j)||[])[1]<10547||(navigator.userAgent.match(i)||[])[1]<537||k.test(navigator.userAgent)&&l;var m={},n=window.requestAnimationFrame||setTimeout,o=document.getElementsByTagName("use"),p=0;f&&e()}function d(a){for(var b=a;"svg"!==b.nodeName.toLowerCase()&&(b=b.parentNode););return b}return c});
 svg4everybody();
+
+/* Меню мобильной и планшетной версии */
+var pageHeader = document.querySelector('.page-header');
+var menu = document.querySelector('.nav');
+var menuList = document.querySelector('.nav__list');
+var menuBtn = document.querySelector('.nav__switch');
+
+pageHeader.classList.add('page-header--off');
+menu.classList.add('nav--off');
+menuList.classList.add('nav__list--off');
+menuBtn.classList.remove('nav__switch--no-js');
+menuBtn.classList.add('nav__switch--off');
+
+menuBtn.addEventListener('click', function (evt) {
+  evt.preventDefault();
+  pageHeader.classList.toggle('page-header--off');
+  menu.classList.toggle('nav--off');
+  menuList.classList.toggle('nav__list--off');
+  this.classList.toggle('nav__switch--off');
+});
+
+
+/* Переключение отзывов */
+var slidesShow = document.querySelectorAll('.slides__no-js');
+var reviews = document.querySelectorAll('.reviews__item');
+var reviewControls = document.querySelectorAll('.reviews__btn');
+var currentSlide = 0;
+for (var i = 0; i < slidesShow.length; i++) {
+  slidesShow[i].classList.remove('slides__no-js');
+}
+
+var reviewToggle = function (reviewId) {
+  for (var i = 0; i < reviews.length; i++) {
+    if (!reviews[i].classList.contains('slides__no-js')) {
+      reviews[i].classList.add('slides__no-js');
+    }
+    if (reviewControls[i].classList.contains('slides__btn--active')) {
+      reviewControls[i].classList.remove('slides__btn--active');
+    }
+  }
+  reviews[reviewId].classList.remove('slides__no-js');
+  reviewControls[reviewId].classList.add('slides__btn--active');
+  currentSlide = reviewId;
+};
+reviewToggle(currentSlide);
+
+reviewControls[0].addEventListener('click', function() {
+  reviewToggle(0);
+});
+reviewControls[1].addEventListener('click', function() {
+  reviewToggle(1);
+});
+reviewControls[2].addEventListener('click', function() {
+  reviewToggle(2);
+});
+
+var reviewPrev = document.querySelector('.reviews__nav--prev');
+var reviewNext = document.querySelector('.reviews__nav--next');
+reviewPrev.addEventListener('click', function() {
+  var prevSlide = currentSlide - 1;
+  if (prevSlide < 0) {
+    prevSlide = reviews.length - 1;
+  }
+  reviewToggle(prevSlide);
+});
+reviewNext.addEventListener('click', function() {
+  var nextSlide = currentSlide + 1;
+  if (nextSlide == reviews.length) {
+    nextSlide = 0;
+  }
+  reviewToggle(nextSlide);
+});
+
+
+/** Интерактивная карта */
+ymaps.ready(init);
+function init() {
+  var myMap = new ymaps.Map('map', {
+    center: [59.93662, 30.3211],
+    zoom: 16,
+    controls: []
+  });
+  myMap.geoObjects.add(new ymaps.Placemark([59.93662, 30.3211], {
+    hintContent: 'ул. Б. Конюшенная, д. 19/8'
+  }, {
+    iconLayout: 'default#image',
+    iconImageHref: 'img/icon-map-marker.svg',
+    iconShadow: false,
+    iconImageSize: [36, 36],
+    iconImageOffset: [-18, 12]
+  }));
+  myMap.behaviors.disable('scrollZoom');
+}

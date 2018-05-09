@@ -4,6 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Пинк</title>
+  <link rel="preload" href="fonts/opensans.woff2" as="font">
+  <link rel="preload" href="fonts/opensansbold.woff2" as="font">
+  <link rel="preload" href="fonts/opensanslight.woff2" as="font">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body class="page">
@@ -158,7 +161,7 @@
             «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
           </p>
         </li>
-        <li class="reviews__item visually-hidden">
+        <li class="reviews__item">
           <p class="reviews__author">
             Иван Пичугин
           </p>
@@ -169,7 +172,7 @@
             «Это приложение позволяет абстрагироваться от суеты этого бренного мира, от экзистенциальной сути всего происходящего. Оно позволяет увидеть мир таким, каким он был бы, если бы люди хоть немного задумывались о смысле своих поступков».
           </p>
         </li>
-        <li class="reviews__item visually-hidden">
+        <li class="reviews__item">
           <p class="reviews__author">
             Лёха Фас
           </p>
@@ -181,25 +184,25 @@
           </p>
         </li>
       </ul>
-      <ul class="slides__togglers">
+      <ul class="slides__togglers slides__no-js">
         <li class="slides__toggler">
-          <button class="slides__btn slides__btn--active btn" type="button">
+          <button class="reviews__btn slides__btn slides__btn--active btn" type="button">
             Отзыв 1
           </button>
         </li>
         <li class="slides__toggler">
-          <button class="slides__btn btn" type="button">
+          <button class="reviews__btn slides__btn btn" type="button">
             Отзыв 2
           </button>
         </li>
         <li class="slides__toggler">
-          <button class="slides__btn btn" type="button">
+          <button class="reviews__btn slides__btn btn" type="button">
             Отзыв 3
           </button>
         </li>
       </ul>
-      <button class="reviews__nav reviews__nav--prev btn" type="button">Предыдущий слайд</button>
-      <button class="reviews__nav reviews__nav--next btn" type="button">Следующий слайд</button>
+      <button class="reviews__nav reviews__nav--prev btn slides__no-js" type="button">Предыдущий слайд</button>
+      <button class="reviews__nav reviews__nav--next btn slides__no-js" type="button">Следующий слайд</button>
     </section>
 
     <section class="page-content__sect page-content__sect--even slides tarifs">
