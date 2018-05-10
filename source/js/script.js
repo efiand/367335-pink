@@ -96,3 +96,104 @@ if (document.getElementById('map')) {
     myMap.behaviors.disable('scrollZoom');
   }
 }
+
+/* Обработка форм */
+var post = document.querySelector('.post');
+if (post) {
+
+  var modalSuccess = document.querySelector('.modal--success');
+  var modalError = document.querySelector('.modal--error');
+  var valFlag = false;
+
+  modalSuccess.classList.add('modal--js');
+  modalError.classList.add('modal--js');
+
+  /* Прогрессивное улучшение формы (глючит в MS Edge и MSIE) */
+  if (!document.documentMode && !/Edge/.test(navigator.userAgent)) {
+    var postLastName = document.getElementById('last-name');
+    var postFirstName = document.getElementById('first-name');
+    var postMiddleName = document.getElementById('middle-name');
+    var postMail = document.getElementById('email');
+
+    postLastName.value = localStorage.getItem('last-name');
+    postFirstName.value = localStorage.getItem('first-name');
+    postMiddleName.value = localStorage.getItem('middle-name');
+    if (!postLastName.value) {
+      postLastName.focus();
+    }
+    else if (!postFirstName.value) {
+      postFirstName.focus();
+    }
+    else {
+      postMiddleName.focus();
+    }
+
+    var fielder = function(obj) {
+      if (obj.classList.contains('post__field--invalid')) {
+        obj.classList.remove('post__field--invalid');
+      }
+      valFlag = true;
+      obj.value = obj.value.trim();
+      if (obj.getAttribute.type == 'email') {
+        if (!/.+@.+\..+/i.test(postMail.value)) {
+          postMail.value = '';
+        }
+      }
+      if (!obj.value) {
+        obj.classList.add('post__field--invalid');
+        valFlag = false;
+      }
+      else {
+        localStorage.setItem(obj.getAttribute('id'), obj.value);
+      }
+    }
+
+    postFirstName.addEventListener('blur', function(evt) {
+      fielder(this);
+    });
+    postLastName.addEventListener('blur', function(evt) {
+      fielder(this);
+    });
+    postMail.addEventListener('blur', function(evt) {
+      fielder(this);
+    });
+
+    var postSubmit = document.querySelector('.post__btn');
+    postSubmit.addEventListener('click', function(evt) {
+      evt.preventDefault();
+      if (valFlag) {
+        modalSuccess.classList.add('modal--opened');
+      }
+      else {
+        modalError.classList.add('modal--opened');
+      }
+    });
+
+
+    var modalClose = function(obj) {
+      if (obj.classList.contains('modal--opened')) {
+        obj.classList.remove('modal--opened');
+      }
+    };
+
+    var modalBtnSuccess = document.querySelector('.modal__btn--success');
+    modalBtnSuccess.addEventListener('click', function(evt) {
+      modalClose(modalSuccess);
+    });
+    modalBtnSuccess.addEventListener('keydown', function(evt) {
+      if (evt.keyCode === 27) {
+        modalClose(modalSuccess);
+      }
+    });
+
+    var modalBtnError = document.querySelector('.modal__btn--error');
+    modalBtnError.addEventListener('click', function(evt) {
+      modalClose(modalError);
+    });
+    modalBtnError.addEventListener('keydown', function(evt) {
+      if (evt.keyCode === 27) {
+        modalClose(modalError);
+      }
+    });
+  }
+}

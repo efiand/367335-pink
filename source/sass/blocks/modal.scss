@@ -1,5 +1,5 @@
 .modal {
-  display: none;
+  margin: 60px auto;
   padding: 0 0 50px;
   text-align: center;
   box-shadow: 0 7px 15px 0 rgba(0, 0, 0, 0.15);
@@ -8,9 +8,22 @@
     background-color: #f2f2f2;
   }
 
+  &--js {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    display: none;
+    transform: translate(-50%, -50%);
+    animation: bounce 0.6s;
+  }
+
+  &--opened {
+    display: block;
+  }
+
   @media ($tablet) {
     width: 460px;
-    margin: 0 auto;
   }
 
   @media ($desktop) {
@@ -58,11 +71,13 @@
 
   @media ($tablet) {
     width: calc(100% - 160px);
-    margin: 0 80px;
+    margin-right: 80px;
+    margin-left: 80px;
   }
 
   @media ($desktop) {
-    margin: 0 auto;
+    margin-right: auto;
+    margin-left: auto;
 
     &--success {
       width: 460px;
