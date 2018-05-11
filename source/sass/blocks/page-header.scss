@@ -93,8 +93,8 @@
     font-size: 50px;
 
     &--index {
-      padding-top: 63px;
-      padding-bottom: 5px;
+      padding: 63px 60px 5px;
+      font-size: 40px;
     }
 
     &--photo {
@@ -107,7 +107,7 @@
   @media ($desktop) {
     width: 940px;
     margin: 0 auto;
-    padding: 65px 0 49px;
+    padding: 63px 0 51px;
 
     &--index {
       width: 260px;

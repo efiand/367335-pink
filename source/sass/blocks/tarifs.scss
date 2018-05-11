@@ -67,7 +67,7 @@
 
   @media ($tablet) {
     width: auto;
-    padding: 12px 20px;
+    padding: 12px 20px 6px;
   }
 
   @media ($desktop) {
@@ -98,7 +98,7 @@
 
     @media ($desktop) {
       font-size: 14px;
-      transform: rotate(-45deg) translate(6px, 23px);
+      transform: rotate(-45deg) translate(6px, 24px);
     }
   }
 }
@@ -113,6 +113,10 @@
   @media ($tablet) {
     font-size: 16px;
   }
+
+  @media ($desktop) {
+    font-size: 18px;
+  }
 }
 
 .tarifs__price {
@@ -123,11 +127,10 @@
   @media ($tablet) {
     margin: 0;
     font-size: 18px;
-    line-height: 24px;
   }
 
   @media ($desktop) {
-    margin: 5px 0 6px;
+    margin: 1px 0 4px;
     font-size: 24px;
   }
 }

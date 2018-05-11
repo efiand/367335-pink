@@ -118,15 +118,6 @@ if (post) {
     postLastName.value = localStorage.getItem('last-name');
     postFirstName.value = localStorage.getItem('first-name');
     postMiddleName.value = localStorage.getItem('middle-name');
-    if (!postLastName.value) {
-      postLastName.focus();
-    }
-    else if (!postFirstName.value) {
-      postFirstName.focus();
-    }
-    else {
-      postMiddleName.focus();
-    }
 
     var fielder = function(obj) {
       if (obj.classList.contains('post__field--invalid')) {
@@ -180,20 +171,10 @@ if (post) {
     modalBtnSuccess.addEventListener('click', function(evt) {
       modalClose(modalSuccess);
     });
-    modalBtnSuccess.addEventListener('keydown', function(evt) {
-      if (evt.keyCode === 27) {
-        modalClose(modalSuccess);
-      }
-    });
 
     var modalBtnError = document.querySelector('.modal__btn--error');
     modalBtnError.addEventListener('click', function(evt) {
       modalClose(modalError);
-    });
-    modalBtnError.addEventListener('keydown', function(evt) {
-      if (evt.keyCode === 27) {
-        modalClose(modalError);
-      }
     });
   }
 }

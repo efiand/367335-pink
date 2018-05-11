@@ -22,11 +22,11 @@
   @media ($desktop) {
     align-items: center;
     box-sizing: border-box;
-    padding: 25px $contain 40px;
+    padding: 23px $contain 40px;
     background-color: rgba(0, 0, 0, 0.3);
 
     &--off {
-      padding: 25px $contain 40px;
+      padding: 27px $contain 43px;
     }
   }
 }
@@ -206,6 +206,7 @@
 
   @media ($desktop) {
     padding: 0;
+    line-height: 18px;
     text-transform: none;
   }
 
@@ -222,15 +223,19 @@
     }
   }
 
-  &--current {
-    @media ($tablet) {
-      background-image: repeating-linear-gradient($asphalt 0, $asphalt 30px, #ffffff 30px, #ffffff 32px);
-      background-position: 0 12px;
+  @media ($desktop) {
+    &--current {
+      position: relative;
     }
 
-    @media ($desktop) {
-      background-image: repeating-linear-gradient(transparent 0, transparent 30px, #ffffff 30px, #ffffff 32px);
-      background-position: 0 30px;
+    &--current::after {
+      content: "";
+      position: absolute;
+      top: 30px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #ffffff;
     }
   }
 }
