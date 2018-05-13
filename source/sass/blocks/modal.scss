@@ -1,7 +1,9 @@
 .modal {
+  width: 100%;
   margin: 60px auto;
   padding: 0 0 50px;
   text-align: center;
+  background-color: #ffffff;
   box-shadow: 0 7px 15px 0 rgba(0, 0, 0, 0.15);
 
   &--success {
