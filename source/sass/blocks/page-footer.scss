@@ -3,7 +3,6 @@
 
   @media ($tablet) {
     display: flex;
-    justify-content: center;
     align-items: center;
     padding: 39px 18px 29px;
   }
@@ -21,14 +20,14 @@
   margin-right: auto;
   margin-left: auto;
 
-  @media ($tablet) {
-    width: 200px;
-  }
-
   &--logo {
     margin: 0 auto;
+  }
 
-    @media ($tablet) {
+  @media ($tablet) {
+    width: 200px;
+
+    &--logo {
       margin: 0 auto 0 0;
       transform: translate(2px, -13px);
     }

@@ -72,24 +72,21 @@
   white-space: nowrap;
   opacity: 0.3;
 
-  @media ($tablet) {
-    width: 30px;
-    height: 30px;
-    padding: 0;
-    opacity: 1;
-  }
-
-  @media ($desktop) {
-    width: 48px;
-    height: 48px;
-  }
-
   &:hover,
   &:focus {
     opacity: 0.5;
   }
 
+  &--active {
+    cursor: default;
+  }
+
   @media ($tablet) {
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    opacity: 1;
+
     &:hover,
     &:focus {
       opacity: 0.5;
@@ -101,19 +98,31 @@
     }
   }
 
+  @media ($desktop) {
+    width: 48px;
+    height: 48px;
+  }
+
   &:active,
   &--active,
   &--active:hover,
   &--active:focus {
     opacity: 1;
 
-    .edit__icon {
-      fill: $pink;
+    @media ($tablet) {
+      opacity: 1;
     }
   }
 
-  &--active {
-    cursor: default;
+  &:active .edit__icon,
+  &--active .edit__icon,
+  &--active:hover .edit__icon,
+  &--active:focus .edit__icon {
+    fill: $pink;
+
+    @media ($tablet) {
+      fill: $pink;
+    }
   }
 }
 

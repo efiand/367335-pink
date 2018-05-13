@@ -23,9 +23,8 @@
   }
 
   &--post {
-    margin-top: 25px;
-    margin-bottom: 0;
-    padding-bottom: 0;
+    margin: 25px 20px 0;
+    padding: 20px 0 0;
 
     @media ($tablet) {
       margin: 72px 60px 38px;
@@ -46,22 +45,6 @@
     background-color: #f2f2f2;
   }
 
-  &--even::before {
-    content: "";
-    display: block;
-    height: 32px;
-    background-image: linear-gradient(to right bottom, #ffffff 50%, #f2f2f2 50%);
-    border-bottom: solid 12px #f2f2f2;
-
-    @media ($tablet) {
-      height: 50px;
-    }
-
-    @media ($desktop) {
-      height: 97px;
-    }
-  }
-
   &--index {
     padding-bottom: 4px;
 
@@ -79,6 +62,22 @@
 
     @media ($desktop) {
       margin-top: 50px;
+    }
+  }
+
+  &--even::before {
+    content: "";
+    display: block;
+    height: 32px;
+    background-image: linear-gradient(to right bottom, #ffffff 50%, #f2f2f2 50%);
+    border-bottom: solid 12px #f2f2f2;
+
+    @media ($tablet) {
+      height: 50px;
+    }
+
+    @media ($desktop) {
+      height: 97px;
     }
   }
 }

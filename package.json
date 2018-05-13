@@ -7,6 +7,7 @@
     "@htmlacademy/editorconfig-cli": "1.x",
     "autoprefixer": "8.3.x",
     "browser-sync": "2.23.x",
+    "css-mqpacker": "^6.0.2",
     "del": "^3.0.0",
     "gulp": "3.9.x",
     "gulp-concat": "^2.6.1",
@@ -33,11 +34,6 @@
     "build": "gulp build",
     "start": "npm run build && gulp serve"
   },
-  "browserslist": [
-    "last 2 versions",
-    "IE 11",
-    "Firefox ESR"
-  ],
   "editorconfig-cli": [
     "*.json",
     "*.js",

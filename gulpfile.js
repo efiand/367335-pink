@@ -8,6 +8,7 @@ var uglify = require('gulp-uglify');
 var sass = require('gulp-sass');
 var plumber = require('gulp-plumber');
 var postcss = require('gulp-postcss');
+var mqpacker = require('css-mqpacker');
 var autoprefixer = require('autoprefixer');
 var minify = require('gulp-csso');
 var imagemin = require('gulp-imagemin');
@@ -33,6 +34,7 @@ gulp.task('style', function() {
   .pipe(plumber())
   .pipe(sass())
   .pipe(postcss([
+    mqpacker(),
     autoprefixer()
     ]))
   .pipe(gulp.dest('build/css'))

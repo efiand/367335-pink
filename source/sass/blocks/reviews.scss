@@ -28,6 +28,10 @@
     display: flex;
     flex-direction: column;
     padding-top: 30px;
+
+    &.slides__no-js {
+      display: none;
+    }
   }
 
   @media ($desktop) {

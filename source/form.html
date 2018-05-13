@@ -71,13 +71,13 @@
           <label class="post__label-fields" for="last-name">
             Фамилия:
           </label>
-          <input class="post__field" id="last-name" name="last-name" type="text" placeholder="Укажите фамилию *" required>
+          <input class="post__field" id="last-name" name="last-name" type="text" placeholder="Укажите фамилию *">
         </p>
         <p class="post__item-fields">
           <label class="post__label-fields" for="first-name">
             Имя:
           </label>
-          <input class="post__field" id="first-name" name="first-name" type="text" placeholder="Введите ваше имя *" required>
+          <input class="post__field" id="first-name" name="first-name" type="text" placeholder="Введите ваше имя *">
         </p>
         <p class="post__item-fields">
           <label class="post__label-fields" for="middle-name">
@@ -91,43 +91,49 @@
         <legend class="post__title post__title--adv">
           Ваши безбашенные достижения в путешествии
         </legend>
-        <div class="post__wrapper post__wrapper--col">
-          <p class="post__item-checks">
-            <input class="post__checker visually-hidden" id="achieve-1" name="achieve[]" type="checkbox" value="1" checked>
-            <label class="post__label" for="achieve-1">
-              Сделал селфи с акулой
-            </label>
-          </p>
-          <p class="post__item-checks">
-            <input class="post__checker visually-hidden" id="achieve-2" name="achieve[]" type="checkbox" value="2" checked>
-            <label class="post__label" for="achieve-2">
-              Обгорел на пляже
-            </label>
-          </p>
-          <p class="post__item-checks">
-            <input class="post__checker visually-hidden" id="achieve-3" name="achieve[]" type="checkbox" value="3">
-            <label class="post__label" for="achieve-3">
-              Видел Чака Норриса
-            </label>
-          </p>
-          <p class="post__item-checks">
-            <input class="post__checker visually-hidden" id="achieve-4" name="achieve[]" type="checkbox" value="4">
-            <label class="post__label" for="achieve-4">
-              Накупил сувениров
-            </label>
-          </p>
-          <p class="post__item-checks">
-            <input class="post__checker visually-hidden" id="achieve-5" name="achieve[]" type="checkbox" value="5" checked>
-            <label class="post__label" for="achieve-5">
-              Удержал башню
-            </label>
-          </p>
-          <p class="post__item-checks">
-            <input class="post__checker visually-hidden" id="achieve-6" name="achieve[]" type="checkbox" value="6">
-            <label class="post__label" for="achieve-6">
-              Разгромил отель
-            </label>
-          </p>
+        <div class="post__wrapper">
+          <div>
+            <p class="post__item-checks">
+              <input class="post__checker visually-hidden" id="achieve-1" name="achieve[]" type="checkbox" value="1" checked>
+              <label class="post__label" for="achieve-1">
+                Сделал селфи с акулой
+              </label>
+            </p>
+            <p class="post__item-checks">
+              <input class="post__checker visually-hidden" id="achieve-2" name="achieve[]" type="checkbox" value="2" checked>
+              <label class="post__label" for="achieve-2">
+                Обгорел на пляже
+              </label>
+            </p>
+          </div>
+          <div>
+            <p class="post__item-checks">
+              <input class="post__checker visually-hidden" id="achieve-3" name="achieve[]" type="checkbox" value="3">
+              <label class="post__label" for="achieve-3">
+                Видел Чака Норриса
+              </label>
+            </p>
+            <p class="post__item-checks">
+              <input class="post__checker visually-hidden" id="achieve-4" name="achieve[]" type="checkbox" value="4">
+              <label class="post__label" for="achieve-4">
+                Накупил сувениров
+              </label>
+            </p>
+          </div>
+          <div>
+            <p class="post__item-checks">
+              <input class="post__checker visually-hidden" id="achieve-5" name="achieve[]" type="checkbox" value="5" checked>
+              <label class="post__label" for="achieve-5">
+                Удержал башню
+              </label>
+            </p>
+            <p class="post__item-checks">
+              <input class="post__checker visually-hidden" id="achieve-6" name="achieve[]" type="checkbox" value="6">
+              <label class="post__label" for="achieve-6">
+                Разгромил отель
+              </label>
+            </p>
+          </div>
         </div>
       </fieldset>
 
@@ -140,13 +146,13 @@
             <label class="post__label-fields post__label-fields--contacts" for="tel">
               Номер телефона
             </label>
-            <input class="post__field post__field--contacts post__field--tel" id="tel" name="tel" type="tel" placeholder="Номер, пожалуйста" required>
+            <input class="post__field post__field--contacts post__field--tel" id="tel" name="tel" type="tel" placeholder="Номер, пожалуйста">
           </p>
           <p class="post__item-fields post__item-fields--contacts">
             <label class="post__label-fields post__label-fields--contacts" for="email">
               Адрес почты
             </label>
-            <input class="post__field post__field--contacts" id="email" name="email" type="email" placeholder="Введите почту *" required>
+            <input class="post__field post__field--contacts" id="email" name="email" type="email" placeholder="Введите почту *">
           </p>
         </div>
       </fieldset>
@@ -193,7 +199,7 @@
         <span class="page-content__em">*</span> — обязательные <span class="page__desktop page__desktop--inline">для заполнения</span> поля
       </p>
     </form>
-    <div class="page__modal modal modal--success">
+    <div class="modal modal--success">
       <p class="modal__lead">
         Ваша заявка отправлена
       </p>
@@ -204,7 +210,7 @@
         Закрыть окно
       </button>
     </div>
-    <div class="page__modal modal modal--error">
+    <div class="modal modal--error">
       <p class="modal__lead">
         Что-то пошло не так!
       </p>
