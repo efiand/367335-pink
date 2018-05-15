@@ -12,42 +12,44 @@
 <body class="page">
   <header class="page__header page-header">
     <nav class="page-header__nav nav">
-      <a class="nav__logo" href="index.html">
-        <svg class="nav__logo-img nav__logo-img--mobile">
-          <use xlink:href="img/symbols.svg#logo-header-mobile"/>
-        </svg>
-        <svg class="nav__logo-img nav__logo-img--tablet">
-          <use xlink:href="img/symbols.svg#logo-header-tablet"/>
-        </svg>
-        <svg class="nav__logo-img nav__logo-img--desktop">
-          <use xlink:href="img/symbols.svg#logo-header-desktop"/>
-        </svg>
-      </a>
-      <button class="nav__switch nav__switch--no-js btn" type="button">
-        Показать/скрыть меню
-      </button>
-      <ul class="nav__list">
-        <li class="nav__item">
-          <a class="nav__link" href="index.html">
-            Главная
-          </a>
-        </li>
-        <li class="nav__item">
-          <a class="nav__link nav__link--current">
-            Фотографии
-          </a>
-        </li>
-        <li class="nav__item">
-          <a class="nav__link" href="form.html">
-            Конкурс
-          </a>
-        </li>
-        <li class="nav__item">
-          <a class="nav__link" href="https://htmlacademy.ru/intensive/adaptive">
-            HTML Academy
-          </a>
-        </li>
-      </ul>
+      <div class="page__container nav__wrapper">
+        <a class="nav__logo" href="index.html">
+          <svg class="nav__logo-img nav__logo-img--mobile">
+            <use xlink:href="img/symbols.svg#logo-header-mobile"/>
+          </svg>
+          <svg class="nav__logo-img nav__logo-img--tablet">
+            <use xlink:href="img/symbols.svg#logo-header-tablet"/>
+          </svg>
+          <svg class="nav__logo-img nav__logo-img--desktop">
+            <use xlink:href="img/symbols.svg#logo-header-desktop"/>
+          </svg>
+        </a>
+        <button class="nav__switch nav__switch--no-js btn" type="button">
+          Показать/скрыть меню
+        </button>
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a class="nav__link" href="index.html">
+              Главная
+            </a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link nav__link--current">
+              Фотографии
+            </a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="form.html">
+              Конкурс
+            </a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="https://htmlacademy.ru/intensive/adaptive">
+              HTML Academy
+            </a>
+          </li>
+        </ul>
+      </div>
     </nav>
     <h1 class="page-header__title page-header__title--photo">
       Фотографии пользователей
@@ -66,18 +68,16 @@
       </h2>
       <ul class="photos__list">
         <li class="photos__item photos__item--lead">
-          <p class="photos__lead">
-            <a href="#">
-              <picture>
-                <source type="image/webp" media="(min-width: 960px)" srcset="img/panorama-desktop@1x.webp 1x, img/panorama-desktop@2x.webp 2x"/>
-                <source type="image/webp" media="(min-width: 660px)" srcset="img/panorama-tablet@1x.webp 1x, img/panorama-tablet@2x.webp 2x"/>
-                <source type="image/webp" srcset="img/panorama-mobile@1x.webp 1x, img/panorama-mobile@2x.webp 2x"/>
-                <source media="(min-width: 960px)" srcset="img/panorama-desktop@1x.jpg 1x, img/panorama-desktop@2x.jpg 2x"/>
-                <source media="(min-width: 660px)" srcset="img/panorama-tablet@1x.jpg 1x, img/panorama-tablet@2x.jpg 2x"/>
-                <img class="photos__img photos__img--lead" src="img/panorama-mobile@1x.jpg" srcset="img/panorama-mobile@2x.jpg 2x" alt="Фотография">
-              </picture>
-            </a>
-          </p>
+          <a class="photos__lead" href="#">
+            <picture>
+              <source type="image/webp" media="(min-width: 960px)" srcset="img/panorama-desktop@1x.webp 1x, img/panorama-desktop@2x.webp 2x"/>
+              <source type="image/webp" media="(min-width: 660px)" srcset="img/panorama-tablet@1x.webp 1x, img/panorama-tablet@2x.webp 2x"/>
+              <source type="image/webp" srcset="img/panorama-mobile@1x.webp 1x, img/panorama-mobile@2x.webp 2x"/>
+              <source media="(min-width: 960px)" srcset="img/panorama-desktop@1x.jpg 1x, img/panorama-desktop@2x.jpg 2x"/>
+              <source media="(min-width: 660px)" srcset="img/panorama-tablet@1x.jpg 1x, img/panorama-tablet@2x.jpg 2x"/>
+              <img class="photos__img photos__img--lead" src="img/panorama-mobile@1x.jpg" srcset="img/panorama-mobile@2x.jpg 2x" alt="Фотография">
+            </picture>
+          </a>
           <p class="photos__title photos__title--lead">
             Анна <span class="photos__time">(5 минут назад)</span>
           </p>

@@ -1,7 +1,4 @@
 .nav {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
   padding: 21px 0 0;
   text-transform: uppercase;
   background-color: inherit;
@@ -21,13 +18,22 @@
 
   @media ($desktop) {
     align-items: center;
-    box-sizing: border-box;
-    padding: 23px $contain 40px;
+    padding: 23px 0 40px;
     background-color: rgba(0, 0, 0, 0.3);
 
     &--off {
-      padding: 27px $contain 43px;
+      padding: 27px 0 43px;
     }
+  }
+}
+
+.nav__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @media ($desktop) {
+    align-items: center;
   }
 }
 
