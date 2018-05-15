@@ -12,13 +12,13 @@
     padding: 27px 0 0;
 
     &--off {
-      padding: 21px 0 42px;
+      padding: 27px 0 42px;
     }
   }
 
   @media ($desktop) {
     align-items: center;
-    padding: 23px 0 40px;
+    padding: 27px 0 40px;
     background-color: rgba(0, 0, 0, 0.3);
 
     &--off {
