@@ -1,6 +1,5 @@
 .contacts {
   padding: 43px 0 0;
-  line-height: 1.2;
   text-align: center;
 
   @media ($tablet) {
@@ -62,6 +61,8 @@
   margin: 26px 0 6px;
   font-weight: 700;
   font-size: 18px;
+  line-height: 21px;
+
 
   @media ($tablet) {
     margin-top: 45px;
@@ -72,6 +73,8 @@
   margin: 0;
   font-weight: 300;
   font-size: 24px;
+  line-height: 28px;
+
   color: $pink;
 
   @media ($tablet) {

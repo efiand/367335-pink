@@ -1,4 +1,5 @@
 .post {
+  overflow: hidden;
   padding: 0;
   line-height: 30px;
 
@@ -12,7 +13,6 @@
 .post__group {
   margin: 0;
   padding: 14px 20px 31px;
-  overflow: hidden;
   border: none;
 
   &--checks {
@@ -21,19 +21,19 @@
   }
 
   &--person {
-    padding: 33px 20px 8px;
+    padding: 33px 20px 26px;
   }
 
   &--app {
-    padding-bottom: 23px;
+    padding: 32px 20px 23px;
   }
 
   &--contacts {
-    padding: 32px 20px 7px;
+    padding: 32px 20px 25px;
   }
 
   &--adv {
-    padding: 52px 20px 18px;
+    padding: 34px 20px 18px;
   }
 
   @media ($tablet) {
@@ -118,6 +118,7 @@
 .post__title {
   position: relative;
   top: 56px;
+  width: 240px;
   padding: 0 20px;
   line-height: 18px;
   text-transform: uppercase;
@@ -136,10 +137,15 @@
   }
 
   &--app {
+    top: 38px;
+
+    @media ($tablet) {
+      width: 318px;
+    }
+
     @media ($desktop) {
       left: 31px;
       margin: 0;
-      width: 318px;
       transform: translateY(-50%);
     }
   }
@@ -158,12 +164,16 @@
 
     @media ($tablet) {
       display: block;
+      width: 184px;
       padding: 0 38px;
     }
   }
 
   &--adv {
+    top: 38px;
+
     @media ($tablet) {
+      width: 370px;
       padding: 0 32px;
     }
   }

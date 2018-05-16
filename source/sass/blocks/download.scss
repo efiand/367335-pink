@@ -63,11 +63,16 @@
 }
 
 .download__mainlink {
-  width: 254px;
-  padding-right: 10px;
-  padding-left: 10px;
+  width: 234px;
+  margin: 0 auto;
+  padding-right: 20px;
+  padding-left: 20px;
   color: inherit;
   border-color: #ffffff;
+
+  @media ($tablet) {
+    width: 254px;
+  }
 
   @media ($desktop) {
     padding: 14px 20px;
@@ -133,17 +138,16 @@
 }
 
 .download__descr {
-  margin: 2px 0;
+  margin: 2px 20px;
   font-weight: 300;
   text-align: center;
 
   @media ($tablet) {
-    margin-top: 37px;
+    margin: 37px 0 2px;
     font-size: 18px;
   }
 
   @media ($desktop) {
-    margin-top: 25px;
-    margin-bottom: 22px;
+    margin: 25px 0 22px;
   }
 }

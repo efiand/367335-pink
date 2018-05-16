@@ -6,6 +6,7 @@
   flex-grow: 1;
   margin: 0;
   padding: 0 0 75px;
+  overflow: hidden;
   list-style: none;
   border-bottom: solid 1px #dddfe0;
 
@@ -128,12 +129,13 @@
 
 .edit__range {
   position: absolute;
-  left: 0;
+  left: 50%;
   display: none;
-  width: calc(100% - 80px);
+  width: 240px;
   height: 14px;
-  margin: 33px 38px 0;
+  margin: 33px 0 0;
   background-image: linear-gradient(transparent 6px, $asphalt 6px, $asphalt 8px, transparent 8px);
+  transform: translateX(-50%);
 
   .edit__btn--active + & {
     display: block;
@@ -141,13 +143,15 @@
 
   @media ($tablet) {
     position: relative;
+    left: 101px;
     display: block;
-    width: calc(100% - 55px);
+    width: 202px;
     margin: 0;
     border-bottom: none;
   }
 
   @media ($desktop) {
+    left: 144px;
     width: 288px;
     margin-right: 12px;
   }
