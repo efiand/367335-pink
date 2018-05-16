@@ -12,6 +12,7 @@
 .post__group {
   margin: 0;
   padding: 14px 20px 31px;
+  overflow: hidden;
   border: none;
 
   &--checks {
@@ -36,8 +37,8 @@
   }
 
   @media ($tablet) {
-    position: relative;
     width: 100%;
+    position: relative;
     margin: 20px 20px 37px;
 
     &--checks {
