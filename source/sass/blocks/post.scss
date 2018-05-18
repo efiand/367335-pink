@@ -1,4 +1,5 @@
 .post {
+  overflow: hidden;
   padding: 0;
   line-height: 30px;
 
@@ -7,14 +8,10 @@
     flex-wrap: wrap;
     align-items: center;
   }
-
-  @media ($desktop) {
-    width: 940px;
-    margin: 0 auto;
-  }
 }
 
 .post__group {
+  position: relative;
   margin: 0;
   padding: 14px 20px 31px;
   border: none;
@@ -25,23 +22,42 @@
   }
 
   &--person {
-    padding: 33px 20px 8px;
+    padding: 33px 20px 26px;
   }
 
   &--app {
-    padding-bottom: 23px;
+    padding: 32px 20px 23px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 18px;
+      background-color: #f2f2f2;
+    }
   }
 
   &--contacts {
-    padding: 32px 20px 7px;
+    padding: 32px 20px 25px;
   }
 
   &--adv {
-    padding: 52px 20px 18px;
+    padding: 34px 20px 18px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 18px;
+      background-color: #f2f2f2;
+    }
   }
 
   @media ($tablet) {
-    position: relative;
     width: 100%;
     margin: 20px 20px 37px;
 
@@ -61,6 +77,10 @@
       padding: 14px 20px 32px 58px;
     }
 
+    &--app::before {
+      content: none;
+    }
+
     &--contacts {
       order: -1;
       margin-top: 34px;
@@ -70,6 +90,10 @@
     &--adv {
       margin-top: 28px;
       padding: 14px 58px 19px;
+    }
+
+    &--adv::before {
+      content: none;
     }
 
     &--descr {
@@ -122,6 +146,7 @@
 .post__title {
   position: relative;
   top: 56px;
+  width: 240px;
   padding: 0 20px;
   line-height: 18px;
   text-transform: uppercase;
@@ -139,6 +164,20 @@
     background-color: #ffffff;
   }
 
+  &--app {
+    top: 38px;
+
+    @media ($tablet) {
+      width: 318px;
+    }
+
+    @media ($desktop) {
+      left: 31px;
+      margin: 0;
+      transform: translateY(-50%);
+    }
+  }
+
   &--contacts {
     display: none;
 
@@ -153,12 +192,16 @@
 
     @media ($tablet) {
       display: block;
+      width: 184px;
       padding: 0 38px;
     }
   }
 
   &--adv {
+    top: 38px;
+
     @media ($tablet) {
+      width: 370px;
       padding: 0 32px;
     }
   }

@@ -5,12 +5,16 @@ var pageHeader = document.querySelector('.page-header');
 var menu = document.querySelector('.nav');
 var menuList = document.querySelector('.nav__list');
 var menuBtn = document.querySelector('.nav__switch');
+var download = document.querySelector('.download');
 
 pageHeader.classList.add('page-header--off');
 menu.classList.add('nav--off');
 menuList.classList.add('nav__list--off');
 menuBtn.classList.remove('nav__switch--no-js');
 menuBtn.classList.add('nav__switch--off');
+if (download) {
+  download.classList.add('download--off');
+}
 
 menuBtn.addEventListener('click', function (evt) {
   evt.preventDefault();
@@ -18,6 +22,9 @@ menuBtn.addEventListener('click', function (evt) {
   menu.classList.toggle('nav--off');
   menuList.classList.toggle('nav__list--off');
   this.classList.toggle('nav__switch--off');
+  if (download) {
+    download.classList.toggle('download--off');
+  }
 });
 
 

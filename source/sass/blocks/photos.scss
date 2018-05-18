@@ -28,6 +28,7 @@
   width: 244px;
   margin: 20px auto;
   padding: 0 18px 20px;
+  overflow: hidden;
   background-color: #f2f2f2;
 
   &--lead {
@@ -89,21 +90,22 @@
 .photos__lead {
   position: absolute;
   top: 0;
-  left: 50%;
+  left: 0;
   width: 320px;
   height: 137px;
   margin: 0;
   overflow: hidden;
-  transform: translateX(-50%);
 
   @media ($tablet) {
     width: 660px;
     height: 509px;
+    left: -10px;
   }
 
   @media ($desktop) {
     width: 100%;
     height: 506px;
+    left: 0;
   }
 }
 

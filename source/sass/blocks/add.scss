@@ -57,7 +57,7 @@
 }
 
 .add__submit {
-  width: calc(100% - 44px);
+  width: 276px;
   margin: 38px auto 0;
 
   @media ($tablet) {
@@ -85,6 +85,11 @@
     background-color: $pink;
   }
 
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: $pink;
+  }
+
   &--reset {
     color: $asphalt;
     border-color: $asphalt;
@@ -98,12 +103,10 @@
     }
 
     &:active {
+      color: #ffffff;
       background-color: $asphalt;
+      opacity: 0.3;
     }
-  }
-
-  &:active {
-    color: rgba(255, 255, 255, 0.3);
   }
 
   @media ($tablet) {

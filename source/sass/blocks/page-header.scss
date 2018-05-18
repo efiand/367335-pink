@@ -1,36 +1,37 @@
 .page-header {
-  margin-top: 260px;
-  padding-top: 66px;
   color: #ffffff;
   background-color: $asphalt;
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-position: center top;
+  background-position: center bottom -223px;
   background-size: 700px auto;
 
-  &--index {
-    margin-top: 259px;
+  &--off {
+    padding-top: 66px;
+    background-position: center top;
   }
 
-  &--off {
-    margin-top: 0;
+  &--index {
+    padding-top: 0;
+    background-image: none;
   }
 
   @media ($retina) {
     background-image: url("../img/bg-back-mobile@2x.jpg");
+
+    &--index {
+      background-image: none;
+    }
   }
 
   @media ($tablet) {
     margin-bottom: 30px;
     background-image: url("../img/bg-back-tablet@1x.jpg");
     background-size: 1200px auto;
+    background-position: center bottom -289px;
 
     &--index {
-      margin-top: 255px;
-    }
-
-    &--off {
-      margin-top: 0;
+      background-position: center bottom;
     }
   }
 
@@ -43,6 +44,7 @@
     padding-top: 0;
     background-image: url("../img/bg-back-desktop@1x.jpg");
     background-size: 2560px auto;
+    background-position: center top;
 
     &--index {
       margin-bottom: 47px;
@@ -54,27 +56,18 @@
   }
 }
 
-.page-header__nav {
-  position: absolute;
-  top: 0;
-  width: 100%;
-
-  @media ($desktop) {
-    position: static;
-  }
-}
-
 .page-header__title {
   margin: 0;
   padding: 32px 40px 54px;
   font-weight: 300;
   font-size: 24px;
-  line-height: 1.2;
+  line-height: 28px;
   text-align: center;
 
   &--index {
     padding: 0 60px 30px;
     font-size: 40px;
+    line-height: 48px;
   }
 
   &--photo {
@@ -89,18 +82,20 @@
 
   @media ($tablet) {
     min-height: 170px;
-    padding: 110px 80px 79px;
+    padding: 70px 80px 79px;
     font-size: 50px;
+    line-height: 60px;
 
     &--index {
       padding: 63px 40px 5px;
       font-size: 40px;
+      line-height: 48px;
     }
 
     &--photo {
       width: 360px;
       margin: 0 auto;
-      padding: 110px 80px 89px;
+      padding: 70px 80px 89px;
     }
   }
 
@@ -114,6 +109,7 @@
       margin: 0;
       padding: 0 20px 50px;
       font-size: 50px;
+      line-height: 60px;
     }
 
     &--photo {
