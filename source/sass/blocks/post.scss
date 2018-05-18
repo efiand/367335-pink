@@ -11,6 +11,7 @@
 }
 
 .post__group {
+  position: relative;
   margin: 0;
   padding: 14px 20px 31px;
   border: none;
@@ -26,6 +27,16 @@
 
   &--app {
     padding: 32px 20px 23px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 18px;
+      background-color: #f2f2f2;
+    }
   }
 
   &--contacts {
@@ -34,11 +45,20 @@
 
   &--adv {
     padding: 34px 20px 18px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 18px;
+      background-color: #f2f2f2;
+    }
   }
 
   @media ($tablet) {
     width: 100%;
-    position: relative;
     margin: 20px 20px 37px;
 
     &--checks {
@@ -57,6 +77,10 @@
       padding: 14px 20px 32px 58px;
     }
 
+    &--app::before {
+      content: none;
+    }
+
     &--contacts {
       order: -1;
       margin-top: 34px;
@@ -66,6 +90,10 @@
     &--adv {
       margin-top: 28px;
       padding: 14px 58px 19px;
+    }
+
+    &--adv::before {
+      content: none;
     }
 
     &--descr {

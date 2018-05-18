@@ -1,15 +1,33 @@
 .download {
   position: relative;
-  margin: 396px 0 21px;
-  padding: 28px 20px;
+  margin: 0 0 21px;
+  padding: 423px 20px 28px;
   background-color: #283645;
+  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center -69px;
+  background-size: 700px auto;
+
+  &--off {
+    padding-top: 490px;
+    background-position: center -3px;
+  }
+
+  @media ($retina) {
+    background-image: url("../img/bg-back-mobile@2x.jpg");
+  }
 
   @media ($tablet) {
     z-index: 1;
     margin: 0 auto 0;
     width: 300px;
-    padding: 74px 340px 108px 20px;
+    padding: 29px 340px 108px 20px;
     background-color: transparent;
+    background-image: none;
+
+    &--off {
+      padding-top: 140px;
+    }
   }
 
   @media ($desktop) {
@@ -20,7 +38,7 @@
   &::before {
     content: "";
     position: absolute;
-    top: -286px;
+    top: 109px;
     left: calc(50% - 160px);
     width: 258px;
     height: 286px;
@@ -60,6 +78,10 @@
       background-image: url("../img/iphone-hand-desktop@2x.png");
     }
   }
+
+  &--off::before {
+    top: 176px;
+  }
 }
 
 .download__mainlink {
@@ -87,6 +109,7 @@
 
   &:active {
     color: $pink-pale;
+    background-color: #ffffff;
   }
 }
 
