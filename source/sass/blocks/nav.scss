@@ -202,8 +202,6 @@
   }
 
   @media ($desktop) {
-    position: relative;
-    left: 41px;
     display: flex;
     flex-wrap: wrap;
     width: 702px;
@@ -225,7 +223,7 @@
   border-bottom: solid 1px #000000;
 
   @media ($desktop) {
-    padding: 5px 40px 47px;
+    padding: 5px 0 47px 80px;
     border: none;
   }
 }

@@ -3,7 +3,7 @@
 var gulp = require('gulp');
 var rename = require('gulp-rename');
 var htmlmin = require('gulp-htmlmin');
-var concat = require("gulp-concat");
+var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var sass = require('gulp-sass');
 var plumber = require('gulp-plumber');
@@ -12,7 +12,6 @@ var mqpacker = require('css-mqpacker');
 var autoprefixer = require('autoprefixer');
 var minify = require('gulp-csso');
 var imagemin = require('gulp-imagemin');
-var jpegoptim = require('imagemin-jpegoptim');
 var webp = require('gulp-webp');
 var svgstore = require('gulp-svgstore');
 var spriteBg = require('gulp-svg-sprites');
@@ -56,11 +55,8 @@ gulp.task('images', function() {
   return gulp.src('source/img/*.{png,jpg,svg}')
   .pipe(imagemin([
     imagemin.optipng(),
-    imagemin.svgo(),
-    jpegoptim({
-      max: 70,
-      progressive: true
-    })
+    imagemin.jpegtran({progressive: true}),
+    imagemin.svgo()
     ]))
   .pipe(gulp.dest('build/img'));
 });
