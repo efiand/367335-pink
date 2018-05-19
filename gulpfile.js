@@ -12,6 +12,7 @@ var mqpacker = require('css-mqpacker');
 var autoprefixer = require('autoprefixer');
 var minify = require('gulp-csso');
 var imagemin = require('gulp-imagemin');
+var jpegoptim = require('imagemin-jpegoptim');
 var webp = require('gulp-webp');
 var svgstore = require('gulp-svgstore');
 var spriteBg = require('gulp-svg-sprites');
@@ -55,8 +56,11 @@ gulp.task('images', function() {
   return gulp.src('source/img/*.{png,jpg,svg}')
   .pipe(imagemin([
     imagemin.optipng(),
-    imagemin.jpegtran({progressive: true}),
-    imagemin.svgo()
+    imagemin.svgo(),
+    jpegoptim({
+      max: 70,
+      progressive: true
+    })
     ]))
   .pipe(gulp.dest('build/img'));
 });
